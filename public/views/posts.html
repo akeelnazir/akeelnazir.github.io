@@ -1,0 +1,246 @@
+<div class="fixed-{{state.fixed}}" id='posts' ng-click="state.fixed = false">
+
+  <article class="post">  
+    
+    <header>
+      <h2>
+        Using AngularJS with ServiceNow CMS
+      </h2>
+    </header>
+    
+    <aside class='date-stamp'>
+      <i class="fa fa-calendar-o"></i><span>May 6, 2013</span>
+    </aside>
+
+    <section class='contents'>
+      <p>
+        Just like in my previous post, I am retrieving user records from the server as JSON and displaying them in a simple list. Applying a filter to the list is surprisingly simple using Angular's filter expression. Now try that using jQuery or PrototypeJS and you'll see what I mean. You may also want to compare the size of the code with my previous BackboneJS example, AngularJS offers greater functionaly using lesser lines of code. Why would anyone ever want to use wobbly Jelly.
+      </p>
+
+      <p><strong>Note:</strong> You will need to enable JSON Web Service plugin to use this example</p>
+
+      <section class='code' ng-non-bindable>
+        <header>UI Page > HTML section</header>
+        <pre class='prettyprint linenums lang-html'>
+&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null"&gt;
+  &lt;script src='//ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js'&gt; &lt;/script&gt;
+  &lt;div id='container' ng-app='myApp'&gt;
+    &lt;h4&gt; All Users &lt;/h4&gt;
+    &lt;label for='doSearch'&gt; Search &lt;/label&gt;
+    &lt;input type='text' name='doSearch' ng-model='searchText'/&gt;
+    &lt;ul id='users' ng-controller='UserController'&gt;
+      &lt;li id='user' ng-repeat='user in users | filter:searchText'&gt;
+        {{user.user_name}}, {{user.first_name}} {{user.last_name}}
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+  &lt;script type="text/javascript"&gt;
+    var app = angular.module( 'myApp', [] );
+    function UserController($scope, $http) {
+      $http.get('/sys_user_list.do?JSON&amp;displayvalue=true')
+        .success(function(data, status, headers, config) {
+          $scope.users = data.records;
+        });
+    }
+  &lt;/script&gt;
+&lt;/j:jelly&gt;</pre>
+      </section>
+
+    </section>
+
+  </article> 
+
+  <article class='post'>
+
+    <header>
+      <h2> 
+        Love CMS but hate Jelly? Read on...
+      </h2>
+    </header>
+    
+    <aside class='date-stamp'>
+      <i class="fa fa-calendar-o"></i><span>Feb 7, 2013</span>
+    </aside>
+
+    <section class="contents">
+       
+      <p>I absolutely love Jelly but most of the ServiceNow pros that I have met do not, and they have a valid reason. Jelly is too difficult to understand, try reading any OOTB Jelly script longer than 10 lines and you’ll see what I mean.</p>
+
+      <p>It’s a fact that in order to get the most out of ServiceNow CMS you need to know not just one, but three languages (Javascript, XML and Jelly), and of course, HTML and CSS.</p>
+      
+      <p>The example that I’m using in this post is a modular piece of code, just HTML and Javascript, which accomplishes two simple tasks to begin with:</p>
+      <ol>
+        <li>Get records from the backend</li>
+        <li>Display them on a web page</li>
+      </ol>
+      <p> <strong>Note:</strong> You will need to enable JSON Web Service plugin to use this example</p>
+      
+      <p>It is a simple UI Page, but the same method can be applied to write CMS Dynamic Blocks and create SPAs (Single-Page Apps) in ServiceNow, complete with headers, dynamic menus and of course dynamic sections. So, without further ado, here is the example.</p>
+
+      <section class="code">
+        <header>UI Page > HTML section </header>
+        <pre class='prettyprint lang-html linenums' lang='html'>
+&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null"&gt;
+  &lt;div id='container'&gt; 
+    &lt;h4&gt; All Users &lt;/h4&gt;
+    &lt;ul id='users'&gt; &lt;/ul&gt;
+  &lt;/div&gt;
+  &lt;!-- jquery.min.jsdbx is already included OOTB. Added underscore.min.jsdbx and backbone.min.jsdbx --&gt;
+  &lt;script type='text/javascript' src='jquery.min.jsdbx'&gt; &lt;/script&gt;
+  &lt;script type='text/javascript' src='underscore.min.jsdbx'&gt; &lt;/script&gt;
+  &lt;script type='text/javascript' src='backbone.min.jsdbx'&gt; &lt;/script&gt;
+  &lt;!-- Templates define how the data will be shown in the UI --&gt; 
+  &lt;script type='text/template' id='user-template'&gt; 
+      #{user_name}, #{first_name} #{last_name}
+  &lt;/script&gt;
+&lt;/j:jelly&gt;
+        </pre>
+      </section>
+
+        <section class="code">
+        <header>Client script section</header>
+          <pre class='prettyprint linenums lang-js' lang='javascript'>
+// Namespacing is always a good idea
+window.App = {
+  Models: {},
+  Collections: {},
+  Views: {}
+} || App;
+// Declaring a Backbone model that will contain an individual glide record
+App.Models.GlideRecord = Backbone.Model.extend({
+  set: function(attributes, options) {
+    Backbone.Model.prototype.set.apply(this, arguments);
+  }
+});
+// View definition of how a Record will look like in the UI and how it will be rendered into DOM
+App.Views.GlideRecord = Backbone.View.extend({
+  tagName: 'li',
+  template: '#user-template',
+  render: function() {
+    var template = new Template($j(this.template).text().replace(/\/\//g,''));
+   this.$el.html(template.evaluate(this.model.toJSON()));
+   return this;
+  }
+});
+// View definition of how a record-set will be displayed in the UI
+App.Views.GlideRecords = Backbone.View.extend({
+  id: '#users',
+  initialize: function() {
+    this.collection.on('add', this.addOne, this);
+  },
+  render: function() {
+    this.collection.each(this.addOne, this);
+    return this;
+  },
+  addOne: function(record) {
+    var recordView = new App.Views.GlideRecord( {model: record} );
+    this.$el.append(recordView.render().el);
+  }
+});
+// Render the records in the UI using a helper function
+renderViews = function() {
+  var users = new App.Collections.GlideRecords( window.records.models.first().attributes.records );
+  var allUsers = new App.Views.GlideRecords( {collection: users} );
+  $j('#users').append(allUsers.render().el);
+};
+// Declaring a collection object to contain multiple records, also where the record source
+App.Collections.GlideRecords = Backbone.Collection.extend({
+  model: App.Models.GlideRecord,
+  url: '/sys_user_list.do?JSON'
+});
+// Instantiating a variable to the above collection object
+window.records = new App.Collections.GlideRecords();
+// Fetching the records from the database and rendering them when fetching finishes
+window.records.fetch({
+  success: function (model, response) { 
+    renderViews();
+  },
+  error: function(model, response) {
+    console.log("ERROR: Error retrieving records from the database");
+  }
+});
+          </pre>
+        </section>
+
+    </section>
+  </article>
+
+  <article class='post'>
+
+    <header>
+      <h2>
+        DOM manipulation libraries in ServiceNow
+      </h2>
+    </header>
+    
+    <aside class="date-stamp">
+      <i class="fa fa-calendar-o"></i><span>Jan 16, 2013</span>
+    </aside>
+
+    <section class="contents">
+     
+      <p><em>Most of you ServiceNow lovers out there know that PrototypeJS is already bundled with ServiceNow, but did you know jQuery which is the most popular JavaScript library, also comes bundled in.</em></p>
+      
+      <p>Here is how you can use it in your CMS pages</p>
+      <ol>
+        <li>Using script tag, include jquery.min.jsdbx</li>
+        <li>Use $j to access the library functions</li>
+        <li>Set the jquery.min UI Script to Global if you would also like to use jQuery in your client scripts</li>
+      </ol>
+      
+      <section class="code">
+        <header>Using jQuery in ServiceNow scripts</header>
+        <pre class='prettyprint lang-js linenums' lang='javascript'>
+$j(function() { 
+   $j('.service-offering-nav li:first').addClass('current'); 
+   $j('.service-offering-section div').first().show(); 
+   $j('.options-container:first > ul li:first').addClass('current'); 
+   $j('.options-container div.info div').first().show(); 
+}); 
+        </pre>
+      </section>
+      
+      <p>In the above code snippet, I am using the shortcut version of jQuery document ready function to define a custom JavaScript function that I want to run when the page finishes loading (which is not the same as page load event). I'm also using jQuery within anonymous function to perform various DOM manipulations. </p>
+      
+      <p>I could have used PrototypeJS to achieve the same effect, but I find jQuery to be more flexible, especially its use of CSS selectors to target DOM elements.</p>
+        
+    </section>
+  </article>
+
+  <article class="post">
+    <header>
+        <h2> BDD in ServiceNow </h2>
+    </header>
+
+    <aside class="date-stamp">
+      <i class="fa fa-calendar-o"></i><span>Jan 15, 2013</span>
+    </aside><!-- /.aside -->
+
+    <section class="contents">
+     
+      <p>
+        <em>Being a serious developer have you ever wished to use BDD/TDD methodology in ServiceNow, thanks to ServiceNow flexibility and Jasmine libraries it's quite easy.</em>
+      </p>
+      
+      <p>
+        I call it TestNow and it's a small CMS portal written to enable you to adopt BDD in ServiceNow. Behind the covers it's using <a href="http://pivotal.github.com/jasmine">Jasmine 1.3.1</a> and you can define and test your specs by writing them as UI Scripts and adding them to "testrunner" dynamic content block. So far I have successfully used it to test for table ACL rules (which is a pain to perform manually) and return values from Ajax calls. You no longer need to rely on log messages and alert dialogs to test your applications.
+      </p>
+      
+      <p>
+        The update set will create a new cms site "TestNow" and you can run your test specs by visiting "your-instance.service-now.com/testnow". Feedback and questions are welcome, please send me an email.
+      </p>
+
+      <img src="../assets/images/TestNow.png" alt="">
+
+      <p/>
+      
+      <p>
+        <a href="../assets/downloads/TestNow.zip" class="more-link">Download update set</a>
+      </p>      
+
+    </section> <!-- /.content -->
+  </article> <!-- /.post -->
+
+</div>

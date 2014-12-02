@@ -1,0 +1,80 @@
+.works
+  position relative
+  background #F3F3F3
+  -webkit-transition all 0.5s
+  transition all 0.5s
+
+  &.fixed-true
+    margin-left 250px
+
+  .works-wrapper
+    height 820px
+    background url(/assets/images/iMac-2012-big.png) no-repeat center 40px
+    position relative
+
+    ul.navigation
+      position absolute
+      list-style-type none
+      top 25%
+      right 25px
+
+      li
+        display block
+        cursor pointer
+
+        i
+          font-size 15px
+          padding-left 9px
+          color #999
+
+        a
+          text-indent 9999em
+          display block
+          width 30px
+          height 30px
+          border-radius 50%
+
+          &.prev
+            background #999 url('/assets/images/previous.png') center center no-repeat
+
+            &:hover
+              background #333 url('/assets/images/previous.png') center center no-repeat
+
+          &.next
+            background #999 url('/assets/images/next.png') center center no-repeat
+
+            &:hover
+              background #333 url('/assets/images/next.png') center center no-repeat
+
+    .viewport
+      position absolute
+      margin auto
+      margin-top 45px
+      width 750px
+      height 420px
+      left 0
+      right 0
+      top 40px
+      bottom 0
+      overflow hidden
+      -webkit-box-sizing border-box
+      -moz-box-sizing border-box
+      box-sizing border-box
+      -webkit-transition all 0.5s
+      transition all 0.5s
+
+      section
+        text-align center
+        width 750px
+        height 420px
+
+        img
+          cursor pointer
+
+      section.ng-hide
+        -webkit-transition all .2s ease-in-out
+
+  > section
+    background white
+
+      

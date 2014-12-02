@@ -1,0 +1,582 @@
+<link media="screen" type="text/css" rel="stylesheet" href="styles/honda/cars-new.css">
+<link media="screen" type="text/css" rel="stylesheet" href="styles/honda/global-cars-new.css">
+<link media="screen" type="text/css" rel="stylesheet" href="styles/honda/discover.css">
+
+<div class="scrollPage cr-v">
+	<div id="wrapper">
+		<div id="carsHeader" role="banner">
+			<div class="nav" role="navigation">
+				<ul id="menu">
+					<li class="new {{show_menu}}">
+						<a ng-click="show_menu = !show_menu">New Cars <span> </span>
+						</a>
+						<ul ng-show="show_menu" id="new-dropdown" nu-mouse-leave="show_menu = false">
+							<li class="cr-v">
+								<a >CR-V <span> </span>
+								</a>
+							</li>
+							<li class="newcivic">
+								<a >Civic <span> </span>
+								</a>
+							</li>
+							<li class="jazz">
+								<a >Jazz <span> </span>
+								</a>
+							</li>
+							<li class="insight">
+								<a >Insight <span> </span>
+								</a>
+							</li>
+							<li class="cr-z">
+								<a >CR-Z <span> </span>
+								</a>
+							</li>
+							<li class="accordsaloon">
+								<a >Accord <span> </span>
+								</a>
+							</li>
+							<li class="accordtourer">
+								<a >Accord Tourer <span> </span>
+								</a>
+							</li>
+							<li class="viewrange">
+								<a >Compare cars across our range <span> </span>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a >Used Cars</a>
+					</li>
+					<li>
+						<a >Corporate</a>
+					</li>
+					<li>
+						<a >Owners</a>
+					</li>
+				</ul>
+			</div>
+
+			<a title="Return to the homepage" class="logo">
+				<img src="assets/images/honda/honda.png" alt="Honda logo">
+			</a>
+
+			<div class="nav" role="navigation">
+				<ul id="tools">
+					<li class="brochure">
+						<a >Get a brochure</a>
+					</li>
+					<li class="testdrive">
+						<a >Book a test drive</a>
+					</li>
+					<li class="showroom">
+						<a >Find a dealer</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div id="body">
+			<div id="canvas" style="background-position: 50% 81px;">
+				<nav id="navwrapper" class="hasSubNav" nu-scroll-fix>
+					<ul>
+						<li class="minilogo hide-text">
+							<a>Honda</a>
+						</li>
+						<li>
+							<a>CR-V</a>
+						</li>
+						<li class="selected">
+							<a>Discover</a>
+							<ul id="subnav">
+								<li class="selected">
+									<a >Top features</a>
+								</li>
+								<li class="">
+									<a >Awards</a>
+								</li>
+								<li class="">
+									<a >Gallery</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a>
+								Reviews
+							</a>
+							<ul>
+								<li>
+									<a>Press reviews</a>
+								</li>
+								<li>
+									<a >Video reviews</a>
+								</li>
+								<li>
+									<a >Customer reviews</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a >Range &amp; Options</a>
+							<ul>
+								<li>
+									<a >Range overview</a>
+								</li>
+								<li>
+									<a >
+										Accessories
+									</a>
+								</li>
+								<li>
+									<a >Options</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a >
+								Build your
+								CR-V</a>
+							</li>
+							<li>
+								<a >Offers &amp; Finance</a>
+							</li>
+						</ul>
+						
+					</nav>
+
+					<div role="main" id="main" style="margin-top: 0px;">
+						<section id="top-features" class="topfeatures">
+							<div>
+								<h1>CR-V Top Features</h1>
+							</div>
+
+							<article class="design">
+								<div>
+									<h2>Turns heads<br>
+										<span>with every turn</span>
+									</h2>
+									<p>Confident, bold, assertive. Words that not only describe the CR-V's personality, but its looks too.</p>
+									<p>Take its deep, sculpted body lines - they're what make its striking, desirable shape stand out on the road. And with its aerodynamic design you'll find visits to the fuel station become noticeably less frequent.</p>
+									<p>But it's not just the outside that looks good. Step inside and you'll find a luxury interior surrounded by wide, expansive windows for a spacious feel. It doesn't matter if you're in the driving seat, or watching it pass by - you won't be able to take your eyes off it.</p>
+								</div>
+							</article>
+
+							<article class="engine right">
+								<div>
+									<h2>Outstanding<br>
+										<span>on the inside</span>
+									</h2>
+									<p>Decisions can be hard to make. So we've kept them to a minimum and made both of our engines fuel efficient, powerful and practical. Now it's just down to preference - petrol, or diesel.</p>
+									
+									<div class="tabs" ng-controller="TabsCtrl" ng-init="tabs=[{key: 'vtec', title: '2.0 i-VTEC ENGINE'} , {key: 'dtec', title: '2.2 i-DTEC Engine'}]">
+										<ul>
+											<li ng-repeat="item in tabs" class="{{tab == $index}}">
+												<a ng-click="setTab($index)">{{item.title}}</a>
+											</li>
+										</ul>
+										<div class="tab-body">
+											<div ng-show="tab == 0">
+												<p>The 155PS 2.0 i-VTEC petrol engine features Variable Valve Timing and Lift Control. This gives optimised output at high engine rpm, and fuel efficiency at lower rpm. It's available with a 5-speed automatic or 6-speed manual transmission, in either 2WD or 4WD.</p>
+											</div>
+											<div ng-show="tab == 1">
+												<p>An impressive 350NM of torque is available from the all-aluminium, 150PS 2.2 i-DTEC diesel engine, ideal for those looking to tow. The engine is matched to a 5-speed automatic or 6-speed manual transmission and comes with 4WD.</p>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</article>
+
+							<article class="technology">
+								<div>
+									<h2>The latest technology<br>
+										<span>all within reach</span>
+									</h2>
+									<p>Driving doesn't need distractions. That's why we've carefully positioned the latest technology right at your fingertips.</p>
+									<p>Take our steering wheel. You hold the power to change the music, check your fuel, or get directions* - all at the touch of button.</p>
+									<p>And for hands-on tasks like reversing, the CR-V will help you all the way, with a tilt of the passenger wing mirror so you can see the curb, and a clever rear view camera** to show where you're heading. You won't have to worry about a thing.</p>
+									<div class="footnote">
+										<ul>
+											<li>*Sat Nav is optional</li>
+											<li>**Standard on SE grade upwards</li>
+										</ul>
+									</div>
+
+									<div class="textCarousel right" ng-controller="TabsCtrl" ng-init="tabs = [0, 1, 2, 3, 4]">
+										<div class="carouselBody">
+											<div ng-show="tab == 0" class="current">
+												<h3>Eco Assist</h3>
+												<p>Everyone wants to be a better driver. And with Eco Assist, you'll soon be on your way to doing so. Just keep an eye on the ambient meter around the speedometer - it changes colour depending on how you drive, which helps you achieve greater fuel efficiency on every journey. Handy, don't you think?</p>
+											</div>
+											<div ng-show="tab == 1">
+												<h3>ECON Button</h3>
+												<p>Push the button. Go on, push it. If you do you'll achieve maximum fuel efficiency while you drive. When activated, fuel economy improves by adjusting the performance of other things, like air con, cruise control and even your engine transmission*.</p>
+												<div class="footnote">
+													<ul>
+														<li>*Engine transmission adjusts on i-VTEC models only</li>
+													</ul>
+												</div>
+											</div>
+											<div ng-show="tab == 2">
+												<h3>i-MID</h3>
+												<p>Intelligent Multi-Information Display. Or i-MID as we like to say. The i-MID screen sits in front of you at eye level showing you directions, your fuel consumption and even your favourite music to pick from - all controlled via the steering wheel.</p>
+											</div>
+											<div ng-show="tab == 3">
+												<h3>Instinctive controls</h3>
+												<p>Entertainment at the push of a button. And stats. And directions too. You'll find the buttons positioned exactly where your fingertips naturally sit on the steering wheel, so you can have total control without taking your eyes off the road.</p>
+											</div>
+											<div ng-show="tab == 4">
+												<h3>Satellite Navigation</h3>
+												<p>Destination - home. Just one of the many things you can say to the optional Voice Recognition Satellite Navigation system*. It will get you to your destination quickly and efficiently, while turn-by-turn directions are conveniently shown on the i-MID screen.</p>
+												<div class="footnote">
+													<ul>
+														<li>*Voice recognition only available on EX and SR grades</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<div class="panelIndex left">
+											<ul>
+												<li ng-repeat="item in tabs" class="{{tab == $index}}"></li>
+											</ul>
+										</div>
+										<div class="panelControl right">
+											<ul>
+												<li>
+													<a class="dir_left" ng-click="decTab()"> Previous </a>
+												</li>
+												<li>
+													<a class="dir_right" ng-click="incTab()"> Next </a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</article>
+
+							<article class="space">
+								<div>
+									<h2>Room<br>
+										<span>to spare</span>
+									</h2>
+									<p>Whether you're taking the kids on holiday or going on your own adventure, you'll find plenty of space in the back.</p>
+									<p>Open the tailgate at the touch of a button* and you'll see we've increased the boot space in our new CR-V by 147 litres. That's enough to hold three big suitcases. A chest of drawers. Or even a Great Dane. But, if you need even more room, our handy fold-flat seats drop smoothly at the pull of a lever.</p>
+									<p>So no matter where you're thinking of going, the CR-V has more than enough room to accommodate you.</p>
+									<div class="footnote">
+										<ul>
+											<li>*Available on EX grade only</li>
+										</ul>
+									</div>
+								</div>
+							</article>
+
+							<article class="handles right">
+								<div>
+									<h2>Keeps you safe<br>
+										<span>in hazardous situations</span>
+									</h2>
+									<p>Sometimes driving conditions will test you. But our CR-V is ready for whatever the road brings.</p>
+									<p>Take the Vehicle Stability Assist - it monitors all four wheels, making sure they have the right amount of power and braking if traction is lost. While the electronic 4WD works with the Motion Adaptive Electronic Power Steering to aid control - great for when the weather takes a turn for the worse.</p>
+									<p>Then there are our extensive safety options like the Advanced Driver Assist System. This includes Collision Mitigation Braking, Lane Keeping Assist and Adaptive Cruise control. By scanning the road ahead, the CR-V applies the brakes and corrects steering when needed.</p>
+									<p>It's probably why the new CR-V has received the 5-Star Euro NCAP Overall Safety Rating - that's the highest award possible.</p>
+								</div>
+							</article>
+
+							<article class="efficiency left">
+								<div>
+									<h2>Stay out on the road<br>
+										<span>and out of the petrol station</span>
+									</h2>
+									<p>Journeys shouldn't be stop-start. That's why we introduced our ECON button. When pressed, the new CR-V modifies its systems to deliver excellent fuel economy and some of the lowest CO<sub>2</sub> emissions in its class from just 149 g/km*.</p>
+									<p>The ambient meter changes colour based on your driving, showing you how to get the most from every tank of fuel and stay on the road for longer. So, switch it on, sit back and enjoy the ride.</p>
+									<div class="footnote">
+										<ul>
+											<li>*Emission figures shown are for the 2.2l i-DTEC S &amp; SE grades with manual transmission and 4WD</li>
+										</ul>
+									</div>
+								</div>
+							</article>
+
+							<footer>
+								<ul class="ctas">
+									<li class="brochure">
+										<a  class="cta">Get a brochure</a>
+									</li>
+									<li class="testdrive">
+										<a  class="cta">Book a test drive</a>
+									</li>
+									<li class="showroom">
+										<a  class="cta">Find a dealer</a>
+									</li>
+								</ul>
+							</footer>
+
+						</section>
+
+						<section id="awards" class="awards">
+							<div>
+								<h1>Awards</h1>
+								<div class="awardsCarousel" ng-controller="TabsCtrl" ng-init="tabs = [0, 1, 2]">
+									<div class="text center">
+										<div class="awardsCarouselViewPort">
+											<div class="awardsCarouselPanel" ng-show="tab == 0">
+												<div class="text left">
+													<h2>Most Reliable Car Manufacturer eight years and counting</h2>
+													<p>When you see a car at the roadside, it's not often a Honda. That's why we're proud to have topped the Annual Car Reliability Survey for the eighth year in a row by What Car? and Warranty Direct. So you know when you buy one of our cars, it will keep going for as long as you want it to.</p>
+													<a target="_blank" class="read-more" href="">Read More</a>
+												</div>
+												<img alt="Most Reliable Car Manufacturer eight years and counting" src="/assets/images/honda/crv-whatcar8.png">
+											</div>
+											<div class="awardsCarouselPanel" ng-show="tab == 1">
+												<div class="text left">
+													<h2>CR-V is one of the safest cars in Europe</h2>
+													<p>To us, safety is key. Whether you're the driver, the passenger, or even in another car - we put your safety first. It's probably why we were awarded the maximum 5-star rating possible from Euro NCAP, making the CR-V one of the safest cars in Europe. So whoever's driving, you know you're in safe hands.</p>
+													<a target="_blank" class="read-more" href="">Read More</a>
+												</div>
+												<img alt="CR-V is one of the safest cars in Europe" src="/assets/images/honda/award-crv-ncap.png">
+											</div>
+											<div class="awardsCarouselPanel" ng-show="tab == 2">
+												<div class="text left">
+													<h2>The CR-V is the Most Popular 4x4. Again.</h2>
+													<p>It's always nice when you get an award. It's even nicer when it happens twice. Honestjohn users have awarded the new Honda CR-V the 'Most Popular 4x4' for the second year running. Once again, the expert motoring website's stats showed that the CR-V was the most searched for 4x4.</p>
+													<a target="_blank" class="read-more" >Read More</a>
+												</div>
+												<img alt="The CR-V is the Most Popular 4x4. Again." src="/assets/images/honda/award-crv-honestjohn.png">
+											</div>
+										</div>
+									</div>
+									<div class="awardsCarouselNav">
+										<ul>
+											<li class="{{tab == 0}}">
+												<a ng-click="tab = 0">
+													<img alt="Most Reliable Car Manufacturer eight years and counting" src="/assets/images/honda/award-what-thumb.png">
+												</a>
+											</li>
+											<li class="{{tab == 1}}">
+												<a ng-click="tab = 1">
+													<img alt="CR-V is one of the safest cars in Europe" src="/assets/images/honda/award-ncap-thumb.png">
+												</a>
+											</li>
+											<li class="{{tab == 2}}">
+												<a ng-click="tab = 2">
+													<img alt="The CR-V is the Most Popular 4x4. Again." src="/assets/images/honda/award-honest-thumb.png">
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</section>
+
+						<section id="gallery" class="gallery" ng-controller="GalleryCtrl" ng-init="images = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]">
+							<div>
+								<h1 class="galleryHeading">Gallery</h1>
+							</div>
+							<div class="main">
+								<div title="Previous" class="prev">
+									<div class="clicker" ng-click="prevImage()">Previous</div>
+								</div>
+								<figure>
+									<img alt="CR-V" src="/assets/images/honda/{{image}}.jpg">
+								</figure>
+								<div title="Next" class="next">
+									<div class="clicker" ng-click="nextImage()">Next</div>
+								</div>
+							</div>
+							<ul class="thumbs clearfix">
+								<li ng-repeat="image in images" class="{{$parent.image == $index+1}}">
+									<img ng-src="/assets/images/honda/{{image}}-thumb.jpg" ng-click="$parent.image = $index+1">
+								</li>
+							</ul>
+							<div>
+								<ul class="ctas">
+									<li class="brochure">
+										<a class="cta">
+											Get a brochure
+										</a>
+									</li>
+									<li class="testdrive">
+										<a class="cta">
+											Book a test drive
+										</a>
+									</li>
+									<li class="showroom">
+										<a class="cta">
+											Find a dealer
+										</a>
+									</li>
+								</ul>
+							</div>
+						</section>
+					</div>
+				</div>
+			</div>
+
+			<div id="footer" role="contentinfo">
+				<div id="footercontent">
+					<div id="promo">
+						<noscript>
+							&lt;div&gt;
+							&lt;img src="/assets/images/honda/car.png" alt="Meet Asimo" class="fixPng"/&gt;
+							&lt;/div&gt;
+						</noscript>
+						<img src="/assets/images/honda/car.png" alt="Meet Asimo"></div>
+
+						<div id="footernav">
+							<div class="cars">
+								<h6>Honda Cars</h6>
+								<ul>
+									<li>
+										<a >New cars</a>
+									</li>
+									<li>
+										<a >Used cars</a>
+									</li>
+									<li>
+										<a >Corporate sales</a>
+									</li>
+									<li>
+										<a >Honda Owners</a>
+									</li>
+								</ul>
+
+								<ul>
+									<li>
+										<a >Deals &amp; Offers</a>
+									</li>
+									<li>
+										<a >Honda Finance</a>
+									</li>
+									<li>
+										<a >Motability</a>
+									</li>
+									<li>
+										<a >Value your car</a>
+									</li>
+								</ul>
+							</div>
+
+							<div class="more">
+								<h6>More Honda</h6>
+								<ul>
+									<li>
+										<a >Motorcycles</a>
+									</li>
+									<li>
+										<a >Lawn &amp; Garden</a>
+									</li>
+									<li>
+										<a >All Terrain Vehicles (ATV)</a>
+									</li>
+									<li>
+										<a >Energy</a>
+									</li>
+									<li>
+										<a >Marine</a>
+									</li>
+									<li>
+										<a >Honda Racing</a>
+									</li>
+								</ul>
+
+								<ul>
+									<li>
+										<a >eNews</a>
+									</li>
+									<li>
+										<a >Brand Stories</a>
+									</li>
+								</ul>
+
+							</div>
+
+							<div class="other">
+								<h6>Our other sites</h6>
+								<ul>
+									<li>
+										<a class="external">Honda World</a>
+									</li>
+								</ul>
+
+								<ul>
+									<li>
+										<a class="external">Honda on YouTube</a>
+									</li>
+									<li>
+										<a class="external">Honda on Twitter</a>
+									</li>
+									<li>
+										<a class="external">Honda on Facebook</a>
+									</li>
+									<li>
+										<a class="external">Honda on Pinterest</a>
+									</li>
+								</ul>
+							</div>
+
+							<div class="huk">
+								<h6>Honda UK</h6>
+								<ul>
+									<li>
+										<a >Honda UK home</a>
+									</li>
+								</ul>
+
+								<ul>
+									<li>
+										<a >Contact Us</a>
+									</li>
+									<li>
+										<a  class="external">Careers</a>
+									</li>
+									<li>
+										<a >Environment</a>
+									</li>
+									<li>
+										<a >Awards</a>
+									</li>
+									<li>
+										<a >Motor Industry Code</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div id="copyright">
+						<div id="copyrightcontent">
+							<ul class="terms">
+								<li>
+									<a >Contact us</a>
+								</li>
+								<li>
+									<a >Terms &amp; conditions</a>
+								</li>
+								<li>
+									<a >Privacy policy</a>
+								</li>
+								<li>
+									<a >Sitemap</a>
+								</li>
+							</ul>
+
+							<ul class="social">
+								<li>
+									<a class="external hide-text">YouTube</a>
+								</li>
+								<li>
+									<a class="external hide-text">Twitter</a>
+								</li>
+								<li>
+									<a class="external hide-text">Facebook</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+<div ng-show="show_menu" ng-click="show_menu = false" id="carsHeaderOverlay"></div>
+
+

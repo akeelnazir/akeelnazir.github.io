@@ -1,0 +1,48 @@
+<div class="works fixed-{{state.fixed}}" ng-click="state.fixed = false">
+  <div ng-show="state.preview == null" class="works-wrapper">
+
+    <ul class="navigation">
+      <li><a ng-click="decSlide()" class="prev">Previous</a></li>
+
+      <li ng-show="state.slide==0"><i class="fa fa-circle"></i></li>
+      <li ng-show="state.slide==0"><i class="fa fa-circle-o"></i></li>
+      <li ng-show="state.slide==0"><i class="fa fa-circle-o"></i></li>
+
+      <li ng-show="state.slide==2"><i class="fa fa-circle-o"></i></li>
+      <li ng-show="state.slide==2"><i class="fa fa-circle-o"></i></li>
+      <li ng-show="state.slide==2"><i class="fa fa-circle"></i></li>
+
+      <li ng-show="state.slide==1"><i class="fa fa-circle-o"></i></li>
+      <li ng-show="state.slide==1"><i class="fa fa-circle"></i></li>
+      <li ng-show="state.slide==1"><i class="fa fa-circle-o"></i></li>
+
+      <li><a ng-click="incSlide()" class="next">Next</a></li>
+    </ul>
+
+    <div class="viewport">
+
+      <section ng-click="state.preview = 'honda'" ng-show="state.slide==0">
+        <img src="/assets/images/honda/CRV_Discover.jpg" alt="">
+      </section>
+
+      <section ng-click="state.preview = 'minima'" ng-show="state.slide==1">
+        <img src="/assets/images/minima/minima.jpg" alt="">
+      </section>
+
+      <section ng-click="state.preview = 'travler'" ng-show="state.slide==2">
+        <img src="/assets/images/travler/travler.jpg" alt="">
+      </section>
+
+    </div> <!-- .viewport -->
+    
+  </div> <!-- .wrapper -->
+
+  <section ng-show="state.preview == 'minima'" class="minima" ng-include="'views/minima.html'"></section>
+
+  <section ng-show="state.preview == 'travler'" class="travler" ng-include="'views/travler.html'"></section>
+
+  <section ng-show="state.preview == 'honda'" class="honda" ng-include="'views/honda.html'" ng-controller="HondaCtrl"></section>
+    
+  
+
+</div>

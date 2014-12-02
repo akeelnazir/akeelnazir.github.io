@@ -1,0 +1,107 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>akeelnazir.com</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="initial-scale=.75, maximum-scale=.75, width=device-width, user-scalable=no">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <!-- build:css(.tmp) styles/main.css -->        
+        <!-- endbuild -->
+        
+        <link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
+        <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/nav.css">
+        <link rel="stylesheet" href="styles/about.css">
+        <link rel="stylesheet" href="styles/posts.css">
+        <link rel="stylesheet" href="styles/works.css">
+        <link rel="stylesheet" href="styles/minima.css">
+        <link rel="stylesheet" href="styles/travler.css">
+        <link rel="stylesheet" href="styles/svg-icon.css">
+
+  </head>
+  <body ng-app="akeelnazircomApp">
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+      <script src="bower_components/es5-shim/es5-shim.js"></script>
+      <script src="bower_components/json3/lib/json3.min.js"></script>
+    <![endif]-->
+
+    <div class="wrap" ng-controller="MainCtrl">
+      <div class="svg-icon fixed-{{state.fixed}}" ng-click="state.fixed = !state.fixed; state.preview = null">
+        <svg version="1.1"
+             baseProfile="full"
+             width="120" height="120"
+             xmlns="http://www.w3.org/2000/svg">
+
+          <circle cx="60" cy="60" r="50"></circle>
+
+          <line x1="52" y1="61"
+                x2="45" y2="61"></line>
+          
+          <line x1="45" y1="65"
+                x2="50" y2="40"></line>
+
+          <line x1="50" y1="40" 
+                x2="70" y2="80"></line>
+
+          <line x1="70" y1="80"
+                x2="75" y2="60"></line>
+
+          <line x1="74" y1="61"
+                x2="80" y2="61"></line>
+
+        </svg>
+      </div>
+
+      <div class="png-icon" ng-click="state.fixed = !state.fixed">
+        <img src="assets/images/akeelnazir_logo.png" alt=""/>
+      </div>
+
+      <div class="nav-main fixed-{{state.fixed}}" ng-include="'/views/nav.html'"></div>
+
+      <!-- Add your site or application content here -->
+      <div ng-view class="view"></div>
+    </div>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+     <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-38368602-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+
+    <script src="bower_components/angular/angular.js"></script>
+
+    <!-- build:js scripts/modules.js -->
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/mainCtrl.js"></script>
+    <script src="scripts/controllers/hondaCtrl.js"></script>
+    <script src="scripts/directives/main.js"></script>
+    <!-- endbuild -->
+</body>
+</html>

@@ -1,0 +1,291 @@
+.minima {
+  font-size: 1.25em;
+}
+.minima .clear {
+  clear: both;
+}
+.minima .left {
+  float: left;
+}
+.minima .right {
+  float: right;
+}
+.minima i {
+  margin-right: 10px;
+}
+.minima .wrapper {
+  padding: 20px 0;
+  margin: 0 auto;
+}
+.minima .wrapper > header {
+  margin: 0 auto;
+  width: 940px;
+  position: relative;
+}
+.minima .wrapper > header h1 {
+  margin-bottom: 0;
+  display: block;
+  width: 221px;
+  height: 43px;
+  background: url("/assets/images/minima/MinimaLogo.jpg") no-repeat;
+  text-indent: -9999em;
+}
+.minima .wrapper > header h5 {
+  margin-top: 10px;
+  display: block;
+  width: 129px;
+  height: 10px;
+  background: #fff url("/assets/images/minima/MinimaTagLine.jpg") 0 0 no-repeat;
+  text-indent: -9999em;
+}
+.minima .wrapper > header nav {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.minima .wrapper > header nav ul {
+  list-style-type: none;
+}
+.minima .wrapper > header nav ul li {
+  display: block;
+  float: left;
+  width: 83px;
+  height: 81px;
+  text-align: center;
+  margin-top: -30px;
+}
+.minima .wrapper > header nav ul li a {
+  padding-top: 30px;
+  width: 100%;
+  height: 100%;
+  display: block;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 14px;
+  color: #585858;
+}
+.minima .wrapper > header nav ul li a:hover {
+  background: #ff61a0;
+  color: #fff;
+}
+.minima section {
+  width: 940px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.minima section > header {
+  font-size: 1.25em;
+  font-family: 'Helvetica Neue', Arial;
+  font-weight: bold;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  margin: 2.5em 0 1.5em 0;
+  border-bottom: 1px solid #bbb;
+  padding-bottom: 1em;
+}
+.minima section ul.pic-gallery {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+.minima section ul.pic-gallery li {
+  display: block;
+  float: left;
+  margin-right: 18px;
+}
+.minima section ul.pic-gallery li div {
+  font-family: 'Lucida Grande', Arial;
+}
+.minima section ul.pic-gallery li div.name {
+  color: #555;
+  margin-top: 20px;
+}
+.minima section ul.pic-gallery li div.type {
+  color: #ffc0cb;
+  font-size: 12px;
+  font-style: italic;
+}
+.minima section ul.pic-gallery li:last-child {
+  margin: 0;
+}
+.minima section article:nth-child(3n+1) {
+  margin-right: 0;
+}
+.minima section article {
+  width: 30%;
+  float: left;
+  margin-right: 5%;
+  margin-bottom: 20px;
+}
+.minima section article header {
+  text-transform: none;
+  color: #777;
+  letter-spacing: normal;
+  font-weight: bold;
+  font-size: 1.25em;
+}
+.minima section article p {
+  color: #777;
+  line-height: 1.5em;
+  font-size: 1.15em;
+}
+.minima section .hero-unit {
+  margin-top: 80px;
+  text-align: center;
+}
+.minima section .slider {
+  position: relative;
+}
+.minima section .slider > div.nav {
+  position: absolute;
+  width: 82px;
+  height: 81px;
+  background: #555 url("/assets/images/minima/slider-arrow.png") no-repeat 26px 15px;
+  top: 40%;
+  padding: 0;
+}
+.minima section .slider .prev {
+  left: 0;
+}
+.minima section .slider .next {
+  right: 0;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.minima section .slider a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-indent: -9999em;
+}
+.minima section .slider .viewport {
+  height: 308px;
+}
+.minima section .slider .viewport ul {
+  list-style-type: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+.minima section .slider .viewport ul li {
+  overflow: hidden;
+}
+.minima section h2,
+.minima section h3 {
+  display: block;
+  height: 51px;
+  width: 777px;
+  background: url("/assets/images/minima/hero-h2.jpg") no-repeat;
+  margin: 0 auto;
+  margin-top: 1em;
+  text-indent: -9999em;
+}
+.minima section h3 {
+  background: url("/assets/images/minima/hero-h3.jpg") no-repeat;
+  height: 50px;
+  width: 443px;
+}
+.minima footer {
+  background: #555;
+  overflow: hidden;
+  color: #fff;
+  margin-top: 2em;
+  padding-bottom: 2em;
+}
+.minima footer .wrapper {
+  width: 940px;
+  margin: 0 auto;
+  margin-bottom: 1em;
+  overflow: hidden;
+}
+.minima footer section:nth-child(3n+3) {
+  margin-right: 0;
+}
+.minima footer section {
+  width: 30%;
+  float: left;
+  margin-right: 5%;
+}
+.minima footer section header {
+  color: #ff61a0;
+  border-bottom: none;
+  margin: 30px 0 0 0;
+  font-size: 1em;
+}
+.minima footer section#contact div {
+  margin-bottom: 1em;
+}
+.minima footer section#contact a {
+  color: #fff;
+  text-decoration: none;
+}
+.minima footer section#contact div.social ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 1em;
+}
+.minima footer section#contact div.social ul li {
+  display: block;
+  float: left;
+  width: 43px;
+  height: 43px;
+  margin-right: 16px;
+  background: url("/assets/images/minima/social-sprite.png");
+  text-indent: -9999em;
+}
+.minima footer section#contact div.social ul .dribbble {
+  background-position: -48px 0;
+}
+.minima footer section#contact div.social ul .twitter {
+  background-position: -95px 0;
+}
+.minima footer section#contact div.social ul .rss {
+  background-position: -143px 0;
+}
+.minima footer section#twitter ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.minima footer section#twitter ul li div {
+  margin-bottom: 1em;
+  width: 88%;
+}
+.minima footer section#twitter ul li div .by {
+  font-weight: bold;
+  font-style: italic;
+}
+.minima footer section#twitter ul li div .when {
+  display: block;
+  font-size: small;
+  font-style: italic;
+  margin-top: 5px;
+}
+.minima footer section#posts ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+.minima footer section#posts ul li {
+  margin-bottom: 1em;
+}
+.minima footer section#posts ul li div {
+  width: 89%;
+  margin-bottom: 1em;
+}
+.minima div.copyright {
+  background: #fff;
+  color: #777;
+  font-size: small;
+  width: 940px;
+  margin: 0 auto;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}

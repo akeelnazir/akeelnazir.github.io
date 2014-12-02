@@ -1,0 +1,73 @@
+div#about
+  position relative
+  font-size 1.5em
+  -webkit-box-sizing border-box
+  -moz-box-sizing border-box
+  box-sizing border-box
+  -webkit-transition all 0.75s
+  -moz-transition all 0.75s
+  -ms-transition all 0.75s
+  transition all 0.75s
+  
+  &.fixed-true
+    margin-left 250px
+
+  article
+    height 780px
+    position relative
+
+    &.kashmir
+      background #fff url('/assets/images/about/kashmir.jpg') center center no-repeat
+      background-attachment fixed
+      background-size cover
+
+    &.bangalore
+      background #0fe9bd
+
+      .caption-wrap p
+        color white
+
+    &.hyderabad
+      background #d3d3d3 url('/assets/images/about/hyderabad.jpg') center center  no-repeat
+      background-attachment fixed
+      background-size cover
+
+    &.leeds, &.contracting, &.java, &.current
+      background #0fe9bd
+
+    &.server-room
+      background #d3d3d3 url('/assets/images/about/server-room.jpg') center center  no-repeat
+      background-attachment fixed
+      background-size cover
+
+    &.cloud
+      background #d3d3d3 url('/assets/images/about/clouds-2.jpg') center center  no-repeat
+      background-attachment fixed
+      background-size cover
+
+    &.frameworks
+      background #757575
+      background-attachment fixed
+      background-size cover
+      background-position 50% 50%
+
+    .caption-wrap 
+      position absolute
+      bottom 40%
+      right 0
+      left 0
+      width 75%
+      padding .5em 2em
+      margin auto
+
+      &.grey
+        background rgba(99, 99, 99, .2)
+
+      &.blue
+        background rgba(15, 233, 189, .5)
+
+      p
+        font-size 1.25em
+        text-align justify
+        color whitesmoke
+

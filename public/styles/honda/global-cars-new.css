@@ -1,0 +1,756 @@
+/* Headings
+-------------------------------------------------------------- */
+
+.honda h1, .honda h2, .honda h3 { font-weight: bold; }
+
+.honda h1 { font-size: 4em; line-height: 1.1em; }
+.honda h2 { font-size: 3em; line-height: 1.167em; }
+.honda h3 { font-size: 2.4em; }
+.honda h6 { font-size: 1.2em; line-height: 1.5em; }
+
+.honda h1, h2 { color: #333; }
+.honda h3 { color: #000; }
+
+.honda h2 span { color: #6d6e71; font-weight: normal; }
+
+/* Text elements
+-------------------------------------------------------------- */
+.honda ul li, .honda ol li { margin: 0 }
+.honda p { font-size: 1.4em; color:#000; line-height: 1.572em; margin: 0; padding: 0}
+
+
+/* Misc classes
+-------------------------------------------------------------- */
+
+.honda .altcolor { color: #6d6e71; }
+.honda .clear {clear:both;}
+
+.honda .clearfix:before, .honda .clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+.honda .clearfix:after {
+  clear: both; }
+
+.honda .pull-right {
+  float: right !important; }
+
+.honda .pull-left {
+  float: left !important; }
+
+.honda .hide {
+  display: none !important; }
+
+.honda .show {
+  display: block !important; }
+
+.honda .invisible {
+  visibility: hidden; }
+
+.honda .text-hide {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0; 
+}
+
+
+/*****************************************
+
+			Sub Navagation
+
+*****************************************/
+
+.honda #navwrapper {
+  margin: 0;
+  position: relative;
+  box-shadow: 0 7px 7px rgba(0, 0, 0, 0.15);
+	-webkit-box-shadow: 0 7px 7px rgba(0, 0, 0, 0.15);
+	-mox-box-shadow: 0 7px 7px rgba(0, 0, 0, 0.15);
+}
+.honda .ie9 #navwrapper li ul, .honda .ie8 #navwrapper li ul {
+	background: #545454 url(/assets/images/honda/ie-nav-bg.png) repeat-y center 0;
+}
+.honda .ie8 #navwrapper li ul:after, .ie8 #navwrapper:after {
+	content: ' ';
+	width: 100%;
+	height: 12px;
+	display: block;
+	background: url(/assets/images/honda/subnav-after.png) top left repeat-x;
+	background-position: 0 -5px;
+	position: absolute;
+}
+
+.honda #navwrapper.hasSubNav {
+	height: 81px;
+}
+.honda #navwrapper ul {
+  list-style: none;
+  font-size: 0;
+  padding: 0;
+  text-align: center;
+}
+.honda #xxnavwrapper.hasSubNav > ul {
+	background: -moz-linear-gradient(top, #2f2f2f 0%, #2f2f2f 2%, #545454 18%, #545454 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2f2f2f), color-stop(2%,#2f2f2f), color-stop(18%,#545454), color-stop(100%,#545454)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #2f2f2f 0%,#2f2f2f 2%,#545454 18%,#545454 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #2f2f2f 0%,#2f2f2f 2%,#545454 18%,#545454 100%); /* Opera 11.10+ */
+	background: linear-gradient(to bottom, #2f2f2f 0%,#2f2f2f 2%,#545454 18%,#545454 100%); /* W3C */
+}
+.honda #navwrapper.hasSubNav > ul {
+	background: #545454 url(/assets/images/honda/topnav-bg.png) top left repeat-x;
+	height: 45px; /* fix to stop Samsung render issue*/
+}
+.honda #navwrapper.hasSubNav > ul > li.selected > a {
+	background: #747474 url(/assets/images/honda/topnav-bg.png) top left repeat-x;
+	height: 45px; /* fix to stop Samsung render issue*/
+}
+.honda #navwrapper ul#quicklinks {background: none;}
+.honda #navwrapper li {
+  display: inline-block;
+  font-size: 16px;
+}
+.honda #navwrapper a:hover {
+	background-color: #888;
+}
+.honda #navwrapper a {
+  color: #fff;
+  display: inline-block;
+  height: 45px;
+  line-height: 45px;
+  padding: 0 20px;
+  text-decoration: none;
+  font-size: 0.9em;
+}
+.honda #navwrapper .minilogo a:hover {background: none;}
+
+.honda #navwrapper ul#subnav a {
+	line-height: 36px;
+	height: 36px;
+}
+.honda #navwrapper ul#subnav {
+	top: 45px;
+	height: 36px;
+}
+
+.honda #navwrapper ul ul {
+	top: 45px;
+	height: 36px;
+}
+
+#navwrapper ul ul a {
+	line-height: 36px;
+	height: 36px;
+}
+
+#navwrapper li ul {
+	background-color: #545454;
+	background: -moz-linear-gradient(left,  #545454 10%, #747474 20%, #747474 80%, #545454 90%);
+	background: -webkit-gradient(linear, left top, right top, color-stop(10%,#545454), color-stop(20%,#747474), color-stop(80%,#747474), color-stop(90%,#545454));
+	background: -webkit-linear-gradient(left,  #545454 10%,#747474 20%,#747474 80%,#545454 90%);
+	background: -o-linear-gradient(left,  #545454 10%,#747474 20%,#747474 80%,#545454 90%);
+	background: -ms-linear-gradient(left,  #545454 10%,#747474 20%,#747474 80%,#545454 90%);
+	background: linear-gradient(to right,  #545454 10%,#747474 20%,#747474 80%,#545454 90%);
+	
+	display: none;
+	left: 0;
+	position: absolute;
+	width: 100%;
+	z-index: 999;
+}
+
+#navwrapper .selected ul {
+  display: block;
+}
+#navwrapper .selected  > a,
+#navwrapper .selected li {
+	background-color: #747474;
+}
+#navwrapper .selected > a {
+	font-weight: bold;
+	position: relative;
+	z-index: 999;
+}
+#navwrapper .selected > a:after {
+	background: url(/assets/images/honda/sprite-nav-icons.png) no-repeat center -179px;
+	position: absolute;
+	content: " ";
+	display: block;
+	height: 24px;
+	left: 0;
+	top: 100%;
+	width: 100%;
+	z-index: 1;
+	*zoom: 1;
+}
+/* --- Mini Honda Logo --- */
+#navwrapper .minilogo {
+	background: url(/assets/images/honda/sprite-nav-icons.png) no-repeat 0 -385px;
+	opacity:0;
+	/*margin-left: -54px;*/
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	-webkit-transition:all .25s ease-in-out;
+	-moz-transition:all .25s ease-in-out;
+	-o-transition:all .25s ease-in-out;
+	transition:all .25s ease-in-out;
+	width:54px;
+	height: 40px;
+	position: absolute;
+	margin-left: -40px;
+}
+#navwrapper .minilogo a{
+	display: none;
+	padding: 0;
+}
+/* --- Sticky menu --- */
+#navwrapper.header-fixed { position: fixed; z-index: 1000; top: 0; width: 100%; left: 0; }
+#navwrapper.header-fixed .minilogo {
+	opacity:1;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+#navwrapper.fixed .minilogo a{
+	display: block;
+}
+
+/* Quicklinks */
+nav #quicklinks {
+	position: fixed;
+	right: 0;
+	top: 35%;
+	z-index: 1000;
+	background: transparent;
+	box-shadow: none;
+}
+#quicklinks li {
+	margin-bottom: 5px;
+	-moz-box-shadow: -1px 1px 0px #303232;
+	-webkit-box-shadow: -1px 1px 0px #303232;
+	box-shadow: -1px 1px 0px #303232;
+	display: block;
+	background: #303232;
+	position: relative;
+	width: 64px;
+	height: 74px;
+}
+#quicklinks a {
+	font-size: 0.55em;
+	line-height: 1.365em;
+	border: solid 2px #909090;
+	width: 54px;
+	padding: 9px 4px 16px 2px;
+	text-align: center;
+	text-transform: uppercase;
+	background: #797979 url(/assets/images/honda/sprite-nav-icons.png) no-repeat 4px -480px;
+	height: 45px;
+	position: absolute;
+	left: 1px;
+	bottom: 1px;
+}
+.ie8 #quicklinks a {left:2px; bottom:2px;}
+
+#navwrapper #quicklinks a:hover {
+	background-color: #c00;
+	border: solid 2px #db7979;
+	color: #fff;
+}
+
+.scrollPage #gallery {
+	padding-bottom: 30px;
+}
+
+
+/* --- Landing pages --- */
+.landing #footer {
+	background: none;
+	padding-top: 27px;
+}
+
+.landing #navwrapper {
+	-webkit-box-shadow: none;
+	-moz-box-shadow:none;
+	box-shadow: none;
+}
+
+.landing #navwrapper ul {
+	text-align: left;
+}
+.landing #navwrapper:after {
+	background: none;
+	width: 0;
+	height: 0;
+}
+.landing #navwrapper .selected > a {
+	background-color: #fff;
+	color: #333;
+	position: static;
+}
+.landing #navwrapper .selected > a:hover {
+	color: #c00;
+}
+.landing #navwrapper a:hover {
+  color: #fff;
+}
+.landing #navwrapper .selected > a:after {
+	background: transparent;
+}
+.landing #navwrapper .minilogo{
+	display: none;
+}
+.landing h1 { 
+	font-weight: normal;
+	font-size: 3.27em;
+	position: absolute;
+	top: 60px;
+	left: 20px;
+	line-height: 26px;
+}
+.landing .tagline {
+	margin-top: 0;
+	font-size: 2em;
+	line-height: 1.2em;
+	position: absolute;
+	top: 97px;
+	left: 20px;
+}
+.landing .mainhero {
+	position: absolute;
+}
+.landing .boxshadow {
+	padding-top: 424px;
+}
+.landing .containershadow {
+	padding-bottom: 50px;
+	background: url("/assets/images/honda/landing-promo-bg.png") no-repeat center -6px;
+
+}
+.landing #navwrapper {
+	margin: 0;
+	width: 940px;
+	margin: 0 auto;
+}
+.landing section {
+	overflow: hidden;
+	width: 906px;
+	margin: 0 auto;
+	padding-top: 14px;
+}
+.landing .outerglow {
+	float: left;
+	background: url("/assets/images/honda/promo-outerglow.png") no-repeat center 0;
+	padding: 3px;
+}
+.landing .range {
+	margin-right: 16px;
+}
+.landing .offers {
+	margin-right: 17px;
+}
+.landing article {
+	width: 285px;
+	height: 139px;
+}
+.landing h2 {
+	font-size: 1.5em;
+	margin-left: 13px;
+	text-align: center;
+	padding-top: 112px;
+}
+.landing h2 a {
+	text-decoration: none;
+	color: #333;
+	background: url(/assets/images/honda/sprite-nav-icons.png) no-repeat right -332px;
+	padding-right: 40px;
+	margin: 0 auto;
+}
+.slide{
+  background-repeat:    no-repeat;
+  background-position:  top center;
+  background-color:   transparent !important;
+  width:100% !important;
+  height:100%;
+}
+.swoosh {
+	position:relative;
+	right: -871px;
+	top: 347px;
+	width:56px; 
+	display:none;
+}
+#crv360 #spinner,
+#civic360 #spinner,
+#jazz360 #spinner {
+	bottom:100px;
+	left:875px;
+}
+#container-360 #spinner span.percentage {
+	left:10px;
+}
+.ie8 #container-360 #spinner span.percentage {
+	left:10px;
+}
+#block-360 {
+	position:absolute;
+	top:-35px;
+}
+.ie8 .threesixty_images {
+	width:1100px;
+	left:-30px;
+}
+#loading360{
+	display:block;
+	position:absolute;
+	font-size:13px;
+	font-weight:bold;
+	color:#eaea;
+	right:143px;
+	bottom:153px;
+}
+.ie8 #loading360{
+	right:238px;
+}
+
+#canvas {width:100% !important;}
+#container {width:940px;margin:0 auto;}
+#contentcontainer { width: 980px; margin: auto; }
+
+.boxshadow {
+	-moz-box-shadow: 0 0px 5px 5px rgba(204,204,204,.2);
+	-webkit-box-shadow: 0 0px 5px 5px rgba(204,204,204,.2);
+	box-shadow: 0 0px 5px 5px rgba(204,204,204,.2);
+ }
+.ie8 .boxshadow {
+   /*oom: 1;*/
+   filter: progid:DXImageTransform.Microsoft.Shadow(Color=#cccccc, Strength=5, Direction=0),
+         progid:DXImageTransform.Microsoft.Shadow(Color=#cccccc, Strength=5, Direction=90),
+         progid:DXImageTransform.Microsoft.Shadow(Color=#cccccc, Strength=5, Direction=180),
+         progid:DXImageTransform.Microsoft.Shadow(Color=#cccccc, Strength=5, Direction=270);
+}
+
+
+
+/**************************************************
+
+
+							OPTIONS & ACCESSORIES
+
+
+**************************************************/
+
+.opt-acc #main > section {
+	width: 980px;
+	margin: 0 auto;
+	background: url("/assets/images/honda/reviews-section-bg.png") no-repeat center 0;
+	position: relative;
+}
+
+.opt-acc h1 {
+	width: 940px;
+	margin: 0 auto;
+	padding-top: 43px;
+	padding-bottom: 28px;
+}
+
+.detached {
+	overflow: hidden;
+	width: 920px;
+	margin: 0 auto;
+	padding: 49px 0 100px 20px;
+}
+
+.detached section {
+	float: left;
+}
+
+.detached > section {
+	width: 250px;
+}
+.detached > section.options > h2 {
+	margin-bottom: 8px;
+}
+.detached > section.options > h2, 
+.detached > section.options > p {
+	padding-left: 5px;
+	width: 72%;
+}
+.detached > section.options > h2 + p {
+	margin-top: 0px;
+}
+.detached > section.options > p {
+	line-height: 17px;
+}
+.detached > section + section {
+	width: 620px;
+	padding-right: 0;
+	padding-top: 3px;
+	margin-left: 50px;
+}
+
+.detached h2 {
+	font-size: 2.4em;
+}
+
+.cr-v #main {
+	background: url("/assets/images/honda/crv-banner-sml.jpg") no-repeat center 0;
+	min-height: 700px;
+}
+.civic #main {
+	background: url("/assets/images/honda/civic-banner-sml.jpg") no-repeat center 0;
+	min-height: 700px;
+}
+.jazz #main {
+	background: url("/assets/images/honda/jazz-banner-sml.jpg") no-repeat center 0;
+	min-height: 700px;
+}
+.insight #main {
+	background: url("/assets/images/honda/insight-banner-sml.jpg") no-repeat center 0;
+	min-height: 700px;
+}
+.cr-z #main {
+	background: url("/assets/images/honda/cr-z-banner-sml.jpg") no-repeat center 0;
+	min-height: 700px;
+}
+.accordsaloon #main {
+	background: url("/assets/images/honda/accordsaloon-banner-sml.jpg") no-repeat center 0;
+	min-height: 700px;
+}
+.accordtourer #main {
+	background: url("/assets/images/honda/accordtourer-banner-sml.jpg") no-repeat center 0;
+	min-height: 700px;
+}
+
+.detached .side p {
+	margin-top: 0;
+}
+
+.detached nav {
+	margin-top: 13px;
+}
+
+.detached nav ul {
+	list-style: none;
+	margin: 0;
+}
+
+.detached nav li {
+	background: url(/assets/images/honda/detached-nav-bg.png) no-repeat 0 1px;
+	overflow: hidden;
+}
+
+.detached nav li:first-child {
+	background: none;
+}
+
+.detached nav li a {
+	text-decoration: none;
+	color: #333;
+	font-size: 1.4em;
+	font-weight: bold;
+	text-transform: uppercase;
+	display: block;
+	line-height: 3.5em;
+}
+
+.detached nav a.selected {
+	color: #c00;
+	background: #fff url(/assets/images/honda/sprite-nav-icons.png) no-repeat right -347px;
+}
+
+.detached nav a:hover {
+	color: #c00;
+}
+
+.detached small {
+	font-size: 0.85em;
+}
+
+.detached .options figure {
+	margin: 14px 18px 0 0;
+	float: left;
+}
+
+.detached figure img {border:1px solid #ccc;}
+.detached .accessories figure img {width:82px; height: 82px;}
+
+.detached .options figure:nth-child(2n-2) {
+	margin-right: 0px;
+}
+.detached .options .figure-wrap {
+	margin: 13px 0 0 4px;
+}
+
+.detached figcaption {
+	font-size: 1.2em;
+	padding-top: 5px;
+}
+
+.detached .cta {
+	border: none;
+	color: #fff;
+	font-size: 1.4em;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 9px 57px 10px 8px;
+	background: #333 url("/assets/images/honda/sprite-nav-icons.png") right -513px no-repeat;
+	text-decoration: none;
+}
+.detached .accessories a.cta {
+	display: block;
+	padding:9px 40px 0px 8px;
+	background: #333 url("/assets/images/honda/sprite-nav-icons.png") 175px -513px no-repeat; 
+	width: 80%;
+}
+.detached .accessories article.selected.details div a.cta {
+  padding: 9px 40px 9px 8px;
+}
+.build-cta {
+	padding-top: 45px;
+	margin-left: 5px;
+}
+.build-cta a:hover, .accessories a.cta:hover {background-color: #c00;}
+
+.detached .accessories a.cta.simple {
+	background: url("/assets/images/honda/sprite-nav-icons.png") right -706px no-repeat;
+	float: left;
+	margin-top: 20px;
+	color: #000;
+	width: auto;
+	padding: 9px 45px 4px 0px;
+	margin-right: 20px;
+}
+
+.detached .accessories a.cta.simple:hover {
+	color: #c00;
+	background-position: right -730px;
+}
+
+.cr-v .options aside {
+	position: absolute;
+	left: 145px;
+}
+
+.cr-v .accessories aside {
+	position: absolute;
+	right: -156px;
+	top: 26px;
+}
+
+.cr-v .accessories > h2 {
+	width: 40%;
+}
+
+.cr-v .accessories p {
+	width: 45%;
+}
+
+
+.accessories .details {
+	overflow: hidden;
+}
+
+.accessories .selected.details {display: block;}
+.accessories .details {display: none;}
+
+.accessories .details img {
+	float: left;
+	margin-right: 14px;
+}
+
+.accessories .details > div {
+	float: right;
+	width: 220px;
+}
+
+.accessories .details h2 {
+	font-size: 1.8em;
+	font-weight: normal;
+	margin-top: 0;
+}
+
+.accessories .details p {
+	width: auto;
+}
+
+.accessories p > b {
+	font-size: 1.7em;
+}
+
+.accessories .thumbs {
+	margin-top: 50px;
+	overflow: hidden;
+	background-color: #f6f6f6;
+	padding: 10px;
+}
+
+.accessories .thumbs > h3 {
+	font-size: 1.4em;
+	margin-bottom: 0;
+}
+
+.accessories .figure-wrap {font-size: 0; width: 620px;}
+.detached .accessories figure {
+	margin: 17px 0 0 0;
+}
+.accessories .thumbs figure {
+	width: 84px;
+	margin-right: 19px;
+	display: inline-block;
+	min-height: 1px;
+	vertical-align: top;
+	cursor: pointer;
+}
+
+.accessories figure:nth-child(6n-6) {
+	margin-right: 0;
+}
+.accessories .thumbs figure.selected {
+	outline: #c00 solid 1px;
+}
+.accessories figcaption {
+	font-size: 10px;
+}
+
+.accessories #pcyld {width:100%; font-size: 12px;}
+
+/* Style radio buttons with nice green tick */
+
+.buyerTypeButtons { padding-top: 35px; }
+.buyerTypeButtons input[type="radio"],
+.buyerTypeButtons input[type="checkbox"] {
+    display:none;
+}
+.buyerTypeButtons input[type="radio"] + label span {
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-1px 5px 2px 21px;
+    vertical-align:middle;
+    background:url(/assets/images/honda/sprite-nav-icons.png) -16px -575px no-repeat;
+    cursor:pointer;
+}
+.buyerTypeButtons input[type="checkbox"] + label span {
+    display:inline-block;
+    float: right;
+    width:19px;
+    height:19px;
+    margin:-1px 0px 0px 7px;
+    vertical-align:middle;
+    background:url(/assets/images/honda/sprite-nav-icons.png) -16px -575px no-repeat;
+    cursor:pointer;
+}
+.buyerTypeButtons input[type="radio"]:checked + label span,
+.buyerTypeButtons input[type="checkbox"]:checked + label span {
+    background:url(/assets/images/honda/sprite-nav-icons.png) -16px -551px no-repeat;
+}
+
+/* turn back to default for ie8 */
+.ie8 .buyerTypeButtons input[type="radio"],
+.ie8 .buyerTypeButtons input[type="checkbox"] {
+  display: inline-block;
+  margin: 0 0 0 15px;
+}
+.ie8 .buyerTypeButtons input[type="radio"] + label span,
+.ie8 .buyerTypeButtons input[type="checkbox"] + label span {
+  display:none;
+}

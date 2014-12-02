@@ -1,0 +1,1083 @@
+/* Compressed with http://refresh-sf.com/yui/ */
+
+.honda {
+  background-color: #fff;
+  font-family: Arial, 'Helvetica Neue';  
+}
+.honda #wrapper {
+	min-width: 980px;
+	max-width: 1680px;
+	margin: 0 auto;
+	background-color: #fff;
+}
+
+.honda .hide-text { text-indent: -9999px; white-space: nowrap; }
+
+/* Global Navigation
+-------------------------------------------------------------- */
+
+.honda #carsHeader a { font-weight: bold; text-transform: uppercase; }
+.honda #menu a {	font-size: 14px; }
+.honda #carsHeader {
+	margin: auto;
+	height: 77px;
+	width: 980px;
+	overflow: visible;
+	position: relative;
+}
+.honda #carsHeader a { color: #333; }
+.honda #menu a { font: bold 14px/14px Arial, sans-serif; padding: 32px 10px 29px 12px; }
+.honda #menu a:hover { color: #c00; }
+.honda #menu .new > a { width: 92px; color: #c00; position: relative; height: 16px; }
+.honda #menu .new > a span {
+	display: inline-block;
+	position: absolute;
+	right: 9px;
+	top: 34px;
+	width: 11px;
+	height: 11px;
+	background: url(/assets/images/honda/sprite-nav-icons.png) no-repeat -17px -366px;
+
+	-webkit-transform: rotate(90deg); /* Safari */
+	-moz-transform: rotate(90deg); /* Firefox */
+	-ms-transform: rotate(90deg); /* IE */
+	-o-transform: rotate(90deg); /* Opera */
+}
+
+.honda .ie8 #menu .new > a span {
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1); /* Internet Explorer 8*/
+}
+
+.honda #tools a { font: bold 11px/11px Arial, sans-serif; }
+.honda .nav { float: left; overflow: hidden; }
+.honda .nav ul { margin: 0; padding: 0 }
+.honda .nav li { display: inline; }
+.honda .nav a { text-transform: uppercase; text-decoration: none; display: inline-block; }
+.honda .nav li.new.true { background-color: rgb(234,234,234); display: inline-block; }
+.honda .nav li.new > a:hover > span { background-position: -100px -38px; }
+.honda .nav li.new > a.menu-selected {
+	color: #c00;
+	background: rgb(236,236,236); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(234,234,234,1) 0%, rgba(236,236,236,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(234,234,234,1)), color-stop(100%,rgba(236,236,236,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(234,234,234,1) 0%,rgba(236,236,236,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(234,234,234,1) 0%,rgba(236,236,236,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(234,234,234,1) 0%,rgba(236,236,236,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(234,234,234,1) 0%,rgba(236,236,236,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ececec', endColorstr='#fcfcfc',GradientType=0 ); /* IE6-9 */
+}
+.honda .nav li.new > a.menu-selected > span { background-position: -99px -20px; }
+.honda .nav ul#new-dropdown > li:hover { background-color: #dcdcdc; }
+.honda .nav ul#new-dropdown > li:last-child:hover { background-color: transparent; }
+.honda .nav ul#new-dropdown { z-index: 999; position: absolute; left: 0; top: 77px; width: 331px;
+	/* Start :: Gradient background */
+	background: rgb(234,234,234); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(234,234,234,1) 0%, rgba(252,252,252,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(236,236,236,1)), color-stop(100%,rgba(252,252,252,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(234,234,234,1) 0%,rgba(252,252,252,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(234,234,234,1) 0%,rgba(252,252,252,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(234,234,234,1) 0%,rgba(252,252,252,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(234,234,234,1) 0%,rgba(252,252,252,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ececec', endColorstr='#fcfcfc',GradientType=0 ); /* IE6-9 */
+	/* End :: Graident background */
+	/* Start :: Box shadow */
+	-webkit-box-shadow: 0px 6px 8px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    0px 6px 8px rgba(50, 50, 50, 0.75);
+	box-shadow:         0px 6px 8px rgba(50, 50, 50, 0.75);
+	/* End :: Box shadow */
+}
+.honda .nav #new-dropdown a { display: block; float: left; width: 319px; text-indent: 149px; padding-top: 20px; padding-bottom: 18px; padding-right: 0; position: relative; }
+.honda .nav #new-dropdown > li { background: url(/assets/images/honda/car-nav-sprite.png) 0 0 no-repeat; display: block; height: 52px; }
+.honda .nav #new-dropdown > li.cr-v { background-position: 0 8px; }
+.honda .nav #new-dropdown > li.newcivic { background-position: 0 -44px; }
+.honda .nav #new-dropdown > li.jazz { background-position: 0 -96px; }
+.honda .nav #new-dropdown > li.insight { background-position: 0 -148px; }
+.honda .nav #new-dropdown > li.cr-z { background-position: 0 -200px; }
+.honda .nav #new-dropdown > li.accordsaloon { background-position: 0 -252px; }
+.honda .nav #new-dropdown > li.accordtourer { background-position: 0 -304px; height: 52px; }
+.honda .nav #new-dropdown .viewrange { height: 43px;
+	background: rgb(204,13,13); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(204,13,13,1) 0%, rgba(143,2,2,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(204,13,13,1)), color-stop(100%,rgba(143,2,2,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(204,13,13,1) 0%,rgba(143,2,2,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(204,13,13,1) 0%,rgba(143,2,2,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(204,13,13,1) 0%,rgba(143,2,2,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(204,13,13,1) 0%,rgba(143,2,2,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc0d0d', endColorstr='#8f0202',GradientType=0 ); /* IE6-9 */
+}
+.honda .nav #new-dropdown .viewrange a { text-indent: 0;	color: #fff; padding-left: 25px; padding-top: 16px; padding-bottom: 0; }
+.honda .viewrange a:hover { color: #000; }
+.honda #new-dropdown a:hover span { background-position: -17px -366px; }
+.honda #new-dropdown .viewrange a:hover span { background-position: -17px -309px; }
+.honda #carsHeaderOverlay { position: absolute;
+	left: 0px;
+	top: 80px;
+	width: 100%;
+	height: 100%;
+	background: rgb(0,0,0);
+	background: rgba(0,0,0,.3);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#30000000, endColorstr=#30000000);
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#30000000, endColorstr=#30000000)";
+	z-index: 100;
+	filter: alpha(opacity = 30);
+	zoom: 1;
+}
+.honda .logo { float: left; margin-left: 25px; }
+
+/* --- Tools nav --- */
+.honda #tools { margin-top: 18px; margin-left: 42px; }
+.honda #tools li {
+	list-style: none;
+	margin-right: 4px;
+	margin-bottom: 4px;
+	float: left;
+  	-moz-box-shadow:    2px 3px 0px 0px #d1d1d1;
+  	-webkit-box-shadow: 2px 3px 0px 0px #d1d1d1;
+  	box-shadow:         2px 3px 0px 0px #d1d1d1;
+}
+
+.honda .ie8 #tools li {
+	filter: progid:DXImageTransform.Microsoft.DropShadow(color='#FFd1d1d1', offX=2, offY=3);
+}
+
+.honda #tools li a {
+	background: url("/assets/images/honda/sprite-nav-icons.png") no-repeat 0 0; 
+	background-color: #f3f3f3;
+	padding: 6px 28px 5px 7px;
+	display: block;
+}
+
+.honda #tools li a:hover {
+	background-color: #c2c2c2;
+	color:#333;
+}
+.honda #tools li { 
+	border: solid 1px #fff; 
+}
+.honda #tools .showroom a { background-position: 43px -452px; width: 49px; }
+.honda #tools .testdrive a { background-position: 67px -452px; width: 73px; white-space: pre-wrap; }
+.honda #tools .brochure a { background-position: 61px -452px; width: 68px; }
+.honda #carsHeader #search p { top: 36px; right: 0; z-index: 10; float: right; width: 77px; margin-top: 23px; }
+.honda #carsHeader #search a {
+	width: 70px;
+	height: 23px;
+	float: none;
+	text-indent: 0;
+	font: bold 12px/14px Arial, sans-serif;
+	text-transform: uppercase;
+	background: url("/assets/images/honda/sprite-nav-icons.png") -2px -91px no-repeat;
+	padding-left: 18px;
+	padding-top: 10px;
+	margin-left: 5px;
+	margin-right: 0;
+	border-bottom: solid 1px #333;
+	text-decoration: none;
+}
+.honda #carsHeader #search .open { top: 24px; width: 300px; height: 41px; background: none; }
+.honda #carsHeader #search .open a { margin-top: 0; background-position: auto; }
+.honda #carsHeader #search input {
+	display: none;
+	float: left;
+	margin: -1px 0 0 50px;
+	padding: 7px;
+	border: solid 1px #ccc;
+	width: 157px;
+	text-transform: uppercase;
+	font-size: 0.85em;
+}
+.honda #carsHome #carsHeader #search p {
+	margin-top: 28px;
+}
+.honda #carsHome #carsHeader #search input {
+	margin-top: -5px;
+}
+.honda .coverbox { display: none; }
+.honda #new-dropdown span,
+.honda .viewrange span { display: inline-block; position: absolute; right: 12px; top: 21px; width: 11px; height: 11px; background: url(/assets/images/honda/sprite-nav-icons.png) no-repeat -17px -336px; }
+.honda #new-dropdown .viewrange span { right: 25px; top: 17px; background-position: -17px -309px; }
+
+
+
+
+/* Global Footer
+-------------------------------------------------------------- */
+
+.honda #footer { padding-top: 62px; background: #fff url(/assets/images/honda/footer-bg.png) repeat-x 0 0; width: 100%;overflow: hidden;}
+.honda .create #footer { margin-top: 0; }
+.honda #footercontent,
+.honda #copyrightcontent { width: 980px;  margin: auto; overflow: hidden;}
+.honda #footercontent, .honda #footernav, .honda #copyrightcontent { overflow: hidden; }
+.honda #promo, .honda #footernav, .honda #footernav div, .honda .terms { float: left; }
+.honda #footer ul { margin: 0; padding: 0; }
+.honda #footer li { list-style: none; }
+.honda #footer a { font-size: 1.1em; line-height: 1.488em; color: #333; text-decoration: none; white-space: nowrap; }
+.honda #footer a:hover { color: #c00; }
+.honda #promo { width: 300px; margin-top: -26px; margin-bottom: 17px; }
+.honda #promo img[alt="Meet Asimo"] { padding-bottom: 0; }
+.honda #copyright { background-color: #ececec; padding: 7px 0; overflow: hidden;}
+.honda .terms { text-indent: 349px; overflow: hidden;}
+.honda .terms li { display: inline; margin-right: 15px; }
+.honda .social { float: right; margin-right: 10px; }
+.honda .social li { float: left; }
+.honda .social a { display: block; height: 20px; margin-left: 18px; background: url(/assets/images/honda/sprite-nav-icons.png) no-repeat 0 0; }
+.honda .social li:first-child a { background-position: 0 -213px; width: 50px; }
+.honda .social li:nth-child(2) a { background-position: 0 -243px; width: 21px; }
+.honda .social li:nth-child(3) a { background-position: 0 -272px; width: 19px; }
+.honda #footernav { padding-left: 48px; }
+.honda #footernav div { width: 168px; }
+.honda #footernav div:last-child { width: 108px; }
+.honda #footer h6 { font-size: 1.2em; }
+.honda #footer h6, .honda #footernav h6 { margin-bottom: 18px; }
+
+.honda #content {position:relative;z-index:1;width: 100%;}
+.honda .carProduct #content {position: absolute; top: 374px;
+				/* For Flash */ left: 0; z-index: 50;}
+
+/* New cars template */
+.honda #body					{position:relative;z-index:1;width: 100%; min-height: 65px; }
+.honda #canvas					{position:relative;z-index:1;width: 980px; margin: 0 auto; position:relative; min-height: 590px; }
+.honda #carsHome #canvas { min-height: 613px; }
+.honda #carsHome #footer {
+	padding-top: 60px;
+	margin-top: 0;
+}
+
+
+.honda #body #content			{min-height: 200px; margin: 0 20px; padding: 0 20px 20px;}
+.honda #body #content			{width: auto; background: #fff;} /* Corrective */
+
+/* Pages with sub nav */
+.honda .bodyPage #canvas			{ padding-top:230px; }
+.honda .bodyPage #body #content	{ padding:1px 0 0; background:transparent url(/assets/images/honda/dividerDottedLine.gif) 0 top repeat-x; }
+.honda .bodyPage #primary			{ float:left; width:700px; padding:22px; background:#fff; }
+
+.honda #contentWrap{position:relative;z-index:1}
+.honda #flashWrap{position:relative;z-index:1}
+
+.honda #content #contentCopy {margin: 0 auto; text-align: left; width: 980px;}
+.honda #content #contentCopy h1 {margin: 0; padding: 0; font-size: 2.8em;}
+.honda .hr {line-height: 1px; /*needed for IE/win*/ font-size: 1px; /*needed for IE/win*/ height: 1px; background: #aaa url(/assets/images/honda/footer-line.gif) repeat-x 0 0; margin: 15px 0;}
+.honda #secondOpinion .hr {clear:left;}
+.honda .hidden {display: none;}
+.honda #placeholder {margin-left: 20px;}
+.honda .content {margin-right: 20px;}
+
+.honda #brief {margin-bottom: 26px;}/* THIS WAS AFFECTING FLEETRANGE PAGES LAYOUT - WILL TAKE OUT AFTER VERIFYING IT DOESN'T MESS UP OTHER AREAS */
+/* Menu fixes */
+.honda #briefContent,
+.honda #detailContent	{z-index: 50; position: relative;} /* Required to make z-index work, now that it's over the Flash layer */
+.honda #detailContent {margin-left: 20px;}
+.honda #brief .productNav {margin-left: 20px;}
+.honda #detail .productNav {margin-left: 20px;}
+.honda #brief .productNav ul {margin-left: 0; padding-left: 0; margin-bottom: 0; padding-bottom: 0;}
+.honda #brief .productNav li, #detail .productNav li {display: inline;}
+.honda #inspire {height: 170px; background-position: 50% 0;
+				/* For Flash */ position: absolute; top: 77px; left: 0; width: 100%; z-index: 1;}
+/* New rules for making the transition nicer when the nav changes/dissappears JS only */
+.honda .panel			{position: relative;}
+.honda .panelBG		{background: transparent url(/assets/images/honda/panel-bottom.png) no-repeat 20px bottom; padding-bottom: 7px;}
+.honda #renderContent	{position: absolute; top: 0; left: 0; visibility: hidden; overflow: hidden; width: 980px;}
+.honda .panelIndicator	{position: absolute; top: 0; right: 20px; z-index: 100;}
+.honda #brief .panelIndicator	{right: 110px;}
+.honda .panelRenderer	{position:absolute;visibility:hidden;display:block;width:980px;}
+
+.honda .window0,
+.honda .window1		{ background:url(/assets/images/honda/panel-top-shadow.gif) 0 0 no-repeat; }
+.honda #brief .window0,
+.honda #brief .window1	{ background-position: 20px 0; }
+
+.honda #inspireOffer	{width: 940px; margin: 80px auto 0; text-align: left;}
+
+
+
+/*layout for inBrief panel*/
+
+/*Philosophy*/
+.honda #breakout {width: 645px; position: absolute;}
+
+/*Top Features*/
+.honda #nonBreakoutWrapper {margin-left: 20px; padding-top:20px;}
+.honda #contentLink {padding-top: 16px;}
+
+.honda #saloonrPhilosophy {margin-left: 7px;}
+.honda #exploreCopy {float: right; width: 293px; background: #fff; height: 586px; padding-top: 30px; padding-left: 22px; padding-right: 20px; margin-right: 20px;}
+.honda #exploreCopy h4 {font-weight: bold; font-size: 1.5em;}
+.honda #exploreCar {position: absolute; left: 543px; top: 34px;}
+
+/*Model Grades*/
+.honda #modelGrades {background: #fff; margin-left: 20px;}
+.honda #models #rangeoverview_model-placeholder {float: left;}
+.honda #engineSizes {margin: 0 20px; position: relative;}
+.honda #modelGrades #engineSizes #engineCombos {float: left;}
+.honda #modelGrades #engineSizes #tableHeader #fuel {width: 230px;}
+.honda #modelGrades #engineSizes #tableHeader #mpg {width: 59px;}
+.honda #modelGrades #engineSizes #tableHeader #c02 {width: 71px;}
+.honda #modelGrades #engineSizes #tableHeader #roadTax {width: 75px;}
+.honda #modelGrades #engineSizes #tableHeader #link {width: 150px;}
+.honda #modelGrades #engineSizes #miniGallery {float: left; height: 92px; width: 227px; padding-top: 90px; padding-left: 73px;}
+
+.honda #featureList {background: no-repeat 620px 60px; float: left; width: 573px; margin:0 0 25px 20px;}
+.honda #featureList h4 {font-weight: bold;}
+.honda #featureList #featureItems {width: 586px; margin: 0 0 12px; padding: 0;}
+.honda #featureList #featureItems li {float: left; width: 180px; list-style: none; padding-left: 15px; color: #6a6565; background: url(bullet-inBrief.gif) no-repeat 0 2px; margin-bottom: 10px; margin-right: 0; padding-right: 0;}
+.honda #modelGrades #customise {float: left; width: 326px; padding-top: 12px;}
+.honda #modelGrades #customise #viewGallery {padding-top:-20px;text-align:right;}
+
+/*Colours*/
+#overviewColours {background: #fff; margin-left: 20px; position: relative;}
+#overviewColours #mainCarColour {float: left; width: 940px;}
+
+#overviewColours span {margin: 0 0 .2em; font-size: 150%; font-weight: bold; position: absolute; left: 450px; top: 260px;}
+#overviewColours #mainCarColour p {}
+#overviewColours #mainCar {width: 626px; height: 226px; padding: 5px;}
+#overviewColours #colourChooser {float: left;}
+#overviewColours #colourChooser .carColours {}
+#overviewColours #colourChooser h4 {font-weight: bold;}
+#overviewColours .carColours img {width: 100px; height: 100px; padding: 4px; border-style: none;}
+#overviewColours .carColours img:hover {border-color: #f90;}
+#overviewColours .carColours li {float: left; list-style: none;}
+#galleryContent {background: #fff; margin-left: 20px; width: 940px; padding-bottom: 20px;}
+#galleryContent #galleryVideo/*Gallery*/ {padding-left: 215px; padding-top: 59px; float: left;}
+#galleryContent #galleryVideoDetails {float: right; width: 225px; padding-left: 20px; padding-top: 184px;}
+#gallerySlider {background: #fff; margin-left: 20px; width: 920px; padding-left: 20px; padding-top: 55px; padding-bottom: 36px;}
+
+/*Second Opinion and Reviews*/
+#secondOpinion {background: #fff; margin-left: 20px; padding-top: 25px; padding-left: 20px;}
+#secondOpinionPress,
+#secondOpinionUser {float: left; padding-top: 19px; width: 450px;}
+#featurePressOpinion {margin-top: 19px; padding-bottom: 20px; width: 380px;}
+#featureUserOpinion {}
+#featurePressOpinion #paperHeading {background: url(secondopinion/paper-heading.png) no-repeat 0 0; width: 365px; padding-left: 15px; padding-top: 14px; padding-bottom: 5px;}
+#featurePressOpinion #paperHeading h3,
+#pressOpinions .pressOpinion h3 {font: 2em "Times New Roman", Times, serif; margin: 0; padding: 0;padding-right:15px;}
+#featurePressOpinion #paperContent {width: 345px; background: url(secondopinion/paper-content.png) repeat-y 0 0; padding-left: 15px; padding-right: 20px; padding-top: 15px;}
+#featurePressOpinion #paperContent p {margin: 0; padding: 0;}
+#featurePressOpinion #paperContent .pressDate,
+#pressOpinions .pressOpinion .pressDate {color: #939393; font-size: 95%; margin-top: 30px; padding-bottom: 13px;}
+#featurePressOpinion #paperBottom {background: url(secondopinion/paper-bottom.png) no-repeat 0 0; height: 9px; width: 380px;padding-bottom:40px;}
+#featurePressOpinion .opinionLogo img,
+#pressOpinion .opinionLogo img {margin: 0 1px 0 0;}
+#featureUserOpinion #speachBubbleHeading {background: #a9a9a9 url(secondopinion/speach-bubble-corner.png) no-repeat right 0; height: 41px; padding-left: 12px; padding-top: 13px; float: left; width: 364px; margin-top: 19px;}
+#featureUserOpinion #speachBubbleHeading #user {margin-top: 0; color: #fff;}
+#featureUserOpinion #speachBubbleContent {float: left; width: 350px; background: url(secondopinion/speach-bubble-edge.png) repeat-y center 0; padding-left: 13px; padding-right: 13px; padding-bottom: 30px;}
+#featureUserOpinion #speachBubbleBottm {float: left; width: 376px; background: url(secondopinion/speach-bubble-bottom.png) no-repeat 0 0; height: 40px; position: relative;}
+#hearFromYou h4 {margin: 0; padding: 0 5px 0 0; float: left; width: 150px;}
+#hearFromYou p {margin: 0; padding: 0 20px 0 0; float: left;}
+.hearfrom {padding-bottom: 36px;}
+#pressOpinions {padding-bottom: 35px;}
+#pressOpinions .pressOpinion {width: 442px; float: left; background: url(secondopinion/press-content.png) repeat;}
+#pressOpinions .pressOpinion h3 {margin-bottom: 15px; padding-top: 5px; background: url(secondopinion/press-heading-bg.png) repeat-y; padding-bottom: 10px; padding-left: 15px;}
+#pressOpinions .pressOpinion p {margin: 0 30px 0 15px; padding: 0;}
+#pressOpinions .pressOp1 {margin-right: 20px;}
+#pressOpinions .pressOpinion .logo {float: left; padding-left: 15px;}
+#yourOpinions, #pressOpinions {background: #fff; padding-left: 20px; padding-top: 23px; margin-left: 20px;}
+#yourOpinions #userOpinions,
+#pressOpinions .pressOpinion {margin-top: 24px;}
+#userOpinions .userOpinion {float: left; width: 286px; margin-right: 15px;}
+#userOpinions .userOpLast {margin-right: 0;}
+#userOpinions #speachBubbleHeading {background: #636363 url(secondopinion/speach-bubble-corner-dark.png) no-repeat right 0; height: 31px; padding-left: 12px; padding-top: 12px; float: left; width: 274px;}
+#userOpinions .userOpinion #speachBubbleHeading .userDetail {color: #fff; margin-top: 0;}
+#userOpinions #speachBubbleContent {float: left; width: 261px; background: url(secondopinion/speach-bubble-edge-dark.png) repeat-y center 0; padding-bottom: 30px; padding-left: 13px; padding-right: 12px;}
+#userOpinions #speachBubbleBottm {float: left; width: 286px; background: #fff url(secondopinion/speach-bubble-bottom-dark.png) no-repeat 0 0; height: 21px; position: relative; padding-top: 19px;}
+#yourSay {background: #fff; margin-left: 20px; padding: 23px 20px 35px;}
+#yourSay form {margin-top: 20px;}
+#yourSay #yourDetails {padding-left: 20px; background: url(secondopinion/your-details-grad.png) repeat-x 0 0; padding-bottom: 31px; height: 56px;}
+#yourSay #yourDetails  #detailheading {width: 100px; float: left; padding-top: 18px; padding-top: 20px;}
+#yourSay #yourDetails #details {width: 760px; float: left;}
+#yourSay #yourDetails .inputs {float: left; width: 170px;}
+#yourSay #yourDetails #emailAddress {width: 400px;}
+#yourSay #yourDetails .inputs label {display: block; padding-bottom: 2px;}
+#yourSay #message {float: left; width: 545px;}
+#yourSay #message label {width: 102px; display: block; float: left; padding-top: 5px; font-size: 1.5em; padding-left: 20px;}
+#yourSay #message #subject {margin-bottom: 18px;}
+#yourSay #message #comments {margin-bottom: 20px;}
+#yourSay #message #submitbtn {padding-left: 120px;}
+#yourSay #alternatives {float: left; width: 280px;}
+#yourSay #alternatives h3 {color:#363636;}
+#yourSay #alternatives #textus {margin-top: 35px;}
+#yourSay #alternatives p {margin-top: 5px;}
+#yourSay label span {color:#cc0000;}
+#responseFail, #responseSuccess {height:150px; font-size:1.1em;}
+.hide {display:none;}
+.show {display:block;}
+
+
+/*Gallery*/
+#galleryContent {background: transparent; margin-left: 0; width: auto; padding-bottom: 0;}
+#galleryContent #galleryVideo {padding-left: 215px; padding-top: 59px; float: left;}
+#galleryContent #galleryVideoDetails {float: right; width: 225px; padding-left: 20px; padding-top: 184px;}
+#gallerySlider {background: #fff; margin-left: 20px; width: 920px; padding-left: 20px; padding-top: 55px; padding-bottom: 36px;}
+#overviewColours #carGallery {width: 900px; height: 450px;}
+#overviewColours .carThumbs img {width: 90px; height: 45px; border-style: none;}
+#galleryContainer {width: 900px; height: 450px; position: relative; margin-left: 20px; padding: 20px 20px 0; }
+#galleryContent, #galleryFlash {position: absolute; top: 20px; left: 20px;}
+.indicator {position: absolute; top: 0; right: 0; height: 45px; width: 90px; background: url(../../../_assets/presentation/loading.gif) no-repeat center;}
+.sliderGallery ul li {display:list-item; float:left; position:relative; padding-left: 5px; text-align:center;}
+.sliderGallery ul li.firstofgroup {padding-left: 30px;}
+#galleryNavigationTip {position: absolute; height: auto; width: auto; padding: 7px 10px; right: 0; margin-top: 0; background-color: #000; color: #fff; opacity: 0.5; filter: alpha(opacity=50); -moz-opacity: 0.5; display: none;}
+.selected {filter: alpha(opacity=100); opacity: 1; -moz-opacity: 1;}
+
+/*Finance*/
+#financeContent {margin-left: 20px; padding-top: 20px; padding-left: 20px; padding-bottom: 20px;}
+#financeCopy #financeFind {margin-top: 30px; margin-bottom: 35px;}
+
+#sharperStyling {background: #fff; margin-left: 20px;}
+#styling {background: #fff; height: 415px; width: 296px; float: left;}
+#stylingHero {float: left;}
+#breakoutStyling {background: #fff; height: 415px; width: 295px; float: right; padding-right: 20px;}
+#breakoutStyling  h2 {margin-top: 20px;}
+#advancedSafety {margin-left: 20px;}
+#comms {background: #fff; margin-left: 20px;}
+#communication {float: left;}
+#commsCopy {float: left; width: 385px; padding-left: 58px;}
+#commsCopy h2 {padding-top: 0; padding-bottom: 0;}
+#commsCopy h3 {color: #8e8e8e; display: block; font-size: 1.4em; font-weight: bold;}
+#engine {background: #fff; padding-bottom: 15px;}
+#engineCopy {width: 404px; float: left; padding-left: 35px;}
+#engineCopy h2 {margin-top: 28px;}
+#engineCopy h3 {margin-top: 19px;}
+#i-DTEC {float: left;}
+#responsive {background: #fff;}
+#responsive h2 {float: left; width: 300px; display: block;}
+#responsive p {width: 555px; display: block; float: left;}
+div#responsivePerformance {float:left;}
+
+/*Test Drive*/
+#testDrive {min-height: 256px; padding-left: 20px; padding-top: 25px; padding-right: 20px;}
+#testDrive p {margin-top: 10px;}
+#testDrive form {margin-top: 10px;}
+#testDrive label.place{background:#fff; padding:5px 5px 3px;}
+#testDrive #findOutMore {margin-top: 10px;}
+#testDrive #differentCar {float: right;}
+#testDrive #differentCar a {color: #fff;}
+
+/*Full Specification*/
+#fullSpecs {padding-top: 23px; padding-bottom: 35px;}
+#specs {width: 467px; float: left; padding-left: 10px;}
+#specs #fullSpecMenu h2 {width:445px; float:left;}
+#fullSpecs .footNote {clear:both;color:#999;}
+#fullSpecData select.engine, #fullSpecData div.optionsGroup, #fullSpecData div.options {display: none;}
+#specs #fullSpecData {margin-bottom:15px;}
+#specs #fullSpecData table {width: 100%; text-align: left;}
+#specs #fullSpecData table td {font-size: 1.1em;}
+#specs #fullSpecData table tr.odd, #specs #fullSpecData table tr.odd th, #specs #fullSpecData table tr.odd td {background: #f0f1f2;}
+#specs #fullSpecData table tr.odd th, #specs #fullSpecData table tr th {background: url(fullspec/full-spec-divider.png) repeat-y right 0; font-weight: bold; font-size: 1.1em;}
+#specs #fullSpecData table tr.odd th, #specs #fullSpecData table tr th {background: url(fullspec/full-spec-divider.png) repeat-y right 0; font-weight: bold; text-align:left;}
+#specs #fullSpecData table tr.odd th {background: #f0f1f2 url(fullspec/full-spec-divider.png) repeat-y right 0;}
+#specs #fullSpecData h2 {float: left; margin-right: 10px; padding-top: 1px;}
+#specs #fullSpecData form {margin-bottom: 11px; clear: right;}
+#specs #fullSpecData form select {font: 1.1em Arial, Helvetica, sans-serif;}
+#specs #fullSpecData form #grade {margin-right: 16px;}
+#specs #fullSpecData h3 {color: #fff; background: #c00 url(fullspec/arrow-on.png) no-repeat 7px 10px; padding-top: 5px; padding-bottom: 5px; padding-left: 22px; margin-bottom: 0; font-size: 1.2em; border-top: solid 1px #fff;}
+#specs #fullSpecData h3.closed {color: #fff; border-top: solid 1px #fff; background: #b0b0b0 url(fullspec/arrow-off.png) no-repeat 8px 7px; text-align: left;}
+#specs #fullSpecData .optionsGroup {clear: both;}
+#specs #fullSpecData select {border: 1px solid #7b9cbd;}
+#specs #fullSpecData .specData {background: url(fullspec/table-shadow.png) repeat-x 0 0;}
+#specs #pdfLink, #specs #emailLink, #specs #printLink {float: left;}
+#specs #printLink {margin-left: 23px;}
+#specsSub {float: left; width: 383px; padding-left: 30px;}
+#specsSub #buildYourOwn h3 {font-size: 1.2em; color: #939393;}
+#specsSub #buildYourOwn #customise #price {float: left; margin-top: 0; padding-top: 4px; padding-bottom: 5px;}
+#specsSub #buildYourOwn #customise #price span {font-size: 2.4em; color: #464646;}
+#specsSub #buildYourOwn #customise #customiseLink {float: left; margin-left: 12px;}
+#specsSub #buildYourOwn #customise .poundSignXML {font-size: 2.4em; color: #464646;}
+#specsSub #buildYourOwn #customise acronym {font-size: 1.5em; color: #464646; font-weight: bold; padding-left: 3px;}
+#specsSub #fullSpecTestDrive {height: 165px; width: 365px; padding-top: 18px; padding-left: 17px; background: url(fullspec/accord-full-spec.jpg) no-repeat 0 0;}
+#specsSub #fullSpecTestDrive p {font-size: 1.2em; color: #333;}
+#specsSub #fullSpecTestDrive form {margin-top: 9px;}
+#specsSub #fullSpecTestDrive #postcodeplace, .place {border: 1px solid #999; font-family: Arial, Helvetica, sans-serif; color: #999; padding-left: 5px; padding-top: 2px; padding-bottom: 3px;}
+#specsSub #fullSpecTestDrive label.place {background:#fff; padding:5px 5px 3px;}
+
+/* Car Builder */
+.carBuilderFlashInstall {padding:5px 30px 30px 20px;}
+
+/*----------- START PRODUCT NAV ------------*/
+.productNav {clear: both; list-style: none; margin: 0; background: url(/cars/_assets/presentation/nav/nav.gif) 0 -68px no-repeat; height: 34px; width: 940px; position: relative; z-index: 60;}
+.productNav li {list-style: none; float: left;}
+
+/* Base & list items (on page, no link) */
+.productNav a {float: left; width: 100px; height: 0; padding-top: 34px; overflow: hidden; background: transparent url(/cars/_assets/presentation/nav/nav.gif) 0 0 no-repeat;}
+
+/* Off */
+.productNav .topfeatures a { width: 126px; background-position: -100px 0; }
+.productNav .rangeoverview a { width: 148px; background-position: -226px 0; }
+.productNav .philosophy a { width: 116px; background-position: -374px 0; }
+.productNav .gallery a { width: 87px; background-position: -490px 0; }
+.productNav .reviews a { width: 97px; background-position: -577px 0; }
+.productNav .offers a { width: 81px; background-position: -674px 0; }
+.productNav .fullspecification a { width: 154px; background-position: -755px 0; }
+.productNav .carbuilder a { width: 115px; background-position: -909px 0; }
+.productNav .testdrive a { width: 107px; background-position: -1024px 0; }
+.productNav .heritage a { width: 96px; background-position: -1131px 0; }
+.productNav .updates a { width: 155px; background-position: -1227px 0; }
+.productNav .limitedoffer a { width: 133px; background-position: -1382px 0; }
+.productNav .competition a { width: 123px; background-position: -1515px 0; }
+.productNav .vouchers a { width: 133px; background-position: -1638px 0; }
+.productNav .finance a { width: 93px; background-position: -1771px 0; }
+.productNav .doerfilm a { width: 104px; background-position: -1864px 0; }
+/*.productNav .newtypes a { width: 120px; background-position: -1968px 0; }*/
+.productNav .gtedition a { width: 139px; background-position: -2088px 0; }
+.productNav .tvad a { width: 78px; background-position: -2227px 0; }
+.productNav .doit a { width: 72px; background-position: -2305px 0; }
+.productNav .goodtogrow a { width: 133px; background-position: -2377px 0; }
+.productNav .accessories a { width: 123px; background-position: -2510px 0; }
+.productNav .theconcept a { width: 132px; background-position: -2726px 0; }
+.productNav .thenewcrz a { width: 148px; background-position: -2850px 0; }
+.productNav .crzontwitter a { width: 152px; background-position: -2988px 0; }
+.productNav .getcrzupdates a { width: 157px; background-position: -3142px 0; }
+.productNav .signup a { width: 96px; background-position: -3435px 0; }
+.productNav .winacrz a { width: 119px; background-position: -3531px 0; }
+.productNav .comparator a { width: 134px; background-position: -3301px 0; }
+.productNav .whyhybrid a { width: 127px; background-position: -3649px 0; }
+.productNav .crz a { width: 76px; background-position: -3776px 0; }
+.productNav .insight a { width: 86px; background-position: -3853px 0; }
+.productNav .civichybrid a { width: 123px; background-position: -3939px 0; }
+.productNav .jazz a { width: 71px; background-position: -4062px 0; }
+.productNav .beyondhybrid a { width: 141px; background-position: -4134px 0; }
+.productNav .faq a { width: 69px; background-position: -4274px 0;}
+.productNav .ecovelocity a { width: 108px; background-position: -4349px 0;}
+.productNav .nsxconcept a { width: 69px; background-position: -4463px 0;}
+
+/* Over & On */
+.productNav .topfeatures a:hover, .productNav .topfeatures a:focus, .prodNav1topfeatures .topfeatures a { background-position: -100px -34px; }
+.productNav .rangeoverview a:hover, .productNav .rangeoverview a:focus, .prodNav1rangeoverview .rangeoverview a { background-position: -226px -34px; }
+.productNav .philosophy a:hover, .productNav .philosophy a:focus, .prodNav1philosophy .philosophy a { background-position: -374px -34px; }
+.productNav .gallery a:hover, .productNav .gallery a:focus, .prodNav1gallery .gallery a { background-position: -490px -34px; }
+.productNav .reviews a:hover, .productNav .reviews a:focus, .prodNav1reviews .reviews a { background-position: -577px -34px; }
+.productNav .offers a:hover, .productNav .offers a:focus, .prodNav1offers .offers a { background-position: -674px -34px; }
+.productNav .fullspecification a:hover, .productNav .fullspecification a:focus, .prodNav1fullspecification .fullspecification a { background-position: -755px -34px; }
+.productNav .carbuilder a:hover, .productNav .carbuilder a:focus, .prodNav1carbuilder .carbuilder a { background-position: -909px -34px; }
+.productNav .testdrive a:hover, .productNav .testdrive a:focus, .prodNav1testdrive .testdrive a { background-position: -1024px -34px; }
+.productNav .heritage a:hover, .productNav .heritage a:focus, .prodNav1heritage .heritage a { background-position: -1131px -34px; }
+.productNav .updates a:hover, .productNav .updates a:focus, .prodNav1updates .updates a { background-position: -1227px -34px; }
+.productNav .limitedoffer a:hover, .productNav .limitedoffer a:focus, .prodNav1limitedoffer .limitedoffer a { background-position: -1382px -34px; }
+.productNav .competition a:hover, .productNav .competition a:focus, .prodNav1competition .competition a { background-position: -1515px -34px; }
+.productNav .vouchers a:hover, .productNav .vouchers a:focus, .prodNav1vouchers .vouchers a { background-position: -1638px -34px; }
+.productNav .finance a:hover, .productNav .finance a:focus, .prodNav1finance .finance a { background-position: -1771px -34px; }
+.productNav .doerfilm a:hover, .productNav .doerfilm a:focus, .prodNav1doerfilm .doerfilm a { background-position: -1864px -34px; }
+/*.productNav .newtypes a:hover, .productNav .newtypes a:focus, .prodNav1newtypes .newtypes a { background-position: -1968px -34px; }*/
+.productNav .gtedition a:hover, .productNav .gtedition a:focus, .prodNav1gtedition .gtedition a { background-position: -2088px -34px; }
+.productNav .tvad a:hover, .productNav .tvad a:focus, .prodNav1tvad .tvad a { background-position: -2227px -34px; }
+.productNav .doit a:hover, .productNav .doit a:focus, .prodNav1doit .doit a { background-position: -2305px -34px; }
+.productNav .goodtogrow a:hover, .productNav .goodtogrow a:focus, .prodNav1goodtogrow .goodtogrow a { background-position: -2377px -34px; }
+.productNav .accessories a:hover, .productNav .accessories a:focus, .prodNav1accessories .accessories a { background-position: -2510px -34px; }
+.productNav .theconcept a:hover, .productNav .theconcept a:focus, .prodNav1theconcept .theconcept a { background-position: -2726px -34px;}
+.productNav .thenewcrz a:hover, .productNav .thenewcrz a:focus, .prodNav1thenewcrz .thenewcrz a { background-position: -2850px -34px;}
+.productNav .crzontwitter a:hover, .productNav .crzontwitter a:focus, .prodNav1crzontwitter .crzontwitter a { background-position: -2988px -34px;}
+.productNav .getcrzupdates a:hover, .productNav .getcrzupdates a:focus, .prodNav1getcrzupdates .getcrzupdates a { background-position: -3142px -34px;}
+.productNav .signup a:hover, .productNav .signup a:focus, .prodNav1signup .signup a { background-position: -3435px -34px; }
+.productNav .winacrz a:hover, .productNav .winacrz a:focus, .prodNav1winacrz .winacrz a { background-position: -3531px -34px; }
+.productNav .comparator a:hover, .productNav .comparator a:focus, .prodNav1comparator .comparator a { background-position: -3301px -34px; }
+.productNav .whyhybrid a:hover, .productNav .whyhybrid a:focus, .prodNav1whyhybrid .whyhybrid a { background-position: -3649px -34px; }
+.productNav .crz a:hover, .productNav .crz a:focus, .prodNav1crz .crz a { background-position: -3776px -34px; }
+.productNav .insight a:hover, .productNav .insight a:focus, .prodNav1insight .insight a { background-position: -3853px -34px; }
+.productNav .civichybrid a:hover, .productNav .civichybrid a:focus, .prodNav1civichybrid .civichybrid a { background-position: -3939px -34px; }
+.productNav .jazz a:hover, .productNav .jazz a:focus, .prodNav1jazz .jazz a { background-position: -4062px -34px; }
+.productNav .beyondhybrid a:hover, .productNav .beyondhybrid a:focus, .prodNav1beyondhybrid .beyondhybrid a { background-position: -4134px -34px; }
+.productNav .faq a:hover,  .productNav .faq a:focus, .prodNav1faq .faq a{ width: 69px; background-position: -4274px -34px;}
+.productNav .ecovelocity a:hover,  .productNav .ecovelocity a:focus, .prodNav1ecovelocity .ecovelocity a{ width: 108px; background-position: -4349px -34px;}
+.productNav .nsxconcept a:hover,  .productNav .nsxconcept a:focus, .prodNav1nsxconcept .nsxconcept a{ width: 69px; background-position: -4463px -34px;}
+
+/* The Brochure icon has a different position - far right */
+.productNav .brochure a,.productNav .brochurex a {position: absolute; top: 0; right: 0; width: 110px; background-position: 0 -186px;}
+.productNav .brochure a:hover, .productNav .brochure a:focus {background-position: 0 -220px;}
+
+#detailContent p {margin-bottom: 0; padding-bottom: 0;}
+
+/* Sub menu */
+.productNav ul {display: block; position: absolute; top: 34px; left: 0; width: 940px; background: transparent url(/cars/_assets/presentation/nav/nav.gif) no-repeat 0 -158px; display: none;}
+
+/* Show the current ON submenu */
+.prodNav1topfeatures .productNav .topfeatures ul, .prodNav1rangeoverview .productNav .rangeoverview ul, .prodNav1philosophy .productNav .philosophy ul, .prodNav1reviews .productNav .reviews ul, .prodNav1newtypes .productNav .newtypes ul, .prodNav1gtedition .productNav .gtedition ul, .prodNav1tvad .productNav .tvad ul, .prodNav1doit .productNav .doit ul, .prodNav1accessories .productNav .accessories ul, .prodNav1offers .productNav .offers ul, .productNav .rangeoverview ul {display: block;}
+.productNav ul {padding-left: 1px !important;} /* Pull the subNav back to the left by 1px to line up text with top level (which has an extra 1px on the left of the text for that tiny curve effect) */
+/* Adjust the submenu height to fit the image. */
+.productNav ul a {padding-top: 28px;}
+
+/* Sub menu sprites */
+
+.productNav .modelgrades a { width: 123px; background-position: 0 -102px; }
+.productNav .dimensions a { width: 108px; background-position: -123px -102px; }
+.productNav .colours a { width: 87px; background-position: -231px -102px; }
+.productNav .i-dtecengine a { width: 125px; background-position: -318px -102px; }
+.productNav .advancedsafety a { width: 140px; background-position: -443px -102px; }
+.productNav .responsiveperformance a { width: 189px; background-position: -583px -102px; }
+.productNav .refinedinterior a { width: 130px; background-position: -772px -102px; }
+.productNav .communication a { width: 132px; background-position: -902px -102px; }
+.productNav .sharperstyling a { width: 129px; background-position: -1034px -102px; }
+.productNav .pressopinions a { width: 129px; background-position: -1163px -102px; }
+.productNav .youropinions a { width: 123px; background-position: -1292px -102px; }
+.productNav .tellusyouropinion a { width: 158px; background-position: -1415px -102px; }
+.productNav .theaccordstory a { width: 145px; background-position: -1573px -102px; }
+.productNav .advertisements a { width: 133px; background-position: -1718px -102px; }
+/*.productNav .newtypesinnovativedesign a { width: 144px; background-position: -1851px -102px; }*/
+.productNav .limited a { width: 128px; background-position: -1995px -102px; }
+.productNav .birthday a { width: 169px; background-position: -2123px -102px; }
+.productNav .thehistory a { width: 109px; background-position: -2292px -102px; }
+.productNav .scrappage a { width: 105px; background-position: -2401px -102px; }
+.productNav .jdpowersurvey a { width: 144px; background-position: -2506px -102px; }
+.productNav .jazzawards a { width: 137px; background-position: -8435px -102px; }
+.productNav .audioandelectronics a { width: 157px; background-position: -2650px -102px; }
+.productNav .bootandutility a { width: 117px; background-position: -2807px -102px; }
+.productNav .exterior a { width: 86px; background-position: -2924px -102px; }
+.productNav .interior a { width: 82px; background-position: -3010px -102px; }
+.productNav .travel a { width: 77px; background-position: -3092px -102px; }
+.productNav .mugentyper a { width: 135px; background-position: -3169px -102px; }
+.productNav .newcivicsi a { width: 113px; background-position: -3304px -102px; }
+.productNav .whichsurvey a { width: 128px; background-position: -3417px -102px; }
+.productNav .cr-v2010 a { width: 103px; background-position: -3545px -102px; }
+.productNav .newtypes a { width: 111px; background-position: -3648px -102px; }
+.productNav .options a { width: 87px; background-position: -3759px -102px; }
+.productNav .civiceverything a { width: 144px; background-position: -3846px -102px; }
+.productNav .parkerssurvey a {width: 131px; background-position: -3990px -102px;}
+.productNav .drivesystem a {width: 117px; background-position: -4121px -102px;}
+.productNav .performance a {width: 116px; background-position: -4238px -102px;}
+.productNav .innovativedesign a {width: 144px; background-position: -4354px -102px;}
+.productNav .highspecification a {width: 146px; background-position: -4498px -102px;}
+/*.productNav .advancedsafety a {width: 140px; background-position: -4644px -102px;}*/
+.productNav .theexchange a {width: 125px; background-position: -4784px -102px;}
+.productNav .modeart a {width: 83px; background-position: -4909px -102px;}
+/*.productNav .crztv a {width: 91px; background-position: -5005px -102px;}*/
+.productNav .crztvad a {width: 111px; background-position: -5096px -102px;}
+.productNav .whatcargreenaward a {width: 192px; background-position: -5207px -102px;}
+.productNav .theendisnear a {width: 132px; background-position: -5399px -102px;}
+.productNav .civicci a { width: 85px; background-position: -5531px -102px; }
+.productNav .civicti a { width: 85px; background-position: -6090px -102px; }
+.productNav .video a { width: 114px; background-position: -5614px -102px; }
+.productNav .jazzsi a { width: 81px; background-position: -8552px -102px; }
+.productNav .accessoryhome a { width: 69px; background-position: -6005px -102px;}
+.productNav li .offers a { background-position: -6164px -102px; width: 95px; }
+.productNav .offers2012 a { background-position: -6264px -102px; width: 95px; }
+.productNav .mgphilosophy a { background-position: -6363px -102px; width: 95px; }
+.productNav .crzmugen a { background-position: -6784px -102px; width: 95px; }
+.productNav .earlytestdrive a {background-position: -6905px -102px}
+.productNav .pressreviews a {background-position: -7034px -102px; width:121px;}
+.productNav .videoreviews a {background-position: -7158px -102px; width:121px;}
+.productNav .customerreviews a {background-position: -8104px -102px; width:137px;}
+.productNav .newcr-v a {background-position: -8248px -102px; width:99px;}
+.productNav .jazz-awards a {background-position: -8436px -102px; width:117px;}
+.productNav .newcr-z a {background-position: -8633px -102px; width:98px;}
+.productNav .newcivicdiesel a {background-position: -8748px -102px;  width: 124px;}
+.productNav li .reviews a, .productNav li .writeyourreview a {background-position: -8898px -102px; width:204px;}
+
+/* Hover, Focus & On states */
+
+.productNav .modelgrades a:hover, .productNav .modelgrades a:focus, .prodNav2modelgrades .productNav .modelgrades a { background-position: 0 -130px; }
+.productNav .dimensions a:hover, .productNav .dimensions a:focus, .prodNav2dimensions .productNav .dimensions a { background-position: -123px -130px; }
+.productNav .colours a:hover, .productNav .colours a:focus, .prodNav2colours .productNav .colours a { background-position: -231px -130px; }
+.productNav .i-dtecengine a:hover, .productNav .i-dtecengine a:focus, .prodNav2i-dtecengine .productNav .i-dtecengine a { background-position: -318px -130px; }
+.productNav .advancedsafety a:hover, .productNav .advancedsafety a:focus, .prodNav2advancedsafety .productNav .advancedsafety a { background-position: -443px -130px; }
+.productNav .responsiveperformance a:hover, .productNav .responsiveperformance a:focus, .prodNav2responsiveperformance .productNav .responsiveperformance a { background-position: -583px -130px; }
+.productNav .refinedinterior a:hover, .productNav .refinedinterior a:focus, .prodNav2refinedinterior .productNav .refinedinterior a { background-position: -772px -130px; }
+.productNav .communication a:hover, .productNav .communication a:focus, .prodNav2communication .productNav .communication a { background-position: -902px -130px; }
+.productNav .sharperstyling a:hover, .productNav .sharperstyling a:focus, .prodNav2sharperstyling .productNav .sharperstyling a { background-position: -1034px -130px; }
+.productNav .pressopinions a:hover, .productNav .pressopinions a:focus, .prodNav2pressopinions .productNav .pressopinions a { background-position: -1163px -130px; }
+.productNav .youropinions a:hover, .productNav .youropinions a:focus, .prodNav2youropinions .productNav .youropinions a { background-position: -1292px -130px; }
+.productNav .tellusyouropinion a:hover, .productNav .tellusyouropinion a:focus, .prodNav2tellusyouropinion .productNav .tellusyouropinion a { background-position: -1415px -130px; }
+.productNav .theaccordstory a:hover, .productNav .theaccordstory a:focus, .prodNav2theaccordstory .productNav .theaccordstory a { background-position: -1573px -130px; }
+.productNav .advertisements a:hover, .productNav .advertisements a:focus, .prodNav2advertisements .productNav .advertisements a { background-position: -1718px -130px; }
+/*.productNav .newtypesinnovativedesign a:hover, .productNav .newtypesinnovativedesign a:focus, .prodNav2newtypesinnovativedesign .productNav .newtypesinnovativedesign a { background-position: -1851px -130px; }*/
+.productNav .limited a:hover, .productNav .limited a:focus, .prodNav2limited .productNav .limited a { background-position: -1995px -130px; }
+.productNav .birthday a:hover, .productNav .birthday a:focus, .prodNav2birthday .productNav .birthday a { background-position: -2123px -130px; }
+.productNav .thehistory a:hover, .productNav .thehistory a:focus, .prodNav2thehistory .productNav .thehistory a { background-position: -2292px -130px; }
+.productNav .scrappage a:hover, .productNav .scrappage a:focus, .prodNav2scrappage .productNav .scrappage a { background-position: -2401px -130px; }
+.productNav .jdpowersurvey a:hover, .productNav .jdpowersurvey a:focus, .prodNav2jdpowersurvey .productNav .jdpowersurvey a { background-position: -2506px -130px; }
+.productNav .jazzawards a:hover, .productNav .jazzawards a:focus, .prodNav2jazzawards .productNav .jazzawards a { background-position: -8435px -130px; }
+.productNav .audioandelectronics a:hover, .productNav .audioandelectronics a:focus, .prodNav2audioandelectronics .productNav .audioandelectronics a { background-position: -2650px -130px; }
+.productNav .bootandutility a:hover, .productNav .bootandutility a:focus, .prodNav2bootandutility .productNav .bootandutility a { background-position: -2807px -130px; }
+.productNav .exterior a:hover, .productNav .exterior a:focus, .prodNav2exterior .productNav .exterior a { background-position: -2924px -130px; }
+.productNav .interior a:hover, .productNav .interior a:focus, .prodNav2interior .productNav .interior a { background-position: -3010px -130px; }
+.productNav .travel a:hover, .productNav .travel a:focus, .prodNav2travel .productNav .travel a { background-position: -3092px -130px; }
+.productNav .mugentyper a:hover, .productNav .mugentyper a:focus, .prodNav2mugentyper .productNav .mugentyper a { background-position: -3169px -130px; }
+.productNav .newcivicsi a:hover, .productNav .newcivicsi a:focus, .prodNav2newcivicsi .productNav .newcivicsi a { background-position: -3304px -130px; }
+.productNav .whichsurvey a:hover, .productNav .whichsurvey a:focus, .prodNav2whichsurvey .productNav .whichsurvey a { background-position: -3417px -130px; }
+.productNav .cr-v2010 a:hover, .productNav .cr-v2010 a:focus, .prodNav2cr-v2010 .productNav .cr-v2010 a { background-position: -3545px -130px; }
+.productNav .newtypes a:hover, .productNav .newtype-s a:focus, .prodNav2newtype-s .productNav .newtype-s a { background-position: -3648px -130px; }
+.productNav .options a:hover, .productNav .options a:focus, .prodNav2options .productNav .options a { background-position: -3759px -130px; }
+.productNav .civiceverything a:hover, .productNav .civiceverything a:focus, .prodNav2civiceverything .productNav .civiceverything a { background-position: -3846px -130px; }
+.productNav .parkerssurvey a:hover, .productNav .parkerssurvey a:focus, .prodNav2parkerssurvey .productNav .parkerssurvey a { background-position: -3990px -130px; }
+.productNav .drivesystem a:hover, .productNav .drivesystem a:focus, .prodNav2drivesystem .productNav .drivesystem a { background-position: -4121px -130px; }
+.productNav .performance a:hover, .productNav .performance a:focus, .prodNav2performance .productNav .performance a { background-position: -4238px -130px; }
+.productNav .innovativedesign a:hover, .productNav .innovativedesign a:focus, .prodNav2innovativedesign .productNav .innovativedesign a { background-position: -4354px -130px; }
+.productNav .highspecification a:hover, .productNav .highspecification a:focus, .prodNav2highspecification .productNav .highspecification a { background-position: -4498px -130px; }
+/*.productNav .advancedsafety a:hover, .productNav .advancedsafety a:focus, .prodNav2advancedsafety .productNav .advancedsafety a { background-position: -4644px -130px; }*/
+.productNav .theexchange a:hover, .productNav .theexchange a:focus, .prodNav2theexchange .productNav .theexchange a { background-position: -4784px -130px; }
+.productNav .modeart a:hover, .productNav .modeart a:focus, .prodNav2modeart .productNav .modeart a { background-position: -4909px -130px; }
+/*.productNav .crztv a:hover, .productNav .crztv a:focus, .prodNav2crztv .productNav .crztv a { background-position: -5005px -130px; }*/
+.productNav .crztvad a:hover, .productNav .crztvad a:focus, .prodNav2crztvad .productNav .crztvad a { background-position: -5096px -130px; }
+.productNav .whatcargreenaward a:hover, .productNav .whatcargreenaward a:focus, .prodNav2whatcargreenaward .productNav .whatcargreenaward a { background-position: -5207px -130px; }
+.productNav .theendisnear a:hover, .productNav .theendisnear a:focus, .prodNav2theendisnear .productNav .theendisnear a { background-position: -5399px -130px; }
+.productNav .civicci a:hover, .productNav .civicci a:focus, .prodNav2civicci .productNav .civicci a { background-position: -5531px -130px; }
+.productNav .civicti a:hover, .productNav .civicti a:focus, .prodNav2civicti .productNav .civicti a { background-position: -6090px -130px; }
+.productNav .video a:hover, .productNav .video a:focus, .prodNav2video .productNav .video a { background-position: -5614px -130px; }
+.productNav .jazzsi a:hover, .productNav .jazzsi a:focus, .prodNav2jazzsi .productNav .jazzsi a  { background-position: -8552px -130px; }
+.productNav .accessoryhome a:hover, .productNav .accessoryhome a:focus, .prodNav2accessoryhome .productNav .accessoryhome a { background-position: -6005px -130px; }
+.productNav li .offers a:hover, .productNav li .offers a:focus, .prodNav2offers .productNav li .offers a { background-position: -6164px -130px; }
+.productNav .offers2012 a:hover, .productNav .offers2012 a:focus, .prodNav2offers2012 .productNav .offers2012 a { background-position: -6264px -130px; }
+.productNav .mgphilosophy a:hover, .productNav .mgphilosophy a:focus, .prodNav2mgphilosophy .productNav .mgphilosophy a { background-position: -6363px -130px; }
+.productNav .crzmugen a:hover, .productNav .crzmugen a:focus, .prodNav2crzmugen .productNav .crzmugen a { background-position: -6784px -130px; }
+.productNav .earlytestdrive a:hover, .productNav .earlytestdrive a:focus, .prodNav2earlytestdrive .productNav .earlytestdrive a {background-position: -6905px -130px;}
+.productNav .pressreviews a:hover, .productNav .pressreviews a:focus, .prodNav2pressreviews .productNav .pressreviews a {background-position: -7034px -130px;}
+.productNav .videoreviews a:hover, .productNav .videoreviews a:focus, .prodNav2videoreviews .productNav .videoreviews a {background-position: -7158px -130px;}
+.productNav .customerreviews a:hover, .productNav .customerreviews a:focus, .prodNav2customerreviews .productNav .customerreviews a {background-position: -8104px -130px;}
+.productNav .newcr-v a:hover, .productNav .newcr-v a:focus, .prodNav2newcr-v .productNav .newcr-v a{background-position: -8248px -130px;}
+.productNav .jazz-awards a:hover, .productNav .jazz-awards a:focus, .prodNav2jazz-awards .productNav .jazz-awards a{background-position: -8436px -130px;}
+.productNav .newcr-z a:hover, .productNav .newcr-z a:focus, .prodNav2newcr-z .productNav .newcr-z a{background-position: -8633px -130px;}
+.productNav .newcivicdiesel a:hover, .productNav .newcivicdiesel a:focus, .prodNav2newcivicdiesel .productNav .newcivicdiesel a  { background-position: -8748px -130px; }
+.productNav li .reviews a:hover, .productNav li .reviews a:focus, .prodNav2reviews .productNav li .reviews a, .productNav li .writeyourreview a:hover, .productNav li .writeyourreview a:focus, .prodNav2writeyourreview .productNav li .writeyourreview a {background-position: -8898px -130px;}
+
+/*body {overflow-y: scroll;}*/
+/* Submenu */
+.prodNav1topfeatures #briefContent,
+.prodNav1rangeoverview #briefContent,
+.prodNav1philosophy #briefContent,
+.prodNav1reviews #briefContent,
+.prodNav1newtypes #briefContent,
+.prodNav1gtedition #briefContent,
+.prodNav1offers #briefContent {padding-top: 28px;}
+
+
+/*----------- END PRODUCT NAV ------------*/
+
+/*this is used to fix the gap between footer and content for ie and FF (can't be fixed later)*/
+#detailContent p {margin-bottom: 0; padding-bottom: 0;}
+
+
+/* FOOTER*/
+
+/* Akeel N. */
+/* #footer {position:relative;z-index:10; margin-top:-32px;} */
+/*#footer {position:relative; margin-top:-32px;}*/
+/* END :: Changes made by Akeel N. */
+
+/*#footer li a {text-decoration: none; color: #333333;}
+#footer li a:hover {color: #c00;}
+#footerWrapper {background-color: white; }
+#footerShadow {background: url(/cars/_assets/presentation/footer/dropshadow.png) repeat-x; height: 20px;}
+#footerContainer, #footerLinks {margin: 0 auto; text-align: left; width: 980px;}
+#footerContainer li.break {padding-top: 1em;}
+#footerLinkContainer {background-color: #ececec;}
+#footerCopy {width: 600px; float: left; padding-top: 30px; padding-left:20px;}
+#footerCopy h2 {margin-bottom:6px;}
+#footerCopy h3 {color: #333333; font-weight: bold;font-size: 1.5em;}
+#moreHonda ul {margin-left: 0;}
+#moreHonda li {list-style: none; margin-bottom: 5px;}
+.more, .try, .visit, .honda {float: left;}
+.more {width: 140px;}
+.try {width: 170px;}
+.visit {width: 160px;}
+.honda {width: 130px;}
+#footerLinks {height: 30px; padding-top: 4px; clear: both;}
+#footerLinks div.padding {width: 340px; height: 10px; float: left;}
+#terms {float:left; padding-top: 6px;}
+#terms ul {margin:0; height:20px;}
+#terms li {display: inline; margin-right: 13px;}
+
+#socialLinks{float:left; margin-left: 75px; padding-top: 2px;}
+#socialLinks span {display:block; height:0; width:0; overflow:hidden;}
+#youtube {float:left;width:61px;height:23px;}
+#facebook, #twitter {float:left;width:25px;height:23px;padding-left: 7px;}*/
+/*#facebook{margin-left:15px}*/
+/*#facebook a, #twitter a, #youtube a {display:block;height:23px;background: url(/cars/_assets/presentation/socialmedia-new.png) no-repeat 0 0}
+#twitter a{background-position:-69px 0; width: 20px;}
+#facebook a{background-position:-105px 0; width: 20px;}*/
+
+/************************************
+EXPANDING STAGE WITH HERO IMAGE
+*************************************/
+.expandingStage #wrapper {background:none;}
+.expandingStage #wrapper,
+.expandingStage #content {margin:0; padding:0;}
+.expandingStage #content {background:transparent;background:url(expandingStage/top-gradient.jpg) top center no-repeat #e3e3e3; min-height:497px; height:auto !important; height:497px;}
+.expandingStage #footer {background: url(expandingStage/bottom-curve.png) no-repeat center 47px; margin-top:-75px;}
+.expandingStage #bgGradientBottom {display:none;}
+
+
+
+
+/* Scrolling slider */
+#completeSlider {position: relative; width:900px;}
+.honda .slider {top: -2px; left:26px; width: 848px; height: 23px; position: relative; background: url(/cars/_assets/presentation/galleryslider/scrollbar.gif) repeat-x 0 2px;}
+.handle {position: absolute; z-index: 5; height: 19px; width: 111px; top: 2px; left: 0; background: transparent url(/cars/_assets/presentation/galleryslider/handle.png) 0 0 scroll; z-index:90;}
+.slider span {cursor: pointer; position: absolute; z-index: 110; font-family :helvetica; font-size: 12px; font-weight: bold; vertical-align:middle; line-height:23px;}
+/* Default positions for the categories on the slider
+set each in own page */
+ .slider .label1 {left: 100px;}
+ .slider .label2 {left: 200px;}
+ .slider .label3 {left: 300px;}
+ .slider .label4 {left: 400px;}
+ .slider .label5 {left: 500px;}
+
+.leftArrow {cursor: pointer; position: absolute;}
+.rightArrow {cursor: pointer; position: absolute; right:0; top:0;}
+.sliderLabel {width:100px; text-align:center;}
+/* slider specific CSS */
+.sliderGallery {overflow: auto; position: relative; padding: 0; height: 350px; width: 900px;}
+.gallerySlider .sliderGallery {height: 80px;}
+.sliderGallery ul {position: absolute; list-style: none; overflow: none; white-space: nowrap; padding: 0; margin: 0;}
+.sliderGallery ul li {display: inline;}
+
+/*Dimensions - paddings are not pixel perfect match to the PSD yet */
+#dimensions {margin: 0 20px; padding: 15px 20px 35px; background: #fff; width: 900px;}
+
+/* CARS HOMEPAGE only */
+#carsHome #heroFlashContainer {background: transparent url(/cars/_assets/presentation/footer/gradient-top.png) repeat-x 0 bottom;}
+#carsHome #content {width: 940px; margin: 0 auto; background: none;}
+#carsHome #homeContent {min-height: 380px;}
+#carsHome #hero {font-size: 0; line-height: 0; min-height: 510px;}
+
+#carsHome #promotions {float:left; width:100%; text-align:center;}
+#carsHome #promotions ul li {display:inline; padding:0 3.5px;}
+
+
+/*---------- ACCESSIBLE Second Level Nav -------------*/
+	.secondLevelNav				{width:195px; text-align: left;}
+	/* title */
+	.secondLevelNav h2			{margin:0; padding:0; color:#fff; font-size:1.1em; font-weight:bold; line-height: normal; background: #c00;text-transform: uppercase;}
+	.secondLevelNav h2 a:hover	{ text-decoration: underline; }
+
+	.secondLevelNav ul			{margin: 0; padding: 0; line-height: normal;}
+	.secondLevelNav li			{padding: 0; list-style: none; border-color: #fff; border-style: solid; border-width: 0 0 1px 0;}
+	.secondLevelNav a,
+	.secondLevelNav span		{display: block; padding: 5px 9px; color: #fff; font-size: 1.182em; text-decoration: none;}
+	.secondLevelNav a:hover		{color: #fff;}
+
+	/* selected nav item */
+	.secondLevelNav #sel a:link, .secondLevelNav #sel a:visited {color: #c00;}
+	.secondLevelNav #sel a:hover {color: #464646;}
+
+	#newCarsMenu li				{margin-bottom: 1px; border-bottom-width: 0;}
+	#newCarsMenu li a			{text-transform: uppercase; background:#404144; opacity:0.8;-moz-opacity:0.8;filter:alpha(opacity=80); }
+	#newCarsMenu li a:hover,
+	#newCarsMenu li a:active,
+	#newCarsMenu li a:focus		{ text-decoration: underline; }
+
+	#newCarsMenu span			{display:inline; padding:0; font-size:1em;}
+
+	.carProduct							{background-position: center 157px;}
+	.carProduct #flashMenuWrapper		{left: 0; width: 100%; margin-left: 0; background: #fff;}
+
+	.carProduct #newCarsMenu			{width: 940px; margin: 0 auto;}
+	.carProduct #newCarsMenu h2 a		{width: 138px; background: #c00;}
+	.carProduct #newCarsMenu li			{float: left; margin: 0; border-width: 1px 0 0 1px;}
+	.carProduct #newCarsMenu li a		{width: 138px; background: #797979; opacity:1;-moz-opacity:1;filter:alpha(opacity=100); }
+	.carProduct #newCarsMenu .firstInRow	{border-left-width: 0;}
+	.carProduct #newCarsMenu .firstInRow a	{width: 137px;}
+
+	#flashMenuWrapper #newCarsMenu .nonProduct a		{color: #747474; background: #eaeaea url(nav/view-range.gif) repeat-x 0 0;}
+	#flashMenuWrapper #newCarsMenu .nonProduct a:hover	{color: #c00;}
+
+
+/*---------- FLASH Second Level Nav ------------------*/
+#flashMenuWrapper {margin-left:-470px; position:absolute; z-index:40; top: 77px; left: 50%;}
+#flashMenuWrapper #newCarsMenuFlash, #flashMenuWrapper #corporateHomeMenuFlash {position:absolute; top:-20px; left:-20px; z-index:41;}
+#flashMenuWrapper object {margin-left: 0; width: 300px}
+#carsHome #content {padding:0;}
+#hero {position:relative;z-index:1;text-align:center;}
+#footer-top-fix	{height: 65px; background: transparent url(/cars/_assets/presentation/footer/gradient-top.png) no-repeat 0 50%;}
+
+.floatLeft {float: left;}
+.floatRight {float: right;}
+#nonBreakoutWrapper  #alignToBottomRight {position: absolute; right: 0; bottom: 0;}
+#nonBreakoutWrapper  #alignToBottomLeft {position: absolute; left: 0; bottom: 0;}
+#nonBreakoutWrapper #type1Content {float: right; width: 293px; padding-right: 20px; padding-left: 20px;}
+#nonBreakoutWrapper #type2Content {float: left; width: 307px; padding-right: 20px; padding-left: 20px;}
+
+/*New breakout globals*/
+#newBreakout {width: 627px; height: 415px; position: absolute; top: 0; left: 0;}
+#newBreakoutStyling {background: #fff; margin-right: 20px; margin-left: 20px; width: 313px; padding-left: 627px;}
+#newBreakoutStyling #newBreakoutContent {width: 293px; padding-right: 20px;}
+
+
+
+/*****************************************************
+GENERIC TEMPLATE
+*****************************************************/
+.genericTemplate .content {padding-top:230px;}
+/* divider */
+.genericTemplate #divider {background:url(dividerDottedLine.gif) left bottom repeat-x; height:1px;}
+/* banner  bg */
+.genericTemplate #banner {background-repeat:no-repeat; background-position:center top;}
+/* floating main image */
+#heroImage {position: absolute; left:0; top:0;}
+/* main content wrapper */
+.genericTemplate #mainContentWrapper {float: left; width: 723px; background: #fff; padding:20px;}
+	/* styles */
+	.genericTemplate #mainContentWrapper h2 {color: #c00;}
+	.genericTemplate #mainContentWrapper h3 {font-size: 1.2em; font-weight: bold; margin-top: 29px; line-height:1.2em; width:70%;}
+	.genericTemplate #mainContentWrapper dl {font-size: 1.1em; margin-top: 20px;}
+	.genericTemplate #mainContentWrapper p, #aboutContent ul, #aboutContent li, #aboutContent dt, #aboutContent dd {margin-top: 10px;}
+	.genericTemplate #mainContentWrapper li {padding-left: 28px; margin-left: 0px;}
+	.genericTemplate #mainContentWrapper dd {margin-left: 0px;}
+/* footer */
+.genericTemplate #wrapper #footer {background: url(_assets/presentation/rangeoverview/footer.png) no-repeat center 0px;}
+/* SECOND LEVEL MENU */
+#secondLevelMenu {width: 195px; float: left; background: #fff; /*margin-top: 150px;*/}
+#secondLevelMenu ul {margin: 0px; padding: 0px;}
+#secondLevelMenu li {margin: 0px; padding: 0px; list-style:none; border-bottom: 1px solid #e9e9e9;}
+#secondLevelMenu a:link,
+#secondLevelMenu a:visited,
+#secondLevelMenu span,
+#secondLevelMenu strong {display: block; text-decoration: none; width: 178px; padding:6px 0 6px 17px; font-size: 1.272em; color: #333;}
+#secondLevelMenu a:hover {
+	color: #c00;
+	text-decoration: underline;
+}
+#secondLevelMenu #sel a:link,
+#secondLevelMenu #sel a:visited,
+#secondLevelMenu #sel span,
+#secondLevelMenu strong { background:#c00; color:#fff; font-weight:normal; }
+
+#secondLevelMenu #sel a:hover {color:#fff;}
+
+
+#secondLevelMenu #sel #subGradTop {background:#fafafa url(/cars/_assets/presentation/nav/leftnav/second-level-sub-top.png) repeat-x left top;}
+#secondLevelMenu #sel #secondLevelSub li {border-bottom:none;}
+#secondLevelMenu #sel #secondLevelSub {background:url(/cars/_assets/presentation/nav/leftnav/second-level-sub-bottom.png) repeat-x left bottom;width:177px;padding-left:18px;}
+#secondLevelMenu #sel #secondLevelSub a:hover {color:#c00;text-decoration: underline;}
+#secondLevelMenu #sel #subGradTop #secondLevelSub .sel {color:#c00;}
+#secondLevelMenu #sel #subGradTop #secondLevelSub .sel:hover {background: url(/cars/_assets/presentation/nav/leftnav/second-level-border.png) repeat-x left top;color:#c00;}
+
+#secondLevelMenu li #secondLevelSub strong {background:#CC0000; color:#FFF; display:block; padding:6px 0 6px 17px; width:160px; font-weight:normal; font-size:1.091em;}
+#secondLevelMenu #sel a:link,
+#secondLevelMenu #sel a:visited {border-bottom: 1px solid #e9e9e9; background-color:#FFF; color:#CC0000;}
+
+#secondLevelMenu .lastListItem {border-bottom-style:none;}
+
+
+
+.genericTemplate .panels {position: relative;}
+
+#secondLevelMenu a:hover {color: #c00;}
+
+#secondLevelMenu #sel #secondLevelSub a:link,
+#secondLevelMenu #sel #secondLevelSub a:visited {
+	background:url(/cars/_assets/presentation/nav/leftnav/second-level-border.png) repeat-x left top;
+	color:#707070;
+	font-size:1.091em;
+	border-bottom:none;
+	width:159px;
+}
+
+#secondLevelMenu #sel #secondLevelSub a:hover {color:#c00;}
+
+#secondLevelMenu #sel #secondLevelSub a.firstSub {background:url(/cars/_assets/presentation/nav/leftnav/second-level-sub-top.png) repeat-x left top;}
+#secondLevelMenu #sel #secondLevelSub a.lastSub {background:url(/cars/_assets/presentation/nav/leftnav/second-level-sub-bottom.png) repeat-x left bottom;}
+
+#secondLevelMenu #subParent #sel {
+	color: #c00;
+	background: #fff;
+}
+
+/* vat rate increase */
+#comparatorvat{padding:10px 0 0 40px;color:#666666;float:left;font-size:0.8em;line-height:22px;}
+#carsoffersvat {padding:0 0 0 160px;width:656px;color:#666666;float:left;font-size:0.8em;line-height:22px;}
+#fullspecvat {color:#666666;float:left;font-size:0.8em;line-height:22px;padding:0 0 15px 13px;width:auto;margin:-31px 20px 0 0;}
+#modelvatstatement {color:#666666;float:left;font-size:0.8em;line-height:22px;padding:20px 0 14px 41px;width:auto;}
+#offervatstatement{color:#666666;float:left;font-size:0.8em;line-height:22px;}
+#taxvatstatement{color:#666666;float:left;font-size:0.8em;line-height:22px;padding:0 0 0 20px;}
+
+/*the exchange*/
+#theexchange{ padding:30px 0 30px 40px;}
+#theexchange #partexchange { width:400px; float:left;padding:0 15px 40px 0;}
+#theexchange #eligible { background: url(/cars/_assets/images/theexchange/eligible_background.jpg) no-repeat;float:left;
+height:195px;
+padding:9px;
+width:450px;}
+
+#theexchange h3 {
+font-size:1.1em;
+font-weight:bold;
+margin-bottom:0;
+margin-top:15px;
+}
+
+#theexchange p { margin-top:3px;}
+#theexchange #showroom  { padding:10px 0 0 0;}
+#theexchange #partexchange .terms{font-size:1em;margin:15px 0 0 0;line-height:1.2em;}
+
+#video{font-size:0;line-height:0;padding:28px 20px 20px}
+
+/* Brochure bubble */
+.roundCornersSml { -moz-border-radius:3px; -webkit-border-radius:3px; -khtml-border-radius:3px; border-radius:3px; }
+.roundCornersMed { -moz-border-radius:5px; -webkit-border-radius:5px; -khtml-border-radius:5px; border-radius:5px; }
+.roundCornersMedTop { -moz-border-radius:5px 5px 0 0; -webkit-border-radius:5px 5px 0 0; -khtml-border-radius:5px 5px 0 0; border-radius:5px 5px 0 0; }
+.roundCornersMedBot { -moz-border-radius:0 0 5px 5px; -webkit-border-radius:0 0 5px 5px; -khtml-border-radius:0 0 5px 5px; border-radius:0 0 5px 5px; }
+.roundCornersLrg { -moz-border-radius:8px; -webkit-border-radius:8px; -khtml-border-radius:8px; border-radius:8px; }
+
+#brochureBubble { display:none; width:141px; position:absolute; top:-34px; right:57px; z-index:65; }
+
+.brochureBubble li {
+    list-style: none outside none;
+	width: 124px;
+	margin: 0;
+    padding: 3px 8px 4px 7px;
+	border-top: 1px solid #ccc;
+	font-size: 0.9em;
+}
+
+.brochureBubble .brochureBubbleHead {  }
+.brochureBubble ul{ padding:0; margin:0; background-color:#fff; border:1px solid #939393; }
+
+.brochureBubble li a {
+	padding-left: 17px;
+	background: url(/cars/_assets/presentation/pdfdownload.gif) no-repeat scroll 0 -38px transparent;
+	text-decoration:none;
+}
+
+.brochureBubble li p {
+	color: #939393;
+    margin:3px 0 0 18px;
+    font-size: 0.9em;
+}
+
+.brochureBubble li:hover { background-color:#fbeded; }
+.brochureBubble li.brochureBubbleHead:hover { background-color: #d6d6d6; }
+.brochureBubble li a:hover { text-decoration:underline; }
+
+.brochureBubble li.brochureBubbleHead div {
+	background: url(/cars/_assets/presentation/pdfdownload.gif) no-repeat scroll 0px -56px transparent;
+	color: #666;
+	font-size: 0.9em;
+	font-weight: bold;
+	line-height: 12px;
+	height: 12px;
+	width: 90px;
+    margin-top: 0;
+    padding:5px 0 5px 17px;
+}
+.brochureBubble .brochureBubbleHead {
+	width:124px;
+	height: 22px;
+    background-color: #d6d6d6;
+	opacity:0.8;
+	filter:alpha(opacity=80);
+	border-bottom: solid 1px #bbb;
+}
+
+.bubbleClose			{ position:absolute; right:10px; top:12px; cursor:pointer; text-indent:-99999px; width:9px; height:9px; display:block; background: url(/cars/_assets/presentation/pdfdownload.gif) no-repeat scroll 0 -1px transparent;}
+.bubbleClose:hover		{ background-position:0 -20px; }
+#brochureBubble .arrow	{ position:absolute; right:-10px; top:44px; width:12px; height:14px; padding:0; background: url(/cars/_assets/presentation/pdfdownload.gif) no-repeat scroll -2px -84px transparent; }
+#brochureBubble .brochureBubble li:hover .arrow { background-position:-2px -107px; }
+
+/* KEEP - Hides BATD, FAS when no JS */
+#bookATestDriveContent,
+#search-container { display: none; }
+
+/* Hide subnav unless within that section (identified with the sel ID) */
+#secondLevelSub{display:none}
+#sel #secondLevelSub{display:block}
+
+.callToAction.facebook { background-position: 0 -307px; padding-left: 22px; }
+.callToAction.facebook:hover { background-position: 0 -326px; }
+.callToAction.twitter { background-position: 0 -345px; padding-left: 22px; }
+.callToAction.twitter:hover { background-position: 0 -364px; }
+
+.comp-copy { text-align:center; }
+
+.reviewTC{ }
+
+.reviewTC li {
+	display: block !important;
+	margin-bottom:5px !important;
+	text-align: left !important;
+}

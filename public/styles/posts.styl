@@ -1,0 +1,77 @@
+div#posts
+  position relative
+  font-size 1.5em
+  padding 3em 10em
+  -webkit-box-sizing border-box
+  -moz-box-sizing border-box
+  box-sizing border-box
+  -webkit-transition all 0.75s
+  -moz-transition all 0.75s
+  -ms-transition all 0.75s
+  transition all 0.75s
+  
+  
+  &.fixed-true
+    padding 3em 8em
+    margin-left 250px
+
+  .post
+    position relative
+
+    pre
+      white-space pre-wrap
+
+    h2
+      font-size 1.7em
+      font-weight bold
+      color black
+      margin-bottom 0
+
+    aside.date-stamp
+      font-size .85em
+      font-style italic
+      color slategrey
+
+      i.fa-calendar-o
+        font-size 1.25em
+        margin-right .5em
+
+    section.contents
+      clear both
+      color slategrey
+
+      p
+        line-height 1.75em
+
+      section.code
+        margin-bottom 1em
+
+        header
+          padding 10px 0px 5px 20px
+          background-color lightgrey
+          font-weight bold
+          color black
+          border 1px solid lightgrey
+          border-top-left-radius 5px
+          border-top-right-radius 5px
+
+        pre.prettyprint
+          margin 0
+          padding .5em 0 .5em 1.5em
+          height 17em
+          overflow auto
+          font-size .85em
+          border 1px solid black
+          border-bottom-left-radius 5px
+          border-bottom-right-radius 5px
+          background-color black
+          color silver
+
+      h4
+        margin-top 1em
+        padding-top .5em
+        font-size .85em
+        text-transform uppercase
+
+      li
+        list-style square

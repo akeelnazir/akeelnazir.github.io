@@ -1,0 +1,641 @@
+.honda *, .honda *:after, .honda *::before {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+}
+.honda #main{
+	background: #fff !important;
+}
+
+.honda p { font-size: 1.4em } /* As per SG-130 */
+
+.honda a { cursor: pointer }
+
+.honda section {
+	position: relative;
+}
+
+.honda section h1 {
+	float: left;
+	padding-top: 52px;
+}
+
+.honda section.topfeatures h1 {
+	float: left;
+}
+
+.honda section footer {
+	clear: both;
+	float: none;
+	width: 900px;
+	margin: 0 auto 20px auto;
+	padding-bottom: 70px;
+}
+
+.honda section.awards {
+	background: #dcdddf;
+	padding-bottom: 100px;
+}
+
+.honda article h2 {
+	margin-bottom: .5em;
+}
+
+.honda article p {
+	/* padding-left: 20px; */
+	width: 408px;
+	padding-bottom: 10px;
+	margin-top: 0;
+}
+.honda .design div > p {
+	width: 400px;
+}
+
+.honda .crv article.design,
+.honda .crv article.efficiency {
+	width: 1024px;
+	margin: 0 auto;
+}
+
+.honda .cr-v article.technology p,
+.honda article.efficiency p {
+	width: 544px;
+}
+
+.honda .cr-v article.design {
+  background: url("/assets/images/honda/design.png") no-repeat center 80px;
+  padding: 144px 0 38px;
+  margin: 0 auto;
+}
+
+.honda .engine.right > div {
+  padding-left: 490px;
+  width: 410px;
+}
+
+.honda .cr-v article.engine {
+  background: url("/assets/images/honda/engine-full.jpg") no-repeat center 0;
+  min-height: 450px;
+} 
+
+.honda .cr-v article.technology {
+  background: url("/assets/images/honda/technology-bg.jpg") no-repeat center bottom;
+  height: 900px;
+}
+
+.honda .cr-v article.technology > div {
+  background: url("/assets/images/honda/technology.jpg") no-repeat right 100px;
+  padding-top: 80px;
+  min-height: 780px;
+  position: relative;
+}
+
+.honda .cr-v article.technology .textCarousel {
+  /* bottom: 40px; */
+}
+
+.honda .cr-v article.technology .textCarousel .carouselBody {
+  height: 210px;
+  max-height: none;
+  min-height: 0;
+}
+
+.honda .cr-v article.space {
+  background: url("/assets/images/honda/space.jpg") no-repeat center 71px;
+  padding-top: 93px;
+  min-height: 450px;
+}
+
+.honda .cr-v article.handles {
+  background: url("/assets/images/honda/handles.jpg") no-repeat center 70px;
+  height: 470px;
+  padding-top: 70px;
+}
+
+.honda .cr-v article.efficiency > div {
+  background: url("/assets/images/honda/efficiency.jpg") no-repeat right 47px;
+  padding-top: 45px;
+  min-height: 400px;
+}
+.honda .cr-v .quoteSource {
+  padding-right: 153px;
+  margin-top: 17px;
+}
+
+.honda .cr-v blockquote.quoteText {
+  padding-left: 243px;
+  padding-top: 86px;
+}
+
+.honda .footnote {
+	line-height: 1.5em;
+	font-size: 1em;
+	color:	#949598; /* SG-130 */
+}
+
+.honda .footnote ul {
+  list-style: none;
+  margin: 1em 0 1em 0;
+  padding: 0;
+}
+
+/* Quotes */
+
+
+.honda article.quote {
+	width: 900px;
+	margin: 0 auto;
+	position: relative;
+	min-height: 366px;
+}
+
+.honda .bluequote .quoteSymbol { color: #cae0ed; }
+.honda .yellowquote .quoteSymbol {
+	color: #efe0be;
+	left: 109px;
+	top: 37px;
+}
+
+.honda .greyquote .quoteSymbol {
+	color: #c6d2d3;
+	top: 49px;
+	left: 168px;
+}
+
+.honda .greenquote .quoteSymbol {
+	color: #cae0e2;
+}
+
+.honda .quoteSymbol {
+	position: absolute;
+	top: 67px;
+	left: 132px;
+	font-size: 172px;
+	font-style: italic;
+	width: auto;
+}
+
+.honda .bluequote  {
+	background: url(/assets/images/honda/quote.png) 95px 53px no-repeat;
+}
+
+.honda .yellowquote  {
+	background: url(/assets/images/honda/quote.png) 99px 8px no-repeat;
+}
+
+.honda .greyquote {
+	background: url(/assets/images/honda/quote.png) 134px 32px no-repeat;
+}
+
+.honda .greenquote {
+	background: url(/assets/images/honda/bluegreenquote.png) 95px 53px no-repeat;
+}
+
+.honda blockquote.quoteText {
+	padding-left: 218px;
+	padding-top: 102px;
+}
+
+.honda blockquote.quoteText {
+	color: #fff;
+	font-size: 35px;
+	line-height: 38px;
+	margin: 0px;
+	white-space: pre-wrap;
+	width: 455px;
+}
+
+.honda .quoteSource {
+	text-align: right;
+	padding-right: 190px;
+	font-size: 20px;
+	margin-top: 16px;
+	color: #fff;
+	font-style: italic;
+	width: auto;
+}
+
+/* --- QUICK LINKS --- */
+.honda ul.quicklinks {
+  height: 32px;
+  padding: 0;
+  margin: 0;
+}
+.honda ul.quicklinks li {
+  float: left;
+  margin-right: 3px;
+  list-style: none;
+  background-color: #f7f7f7;
+  width: 210px;
+  padding: 2px;
+  border: 1px solid #aaa;
+  margin-right: 10px;
+}
+
+.honda ul.quicklinks li a {
+  position: relative;
+  font-size: 1.3em;
+  line-height: 1.158em;
+  color: #333;
+  background: #e6e6e6 url(/assets/images/honda/sprite-nav-icons.png) no-repeat 8px 4px;
+  padding: 5px;
+  text-indent: 25px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+}
+.honda ul.quicklinks li a:hover {
+	color: #c00;
+}
+
+.honda ul.quicklinks li a span {
+	text-indent: -9999em;
+}
+.honda ul.quicklinks li.brochure a { background-position: 4px -70px; }
+.honda ul.quicklinks li.testdrive a { background-position: 3px -34px; }
+.honda ul.quicklinks span {
+  display: inline-block;
+  position: absolute;
+  right: 3px;
+  top: 7px;
+  width: 11px;
+  height: 11px;
+  background: url(/assets/images/honda/sprite-nav-icons.png) no-repeat -17px -336px;
+}
+.honda #gallery .quicklinks, #gallery .ctas  {padding-top: 20px;padding-left: 20px;}
+
+.honda ul.ctas { 
+  list-style-type: none;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.honda ul.ctas li {
+	margin: 0 10px 0 0;
+	display: block;
+	float: left;
+}
+
+.honda ul.ctas li a.cta {
+	float: left;
+	border: none;
+	color: #fff;
+	font-size: 1.4em;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 9px 57px 10px 8px;
+	background: #333 url("/assets/images/honda/sprite-nav-icons.png") right -511px no-repeat;
+	text-decoration: none;
+	width: 165px;
+}
+.honda ul.ctas li a.cta:hover {
+	color: #c81d29;
+	text-decoration: none;
+	background: #333 url("/assets/images/honda/sprite-nav-icons.png") right -893px no-repeat;
+}
+/* --- QUICKLINKS : END --- */
+
+/* --- text carousel --- */
+.honda div.textCarousel {
+  width: 450px;
+  overflow: hidden;
+  position: absolute;
+	right: -20px;
+	bottom: 20px;
+}
+.honda .textCarousel > div {
+	padding-left: 0;
+	width: auto;
+}
+.honda div.textCarousel div.carouselBody {
+  background: rgb(255, 255, 255);
+  background: rgba(255, 255, 255, .8);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  padding: 22px 33px 20px;
+  max-height: 280px;
+  min-height: 280px;
+}
+.honda div.textCarousel div.carouselBody h2, .honda div.textCarousel div.carouselBody h3 { margin: 0;}
+
+.honda #wrapper .textCarousel .carouselBody p {
+	width: auto;
+	padding: 0;
+	margin-top: 10px;
+	font-size: 10pt;
+}
+
+.honda .carouselBody .footnote {
+	padding: 0;
+}
+
+.honda .panelControl {
+	float: right;
+	margin-top: -3px; /* fix weird double margin.... */
+}
+.honda .textCarousel .panelIndex { padding-left: 0; }
+.honda div.textCarousel div.panelIndex ul,
+.honda div.textCarousel div.panelControl ul {
+  margin: 0px;
+  margin-top: 3px;
+  padding: 0;
+}
+.honda div.textCarousel div.panelIndex ul > li {
+  list-style: none;
+  margin-right: 3px;
+  float: left;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+}
+.honda div.textCarousel div.panelIndex ul > li.true { background-color: #c00; }
+.honda div.textCarousel div.panelControl ul > li {
+  list-style: none;
+  float: left;
+  margin-left: 3px;
+  width: 50px;
+  height: 50px;
+  background-color: #eee;
+}
+.honda div.textCarousel div.panelControl ul > li:hover { background-color: lightgrey; }
+.honda div.textCarousel div.panelControl a {
+  background-image: url(/assets/images/honda/textcarousal-nav-controls-sprite.png);
+  background-repeat: no-repeat;
+  display: block;
+  height: 100%;
+  text-indent: -9999px;
+}
+.honda div.textCarousel div.panelControl a.dir_left { background-position: 14px 7px; }
+.honda div.textCarousel div.panelControl a.dir_right { background-position: 17px -93px; }
+.honda div.textCarousel div.panelControl li:hover a.dir_left { background-position: -27px 7px; }
+.honda div.textCarousel div.panelControl li:hover a.dir_right { background-position: -24px -95px; }
+
+
+/* --- tabbed panel --- */
+.honda div.tabs { margin-left: -20px; margin-top: 15px; width: 470px; }
+.honda div.tabs > ul { margin: 0 0 0 -40px }
+.honda div.tabs > ul > li {
+  list-style: none;
+  float: left;
+  background-color: #959595;
+  margin-right: 3px;
+  text-transform: uppercase;
+}
+.honda div.tabs ul > li a {
+  padding: 10px 20px;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: .1em;
+  text-decoration: none;
+  height: 100%;
+  display: block;
+  font-size: 1.15em;
+}
+.honda div.tabs ul > li.true {
+  background-color: #eee;
+  color: #000;
+}
+.honda div.tabs ul > li.true a {
+  background-color: #eee;
+  color: #333;
+}
+.honda div.tabs div.tab-body {
+  clear: both;
+  padding: 20px 20px 5px 20px;
+  height: auto;
+  background-color: #eee;
+}
+
+.honda div.tabs div.tab-body p {
+	width: auto;
+	font-size: 10pt; /* SG-130 */
+}
+	
+/* --- end tabbed panel --- */
+
+/* --- Awards section --- */
+.honda section.awards h1 {
+	color: #333;
+	float: none;
+	margin-bottom: 1.3em;
+}
+.honda section.awards .section h3 { width: 300px; }
+.honda section.awards .section div.text.center {
+  width: 100%;
+  background: white;
+  overflow: hidden;
+  margin: 20px;
+  margin-bottom: 5px;
+  padding-top: 0px;
+  -webkit-box-shadow: 0px 0px 10px #444;
+  box-shadow: 0px 0px 10px #444;
+}
+.honda section.awards .text.left {
+	width: 475px;
+	float: left;
+}
+.honda .text.left h2 {
+	font-weight: normal;
+}
+
+.honda section.awards a.read-more {
+  text-transform: uppercase;
+  text-decoration: underline;
+  color: black;
+  font-size: small;
+  background: url(/assets/images/honda/read-more-icon.png) no-repeat;
+  height: 20px;
+  background-position: top right;
+  width: 103px;
+  display: block;
+  padding-top: 4px;
+  margin-top: 20px;
+}
+
+/* --- Awards Carousel --- */
+.honda div.awardsCarousel { width: 900px; margin: 0 auto; }
+
+.honda .awardsCarousel > .text {
+	background-color: #fff;
+	-webkit-box-shadow: 0px 1px 15px rgba(50, 50, 50, 0.20);
+	-moz-box-shadow:    0px 1px 15px rgba(50, 50, 50, 0.20);
+	box-shadow:         0px 1px 15px rgba(50, 50, 50, 0.20);
+}
+.honda div.awardsCarouselPanel div.image.right img { margin: 20px 20px 0px; }
+.honda div.awardsCarousel div.awardsCarouselViewPort {
+  overflow: hidden;
+  min-height: 370px;
+  max-height: 370px;
+  padding-top: 28px;
+	padding-left: 39px;
+}
+.honda div.awardsCarouselNav ul {
+  margin-left: -13px;
+  overflow: hidden;
+  padding: 0;
+}
+
+.honda div.awardsCarouselNav li {
+  list-style: none;
+  float: left;
+  width: 110px;
+  height: 105px;
+  background: url(/assets/images/honda/awards-thumbs-bg.png) no-repeat 0 0;
+}
+.honda div.awardsCarouselNav li > a {
+  display: block;
+  padding: 13px;
+}
+.honda div.awardsCarouselNav li.true {
+  background: url(/assets/images/honda/awards-thumbs-current-bg.png) no-repeat 0 0;
+}
+
+
+/* --- Gallery Content --- */
+.honda section.gallery h1 {
+	margin-bottom: 1.3em;
+	clear: both;
+	float: none;
+}
+.honda .gallery div.main {
+	position:relative;
+
+	margin: 0 auto;
+	height: 450px;
+ }
+
+.honda .gallery figure { margin: 0 20px; }
+.honda .ie8 .gallery figure { background-color: #000; }
+.honda .gallery img { display: block; }
+.honda .gallery .prev, .honda .gallery .next {
+	position: absolute;
+	top: 40%;
+	white-space: nowrap;
+	width: 40px;
+	height: 90px;
+	z-index: 10;
+	overflow: hidden;
+}
+.honda .gallery .prev:before, .honda .gallery .next:before {
+	content: "";
+	height: 100%;
+	vertical-align: middle;
+	width: 0px;
+	display: inline-block;
+}
+.honda .gallery .clicker {
+	background: url(/assets/images/honda/gallery-arrows.png) -5px center no-repeat;
+	border: none;
+	cursor: pointer; 
+	width: 40px;
+	height: 90px;
+	vertical-align: middle;
+	overflow: hidden; 
+	text-indent: 110%;
+	padding: 0;
+	margin: 0;
+	display: inline-block;
+	background-color: rgb(255, 255, 255);
+	background-color: rgba(255, 255, 255, 0.5);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+}
+.honda .gallery .prev { left: 25px; }
+.honda .gallery .next { right: 28px; }
+.honda .gallery .next .clicker {
+	background-position: -57px center;
+}
+.honda .gallery ul.thumbs {
+  list-style: none;
+  margin: 0 auto 37px auto;
+  width: 900px;
+  padding: 0;
+}
+
+.honda .gallery .thumbs li { cursor: pointer; float: left; margin: 9px 9px 0 0; transition: .3s; -moz-transition: .3s; -o-transition: .3s; -webkit-transition: .3s; }
+.honda .gallery .thumbs li img { height: 80px; width: 142px; cursor: pointer }
+.honda .gallery .thumbs li img.hidden { height: 0px; width: 0px; }
+.honda .gallery .thumbs li:hover,
+.honda .gallery .thumbs li.true { opacity: .5; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; }
+
+.honda .gallery .thumbs li:nth-child(6n) {
+	margin-right: 0;
+}
+
+.honda article > div {
+	margin: 0 auto;
+	width: 900px;
+}
+.honda section > div {
+	margin: 0 auto;
+	width: 940px;
+}
+.honda .right > div {
+	padding-left: 490px;
+	width: 410px;
+}
+
+.honda .cr-v article.technology {
+	overflow: hidden;
+}
+.honda article .textCarousel > div {
+	padding-left: 0;
+	width: auto;
+}
+
+/* BUTTONS/BARS */
+.honda .buttonbar {
+	margin-top: 32px;
+	width: 618px;
+	border: solid 1px #ccc;
+	padding: 7px;
+  position: relative;
+}
+
+.honda .buttonbar a {
+  text-transform: uppercase;
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: bold;
+	color: #333;
+}
+
+.honda .buttonbar a:hover {
+	color: #c00;
+}
+
+.honda .buttonbar a:after {
+	background: url(/assets/images/honda/sprite-nav-icons.png) no-repeat -6px -597px;
+	content: " ";
+	height: 20px;
+	width: 25px;
+	top: 1px;
+	position: absolute;
+}
+
+.honda .buttonbar a:hover:after {
+	background: url(/assets/images/honda/sprite-nav-icons.png) no-repeat -6px -757px;
+	content: " ";
+}
+
+.honda section footer .quicklinks li {
+	width: 225px;
+}
+
+.honda .quicklinks li a:after {
+	background: url(/assets/images/honda/sprite-nav-icons.png) no-repeat -11px -334px;
+	content: " ";
+	display: inline-block;
+	height: 13px;
+	position: absolute;
+	top: 5px;
+	right: 0;
+	width: 20px;
+	z-index: 1;
+	zoom: 1;
+}
+
+.honda .quicklinks li a:hover:after {
+	background: url(/assets/images/honda/sprite-nav-icons.png) no-repeat -11px -364px;
+	content: " ";
+}
