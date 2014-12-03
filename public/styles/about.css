@@ -13,7 +13,7 @@ div#about.fixed-true {
   margin-left: 250px;
 }
 div#about article {
-  height: 780px;
+  height: 960px;
   position: relative;
 }
 div#about article.kashmir {
@@ -56,7 +56,7 @@ div#about article.frameworks {
 }
 div#about article .caption-wrap {
   position: absolute;
-  bottom: 40%;
+  bottom: 45%;
   right: 0;
   left: 0;
   width: 75%;

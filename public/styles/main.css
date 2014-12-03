@@ -22,7 +22,7 @@ body {
   background: url("/assets/images/paper.jpg");
   color: #586264;
   color: rgba(0,0,0,0.8);
-  font: 62.5%/1.5 AllerRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 100%/1.5 AllerRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
