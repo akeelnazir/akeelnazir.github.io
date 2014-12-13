@@ -7,14 +7,22 @@
       <li ng-show="state.slide==0"><i class="fa fa-circle"></i></li>
       <li ng-show="state.slide==0"><i class="fa fa-circle-o"></i></li>
       <li ng-show="state.slide==0"><i class="fa fa-circle-o"></i></li>
-
-      <li ng-show="state.slide==2"><i class="fa fa-circle-o"></i></li>
-      <li ng-show="state.slide==2"><i class="fa fa-circle-o"></i></li>
-      <li ng-show="state.slide==2"><i class="fa fa-circle"></i></li>
+      <li ng-show="state.slide==0"><i class="fa fa-circle-o"></i></li>
 
       <li ng-show="state.slide==1"><i class="fa fa-circle-o"></i></li>
       <li ng-show="state.slide==1"><i class="fa fa-circle"></i></li>
       <li ng-show="state.slide==1"><i class="fa fa-circle-o"></i></li>
+      <li ng-show="state.slide==1"><i class="fa fa-circle-o"></i></li>
+
+      <li ng-show="state.slide==2"><i class="fa fa-circle-o"></i></li>
+      <li ng-show="state.slide==2"><i class="fa fa-circle-o"></i></li>
+      <li ng-show="state.slide==2"><i class="fa fa-circle"></i></li>
+      <li ng-show="state.slide==2"><i class="fa fa-circle-o"></i></li>
+
+      <li ng-show="state.slide==3"><i class="fa fa-circle-o"></i></li>
+      <li ng-show="state.slide==3"><i class="fa fa-circle-o"></i></li>
+      <li ng-show="state.slide==3"><i class="fa fa-circle-o"></i></li>
+      <li ng-show="state.slide==3"><i class="fa fa-circle"></i></li>
 
       <li><a ng-click="incSlide()" class="next">Next</a></li>
     </ul>
@@ -33,6 +41,12 @@
         <img src="/assets/images/travler/travler.jpg" alt="">
       </section>
 
+      <section ng-click="state.preview = 'knews'" ng-show="state.slide==3">
+        <h1 style="color: white">Kashmir News</h1>
+
+        <h3 style="color: white">News scraped from GreaterKashmir.com</h3>
+      </section>
+
     </div> <!-- .viewport -->
     
   </div> <!-- .wrapper -->
@@ -42,6 +56,8 @@
   <section ng-show="state.preview == 'travler'" class="travler" ng-include="'views/travler.html'"></section>
 
   <section ng-show="state.preview == 'honda'" class="honda" ng-include="'views/honda.html'" ng-controller="HondaCtrl"></section>
+
+  <section ng-show="state.preview == 'knews'" class="knews" ng-include="'views/knews.html'" ng-controller="knewsCtrl as knews"></section>
     
   
 

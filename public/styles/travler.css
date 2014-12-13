@@ -206,9 +206,10 @@ section.travler section#map div.features div:last-child {
   margin-right: 0;
 }
 section.travler section#screen {
-  background: url("/assets/images/travler/screen.jpg") 50% 50% no-repeat;
+  background: url("/assets/images/travler/screen.jpg") center center no-repeat;
   height: 500px;
   position: relative;
+  background-size: cover;
 }
 section.travler section#screen div {
   width: 960px;

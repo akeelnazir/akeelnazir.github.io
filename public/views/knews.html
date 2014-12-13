@@ -1,18 +1,112 @@
-<div class="container">
+<div id="knews" class="container">
 
   <div class="row">
-    <div class="col-xs-7">
-      
-    </div>
-    
-    <div class="col-xs-5">
-      
-      <ul class="list-unstyled">
-        <li ng-repeat="image in knews.images"> 
-          <img ng-src="{{image.imgSrc}}" alt="" width="500px"> 
-        </li>
-      </ul>
+    <div class="col-xs-4 col-xs-push-8 hidden-xs hidden-sm">
+      <div class="panel-group" ng-model="panels.activePanel" bs-collapse>
+        <div class="panel panel-default" ng-repeat="panel in panels">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a bs-collapse-toggle>
+                News in pictures &nbsp; &nbsp;
+                <i class="fa" ng-class="{'fa-caret-down': panel == -1, 'fa-caret-up': panel != -1 }"></i>
+              </a>
+            </h4>
+          </div>
+
+          <div class="panel-collapse" bs-collapse-target>
+            <div class="panel-body">
+              <ul class="gallery list-unstyled">
+                <li class="image" ng-repeat="image in knews.images" ng-show="$index == knews.imageNumber">
+                  <img ng-src="{{image.imgSrc}}" alt="" width="100%" >
+                  <div class="bottom-panel">
+                    <a ng-click="knews.prevImage()" ng-hide="$index == 0">
+                      <i class="fa fa-caret-left"></i>
+                    </a>
+                    <span class="caption" ng-bind="image.caption"></span>
+                    <a ng-click="knews.nextImage()">
+                      <i class="fa fa-caret-right"></i>
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div> <!-- /.row -->
 
+  <div class="clear-fix"></div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <h1> Title </h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, animi aspernatur atque deleniti eius eligendi expedita fugiat ipsum nemo nobis numquam odit quod saepe sequi tempore ullam vitae. Aperiam, quo?
+      </p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <h1> Title </h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, animi aspernatur atque deleniti eius eligendi expedita fugiat ipsum nemo nobis numquam odit quod saepe sequi tempore ullam vitae. Aperiam, quo?
+      </p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <h1> Title </h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, animi aspernatur atque deleniti eius eligendi expedita fugiat ipsum nemo nobis numquam odit quod saepe sequi tempore ullam vitae. Aperiam, quo?
+      </p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <h1> Title </h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, animi aspernatur atque deleniti eius eligendi expedita fugiat ipsum nemo nobis numquam odit quod saepe sequi tempore ullam vitae. Aperiam, quo?
+      </p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <h1> Title </h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, animi aspernatur atque deleniti eius eligendi expedita fugiat ipsum nemo nobis numquam odit quod saepe sequi tempore ullam vitae. Aperiam, quo?
+      </p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <h1> Title </h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, animi aspernatur atque deleniti eius eligendi expedita fugiat ipsum nemo nobis numquam odit quod saepe sequi tempore ullam vitae. Aperiam, quo?
+      </p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <h1> Title </h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, animi aspernatur atque deleniti eius eligendi expedita fugiat ipsum nemo nobis numquam odit quod saepe sequi tempore ullam vitae. Aperiam, quo?
+      </p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <h1> Title </h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, animi aspernatur atque deleniti eius eligendi expedita fugiat ipsum nemo nobis numquam odit quod saepe sequi tempore ullam vitae. Aperiam, quo?
+      </p>
+    </div>
+  </div>
 </div>

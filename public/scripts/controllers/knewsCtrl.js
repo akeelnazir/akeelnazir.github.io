@@ -9,12 +9,33 @@
   function knewsCtrl (gkImages) {
     var vm = this;
 
-    vm.images = gkImages.get()
-      .then (function(data) {
+    main();
+
+    /* Variables */
+    vm.imageNumber = 0;
+
+    /* Functions */
+    vm.prevImage = prevImage;
+    vm.nextImage = nextImage;
+
+
+    function main() {
+      vm.images = gkImages.get()
+        .then (function(data) {
         vm.images = data;
       }, function(errors) {
-        console.log (errors);
+        errors = null;
       });
+    }
+
+    function prevImage() {
+      vm.imageNumber = (vm.imageNumber == 0) ? vm.imageNumber : vm.imageNumber - 1;
+    }
+
+    function nextImage() {
+      vm.imageNumber = (vm.imageNumber == vm.images.length) ? 0 : vm.imageNumber + 1;
+    }
+
 
   }
 

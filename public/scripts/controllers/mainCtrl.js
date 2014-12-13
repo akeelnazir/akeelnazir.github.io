@@ -9,7 +9,7 @@ myApp.controller('MainCtrl', function ($scope) {
 
   $scope.incSlide = function() {
     var num = $scope.state.slide;
-    if (num >= 2)
+    if (num >= 3)
       num = 0;
     else
       num ++;
@@ -21,7 +21,7 @@ myApp.controller('MainCtrl', function ($scope) {
     if (num > 0)
       num --;
     else
-      num = 2;
+      num = 3;
     $scope.state.slide = num;
   };
 

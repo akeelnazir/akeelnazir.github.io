@@ -1,7 +1,10 @@
 'use strict';
 
 var myApp = angular.module('akeelnazircomApp', [
-  'ngRoute'
+  'ngRoute',
+
+  'mgcrea.ngStrap.collapse'
+
 ]);
 
 myApp.config(function ($routeProvider) {
