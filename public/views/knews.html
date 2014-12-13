@@ -17,7 +17,7 @@
             <div class="panel-body">
               <ul class="gallery list-unstyled">
                 <li class="image" ng-repeat="image in knews.images" ng-show="$index == knews.imageNumber">
-                  <img ng-src="{{image.imgSrc}}" alt="" width="100%" >
+                  <img ng-src="{{image.imgSrc}}" width="100%" >
                   <div class="bottom-panel">
                     <a ng-click="knews.prevImage()" ng-hide="$index == 0">
                       <i class="fa fa-caret-left"></i>

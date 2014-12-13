@@ -33,7 +33,7 @@
     }
 
     function nextImage() {
-      vm.imageNumber = (vm.imageNumber == vm.images.length) ? 0 : vm.imageNumber + 1;
+      vm.imageNumber = (vm.imageNumber == vm.images.length - 1) ? 0 : vm.imageNumber + 1;
     }
 
 

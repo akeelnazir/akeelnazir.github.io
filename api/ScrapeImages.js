@@ -24,12 +24,12 @@
           var $ = require ('jquery')(window);
           var images = [];
 
-          $('#featured li.ui-tabs-nav-item')
+          $('#featured div.ui-tabs-panel')
             .each (function(index, value) {
               var $value = $(value);
               images.push (
                 {
-                  'caption': $value.find('span').text(),
+                  'caption': $value.find('.info h2 a').text(),
                   'imgSrc': url + $value.find('img').attr('src')
                 }
               );
