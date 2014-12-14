@@ -1189,20 +1189,23 @@ ul.gallery li.image {
 ul.gallery li.image img {
   max-height: 300px;
 }
-ul.gallery li.image div.bottom-panel {
+ul.gallery li.image:not(:hover) div.bottom-panel {
+  display: none;
+}
+ul.gallery li.image:hover div.bottom-panel {
   position: absolute;
   left: 0;
   bottom: 0px;
   width: 100%;
-  text-align: center;
   background: rgba(255,255,255,0.75);
   padding: 0.75em 0;
 }
-ul.gallery li.image div.bottom-panel i.fa {
-  font-size: 2.5em;
-}
-ul.gallery li.image div.bottom-panel span.caption {
+ul.gallery li.image:hover div.bottom-panel span.caption {
   display: inline-block;
   width: 85%;
   font-size: 1.5em;
+}
+ul.gallery li.image:hover div.bottom-panel div.description {
+  padding: 10px;
+  font-size: 1.25em;
 }

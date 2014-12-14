@@ -1,14 +1,19 @@
 <div id="knews" class="container">
 
-  <div class="row">
+  <div id="image_gallery" class="row" data-ng-show="knews.images.length > 0">
     <div class="col-xs-4 col-xs-push-8 hidden-xs hidden-sm">
       <div class="panel-group" ng-model="panels.activePanel" bs-collapse>
         <div class="panel panel-default" ng-repeat="panel in panels">
           <div class="panel-heading">
             <h4 class="panel-title">
+              <a ng-click="knews.prevImage()">
+                <i class="fa fa-caret-left"></i>
+              </a>
               <a bs-collapse-toggle>
-                News in pictures &nbsp; &nbsp;
-                <i class="fa" ng-class="{'fa-caret-down': panel == -1, 'fa-caret-up': panel != -1 }"></i>
+                News in pictures
+              </a>
+              <a ng-click="knews.nextImage()">
+                <i class="fa fa-caret-right"></i>
               </a>
             </h4>
           </div>
@@ -19,13 +24,8 @@
                 <li class="image" ng-repeat="image in knews.images" ng-show="$index == knews.imageNumber">
                   <img ng-src="{{image.imgSrc}}" width="100%" >
                   <div class="bottom-panel">
-                    <a ng-click="knews.prevImage()" ng-hide="$index == 0">
-                      <i class="fa fa-caret-left"></i>
-                    </a>
-                    <span class="caption" ng-bind="image.caption"></span>
-                    <a ng-click="knews.nextImage()">
-                      <i class="fa fa-caret-right"></i>
-                    </a>
+                    <span class="caption text-center" ng-bind="image.caption"></span>
+                    <div class="description text-left" data-ng-bind="image.description"> </div>
                   </div>
                 </li>
               </ul>

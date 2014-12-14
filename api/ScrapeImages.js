@@ -30,6 +30,7 @@
               images.push (
                 {
                   'caption': $value.find('.info h2 a').text(),
+                  'description': $value.find('.info p').text(),
                   'imgSrc': url + $value.find('img').attr('src')
                 }
               );

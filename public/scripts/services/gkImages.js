@@ -8,7 +8,7 @@
 
       var deferred = $q.defer();
 
-      $http.get('/api/images')
+      $http.get('/api/images', {cache: true})
         .success (function (data) {
           deferred.resolve (data);
         })

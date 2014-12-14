@@ -21,7 +21,7 @@
     }
 
     function prevImage() {
-      vm.imageNumber = (vm.imageNumber === 0) ? vm.imageNumber : vm.imageNumber - 1;
+      vm.imageNumber = (vm.imageNumber === 0) ? 0 : vm.imageNumber - 1;
     }
 
     function nextImage() {
