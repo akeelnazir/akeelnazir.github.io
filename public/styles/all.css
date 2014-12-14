@@ -70,6 +70,9 @@ a {
 a:hover {
   text-decoration: none;
 }
+pre.prettyprint {
+  border-radius: 0;
+}
 .nav-main {
   position: fixed;
   top: 0;
