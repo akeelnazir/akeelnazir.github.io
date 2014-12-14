@@ -1,18 +1,9 @@
 (function() {
   'use strict';
 
-  angular.module('akeelnazircomApp')
-    .factory('gkImages', gkImages);
-
-  gkImages.$inject = ['$http', '$q'];
-
+  
   function gkImages ($http, $q) {
-    var service = {
-      get: get
-    }
-
-    return service;
-
+    
     function get() {
 
       var deferred = $q.defer();
@@ -27,6 +18,16 @@
 
       return deferred.promise;
     }
+    
+    return {
+      get: get
+    };
+
   }
+  
+  gkImages.$inject = ['$http', '$q'];
+  
+  angular.module('akeelnazircomApp')
+    .factory('gkImages', gkImages);
 
 })();
