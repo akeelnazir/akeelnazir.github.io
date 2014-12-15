@@ -1,14 +1,25 @@
 var 
   express = require('express'),
   http = require('http'),
-  scrapeImages = require('./api/ScrapeImages');
+  scrapeImages = require ('./api/ScrapeImages'),
+  scrapeStories = require ('./api/ScrapeStories');
+
 
 var app = express()
   .use(express.bodyParser())
   .use(express.static('public'));
 
-app.get('/api/images', function(req, res) {
+app.get ('/api/images', function (req, res) {
   scrapeImages ('http://www.greaterkashmir.com')
+    .then(function(data) {
+      res.send (data);
+    }, function(error) {
+      res.send (error);
+    });
+});
+
+app.get ('/api/stories', function (req, res) {
+  scrapeStories ('http://www.greaterkashmir.com')
     .then(function(data) {
       res.send (data);
     }, function(error) {
