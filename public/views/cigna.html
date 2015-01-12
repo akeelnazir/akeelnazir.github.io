@@ -18,27 +18,24 @@
         </ol>
     </div>
 
-    <div class="row">
+    <div class="row mb2em">
         
         <div class="col-md-7">
 
             <article class="main">
 
-                <form name="form" ng-submit="submitted(form) && form.$valid && submit()" class="form transparent-background" novalidate>
+                <form name="form" class="form transparent-background" novalidate>
                     <section class="travellers">
                         <header class="section-header">
                             <div class="well well-sm pull-left">
                                 <div class="header-icon pull-left hidden-xs">
                                     <i class="fa fa-user"></i>
                                 </div>
-                                <h4>{{viewName}}</h4>
+                                <h4>Traveller Details</h4>
                                 <div class="note pull-right hidden-xs">
                                     * All fields marked are mandatory
                                 </div>
                                 <div class="note visible-xs">
-                                    <p>
-                                        Please provide the names of persons to be insured.
-                                    </p>
                                     <div>
                                         * All fields marked are mandatory    
                                     </div>
@@ -67,10 +64,10 @@
                         <div class="row">
                             <div class="form-group col-xs-12 col-sm-4">
                                 <label for="postcode">Postcode</label>
-                                <input type="text" name="findaddress" id="postcode" class="form-control" 
+                                <input type="text" name="findaddress" id="postcode" class="form-control"
                                     ng-model="userData.selection.findaddress"
                                     ng-pattern="/^(?!JE|GY|IM)([A-z]{1,2}[0-9][0-9A-z]?\s?[0-9][A-z]{2})/i"
-                                    maxlength="8">
+                                    maxlength="8" placeholder="PA15 4RJ">
                                 <div class="error" ng-show="form.findaddress.$invalid">
                                     Please enter a valid UK postcode
                                 </div>
@@ -193,7 +190,7 @@
                                 <input type="email" name="email" id="email" class="form-control"
                                     ng-model="userData.selection.email"
                                     ng-pattern='/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/'
-                                    required>
+                                    placeholder="john.doe@email.com" required>
                                 <div class="error" ng-show="form.submitted && form.email.$invalid">
                                     Please enter a valid email address
                                 </div>
@@ -202,7 +199,7 @@
                             <div class="form-group col-xs-12 col-sm-6">
                                 <label for="confirmEmail"><span class="primary">* </span> Email Address Confirmation</label>
                                 <input type="email" name="confirmEmail" id="confirmEmail" class="form-control"
-                                    ng-model="userData.selection.confirmEmail" ci-match="email" required>
+                                    ng-model="userData.selection.confirmEmail" ci-match="email" placeholder="john.doe@email.com" required>
                                 <div class="error" ng-show="form.confirmEmail.$error.match || (form.submitted && form.confirmEmail.$invalid)">
                                     Please confirm your email by re-entering your email address
                                 </div>

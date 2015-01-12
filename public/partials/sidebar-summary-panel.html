@@ -16,25 +16,24 @@
 				        <tr>
 				            <td class="bold" width="40%">Quote Ref</td>
 				            <td>
-				                <span class="bold pull-right hidden" ng-bind="userData.quoteDetails.quoteRef"> </span>
-                                <span class="bold pull-right" ng-bind="userData.quoteRef"> </span>
+                                <span class="bold pull-right">QTR02230522</span>
 				            </td>
 				        </tr>
 
 				        <tr>
 				            <td class="bold ">Policy Price</td>
 				            <td>
-				                <span class="bold pull-right" ng-bind="userData.quotePrice | currency : '£'"></span> 
+				                <span class="bold pull-right">&pound;67.16</span> 
 				            </td>
 				        </tr>
 
 				        <tr>
 				            <td class="bold ">Destination</td>
 				            <td>
-			                    <div class="bold pull-right" ng-bind="userData.regionDescription"></div>
+			                    <div class="bold pull-right">Europe</div>
 			                    <div class="clearfix"></div>
-			                    <div class="italic pull-right text-right" ng-show="userData.showVisitingCountries" ng-cloak>
-			                        {{userData.tripData.toxicDesc}}
+			                    <div class="italic pull-right text-right">
+			                        (including Spain, Malta, Cyprus & Turkey)
 			                    </div>
 				                
 				            </td>
@@ -43,14 +42,14 @@
 				        <tr>
 				            <td class="bold">Policy Dates</td>
 				            <td>
-				                <span class="pull-right" ng-bind="userData.policyDates"></span>
+				                <span class="pull-right">26/01/2015 - 26/02/2015</span>
 				            </td>
 				        </tr>
 
 				        <tr>
 				            <td class="bold ">Policy Type</td>
 				            <td>
-				                <span class="pull-right" ng-bind="userData.productName"></span>
+				                <span class="pull-right">Single Trip - Standard Plus</span>
 				            </td>
 				        </tr>
 				    </tbody>
@@ -79,14 +78,32 @@
 				        <table class="table compressed">
 				            
 				            <tbody>
-				                <tr rel='sidebar' ng-repeat="cover in userData.tailoredCovers">
+				                <tr rel='sidebar'>
 				                    <td class="text-right">
-				                        <span class="italic" ng-bind="cover.coverDesc"> </span>
+				                        <span class="italic">Winter Sport</span>
 				                    </td>
 				                    <td>
-				                        <span class="bold pull-right" ng-bind-html="cover.coverLimit"></span> 
+				                        <span class="bold pull-right">Included</span> 
 				                    </td>
 				                </tr>
+
+                                <tr rel='sidebar'>
+                                    <td class="text-right">
+                                        <span class="italic">Baggage</span>
+                                    </td>
+                                    <td>
+                                        <span class="bold pull-right">&pound;1,000</span> 
+                                    </td>
+                                </tr>
+
+                                <tr rel='sidebar'>
+                                    <td class="text-right">
+                                        <span class="italic">Excess</span>
+                                    </td>
+                                    <td>
+                                        <span class="bold pull-right">&pound;50</span> 
+                                    </td>
+                                </tr>
 				            </tbody>
 				        </table>
 				    </div>
