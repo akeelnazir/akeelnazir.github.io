@@ -1,0 +1,414 @@
+@import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/variables";
+@import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
+
+section.cigna {
+    
+    *[ng-click] {
+      cursor: pointer;
+      
+      &.disabled:hover {
+        @include opacity(.65);
+        color: $pink;
+        cursor: not-allowed;
+      }
+    }
+
+    .form-control {
+        &:not(a) {
+            background: rgba(255, 255, 255, 0.6);
+        }
+        
+    }
+
+    .well {
+        background: rgba(255, 255, 255, 0.6);
+    }
+
+    .mandatory {
+      &:before {
+        content: "* " ;
+        font-size: 1.5em;
+        color: $pink;
+      }
+    }
+
+    .error {
+        color: $white;
+        background-color: $orange;
+        padding: .25em .5em;
+    }
+
+    .systemError {
+      position: fixed;
+      top: 0;
+      left: 0;
+      opacity: .9;
+      width: 100%;
+      text-align: center;
+      z-index: 1031;
+    }
+      
+    .divider-xs {
+      border: 2px solid $mobile-divider;
+      &.thin {
+        border-width: .01em;
+        opacity: .2;
+        &.white {
+          border-color: white;
+        }
+      }
+    }
+
+    .divider-sm {
+      border: 10px solid $white;
+    }
+
+    hr {
+        &.fat {
+          border-top: 3px solid transparent;
+          border-bottom-left-radius: 3px;
+          border-bottom-right-radius: 3px;
+          border-top-left-radius: 3px;
+          border-top-right-radius: 3px;
+        }
+
+        &.jumbo {
+            border-top-width: 10px;
+            font-size: medium;
+        }
+
+        &.purple {
+            border-top-color: $purple;
+        }
+
+        &.white {
+            border-top-color: $white;   
+        }
+
+        &.grey {
+            border-top-color: $grey;
+        }
+    }
+
+    .navbar-toggle {
+        margin-right: 0;
+        background-color: inherit;
+        border-bottom-width: 0;
+        border-left-width: 0;
+        border-right-width: 0;
+        border-top-width: 0;
+
+        &:active, &:focus {
+            outline: none;
+        }
+
+        .icon-bar {
+            background-color: $lightblue;
+            height: 4px;
+            width: 30px;
+            border-radius: 3px;
+
+            & + .icon-bar {
+                margin-top: 3px;
+            }
+        }
+    }
+
+    .box-with-icon {
+        width: 60px;
+        height: 60px;
+        border-radius: $border-radius-large;
+        position: relative;
+
+        i {
+            position: absolute;
+            display: table;
+            top: 0;
+            left: 35%;
+            bottom: 0;
+            margin: auto;
+            font-size: 2em;
+            color: $white;
+        }
+
+    }
+
+    .fa-check, .fa-exclamation {
+      color: $lightblue;
+    }
+
+    input[type='checkbox'], input[type='radio'] {
+        display: none;
+
+        & ~ span {
+            display: inline-block;
+            margin-left: .25em;
+        }
+
+        & ~ i.fa {
+            font-size: 1.5em;
+        }
+
+        & ~ i.fa-square {
+          color: $lightblue;
+        }
+
+        & ~ i.fa-circle {
+            color: $lightblue;
+        }
+
+        & ~ i.fa-check-square {
+            display: none;
+            color: $lightblue;
+        }
+
+        & ~ i.fa-check-circle {
+            display: none;
+            color: $lightblue;
+        }
+
+        & ~ i.fa-circle.pink {
+          color: $pink;
+        }
+
+        & ~ i.fa-check-circle.pink {
+          display: none;
+          color: $pink;
+        }
+
+        &:checked {
+            & ~ i.fa-square {
+                display: none;
+            }
+
+            & ~ i.fa-check-square {
+                display: inline-block;
+            }
+
+            & ~ i.fa-circle {
+                 display: none;
+            }
+
+            & ~ i.fa-check-circle {
+                display: inline-block;
+            }
+        }
+    }
+
+    input[type="radio"] {
+      & ~ i.fa-dot-circle-o {
+        display: none;
+      }
+
+      &:checked ~ i.fa-dot-circle-o {
+        display: inline-block;
+      }
+
+      &:checked ~ i.fa-circle-o {
+        display: none;
+      } 
+    }
+
+    label {
+        cursor: pointer;
+    }
+
+    .fa {
+        &.large {
+            font-size: 1.5em;
+            line-height: 1em;
+        }
+    }
+
+    .fa-calendar {
+      color: $pink;
+      &.disabled {
+        @include opacity(.65);
+      }
+    }
+
+    .fa-times-circle {
+      color: white;
+    }
+
+    i {
+        &.bottom {
+            position: absolute;
+            left: 50%;
+            margin-left: -13px;
+            bottom: 0;
+            margin-bottom: -13px;
+            background-color: green;
+            width: 26px;
+            height: 26px;
+            z-index: 99;
+            padding-top: 4px;
+            border-radius: 50%;
+        }
+    }
+
+    ol.indent {
+      padding-left: 20px;
+      margin-top: 10px;
+    }
+
+    ol.no-bullets, ul.no-bullets {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .icon-circle {
+        background-color: $white;
+        padding: 6px 7px 4px;
+        border-radius: 100%;
+
+        &.with-border {
+            border: 1px solid $lgtGrey;
+        }
+    }
+
+    .modal-header {
+      background-color: $primary;
+    }
+
+    .close, .close:hover, .close:focus {
+      opacity: 1;
+    }
+
+    .cigna-aggr-travel .navbar-header{
+        .navbar-brand {display: none;}
+    }
+
+    #confirm-and-pay {
+        .important-information {
+            label {
+                position: relative;
+                width: 100%;
+                box-sizing: border-box;
+                padding-left: 23px;
+
+                .fa-square, .fa-check-square {
+                    position: absolute;
+                    left: 0px;
+                    top: 1px;
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        top: -5px;
+                        bottom: -5px;
+                        left: -5px;
+                        right: -5px;
+                    }
+                }
+
+                span.primary {
+                    margin-right: 4px;
+                }
+            }
+        }
+        
+    }
+
+    .container .cards-strip {
+        padding: 12px;
+        position: relative;
+
+        .cards-pic {
+            position: absolute;
+            height: 100%;
+            width: 180px;
+            top: 0;
+            left: auto;
+            right: 10px;
+            background: url('/assets/images/cigna/cards-strip.png') 100% 50% no-repeat;
+        }
+    }
+
+    .header-logo-panel {
+        .header-contact-num {
+            text-align: right;
+            color: $lightblue;
+
+            p {
+                font-size: 22px;
+                font-weight: bold;
+                margin: 0;
+            }
+        }
+    }
+
+    .content-head {
+        li {
+            line-height: 2em;
+            position: relative;
+        }
+    }
+
+    .icon-holder {
+        position: absolute;
+
+        i {
+            font-size: 1.25em;
+        }
+
+        
+    }
+
+
+    .aggr-icon {
+        display: inline-block;
+        background-size: 100% auto;
+        background-image: url('../assets/images/aggr-icons-sprite.png');
+
+        &.icon-credit-card-grey {
+            background-position: 0 -60px;
+        }
+
+        &.icon-credit-card-blue {
+            background-position: 0px 0px;
+        }
+
+        &.icon-pen-blue {
+            background-position: 0px -120px;
+        }
+
+        .content-head & {
+            width: 25px;
+            height: 18px;
+            position: absolute;
+            top: 50%;
+            margin-top: -10px;
+        }
+
+        .sidebar-panel & {
+            width: 25px;
+            height: 23px;
+            position: absolute;
+            top: 50%;
+        }
+    }
+
+    .mobile-header-contact-num {
+        padding: 0;
+        margin-left: -15px;
+
+        .phone-icon {
+            float: left;
+            width: 60px;
+            height: 60px;
+            background: url('../assets/images/phone-icon.png') 0 0 no-repeat;
+            background-size: 100%;
+            border-right: 1px solid $grey;
+            margin-right: 15px;
+        }
+
+        p {
+            font-weight: bold;
+            color: $lightblue;
+            margin: 0;
+            line-height: 1.25;
+        }
+    }
+
+}

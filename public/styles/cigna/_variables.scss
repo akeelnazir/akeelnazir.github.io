@@ -1,0 +1,50 @@
+$ribbon-color: #FF4E00;
+$white: #ffffff;
+
+$blue: #373ABE;
+$mid-blue: #127ac6;
+$midblue: #127ac6;
+$light-blue: #00AEEF;
+$lightblue: #00AEEF;
+$lighterblue: lighten($lightblue, 15%);
+$lightestblue: lighten($lighterblue, 15%);
+$logogreen: #2eb135;
+
+$purple: #970074;
+$yellow: #FFC82E;
+$red: #DA1A35;
+
+$orange: #f7941d;
+$pink: #ed1d89;
+$black: #000;
+
+$green: #55A51C;
+$lightgreen: lighten($green, 15%);
+
+$limegreen : rgb(204, 218, 45);
+
+
+$midGrey: #828387;
+
+$lightGrey: #eeeeee;
+$lgtGrey: #eeeeee;
+$grey: #cccccc;
+$drkGrey: #333333;
+
+$font-color: $midGrey;
+$font-size-base: 14px;
+
+$primary: $lightblue;
+
+$btn-primary-face: $logogreen;
+$btn-primary-text: $white;
+
+$mobile-nav-bg-color: $purple;
+
+$btn-face: $midGrey ;
+$btn-text: $white;
+
+$list-group-striped: #E9E8E6;
+$mobile-divider: #D9D9D7;
+
+$header-bg-color: transparent;

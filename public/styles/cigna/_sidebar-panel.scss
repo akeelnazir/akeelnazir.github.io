@@ -1,0 +1,71 @@
+@import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/panels";
+
+section.cigna {
+
+    aside.sidebar {
+
+        .sidebar-panel {
+            @extend .panel-primary;
+
+            .panel-heading {
+                position: relative;
+                background-color: rgba(0, 174, 239, 0.6);
+                border-bottom: none;
+                border-radius: 0;
+                padding: 25px 20px;
+
+                i.border-circle {
+                    padding-left: 7px;
+                    padding-top: 5px;
+                    border: 2px solid $white;
+                    border-radius: 100%;
+                    margin-top: -5px;
+                    width: 2em;
+                    height: 2em;
+                }
+
+                h3, h4, h5, h6 {
+                    margin: 0;
+                }
+
+                i.fa-check {
+                    color: $white;
+                    padding-left: 5px;
+                }
+            }
+
+            .panel-body {
+                padding-top: 2em;
+                background-color: rgba(255, 255, 255, 0.5);
+                overflow: hidden;
+                
+                table.table {
+                    tbody > tr > td {
+                        border: none;
+                        padding: 5px;
+                    }
+                }
+
+                table.compressed {
+                    tbody > tr > td {
+                        border: none;
+                        padding: 0 5px;
+                    }
+                }
+
+
+            }
+
+            &.key-features, &.why-cigna {
+                .panel-body {
+                    color: $primary;
+
+                    li {
+                        padding: .5em 0;
+                        line-height: 1em;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,167 @@
+
+<div class="row">
+    <div class="col-xs-12">
+
+        <div class="sidebar-panel your-trip-panel">
+            <div class="panel-heading">
+                <span class="bold uppercase">Your Trip</span>
+                <span class="pull-right">
+                    <i class="border-circle fa fa-plane"></i>    
+                </span>
+            </div>
+
+            <div class="panel-body" >
+            	<table class="table">
+				    <tbody>
+				        <tr>
+				            <td class="bold" width="40%">Quote Ref</td>
+				            <td>
+				                <span class="bold pull-right hidden" ng-bind="userData.quoteDetails.quoteRef"> </span>
+                                <span class="bold pull-right" ng-bind="userData.quoteRef"> </span>
+				            </td>
+				        </tr>
+
+				        <tr>
+				            <td class="bold ">Policy Price</td>
+				            <td>
+				                <span class="bold pull-right" ng-bind="userData.quotePrice | currency : '£'"></span> 
+				            </td>
+				        </tr>
+
+				        <tr>
+				            <td class="bold ">Destination</td>
+				            <td>
+			                    <div class="bold pull-right" ng-bind="userData.regionDescription"></div>
+			                    <div class="clearfix"></div>
+			                    <div class="italic pull-right text-right" ng-show="userData.showVisitingCountries" ng-cloak>
+			                        {{userData.tripData.toxicDesc}}
+			                    </div>
+				                
+				            </td>
+				        </tr>
+
+				        <tr>
+				            <td class="bold">Policy Dates</td>
+				            <td>
+				                <span class="pull-right" ng-bind="userData.policyDates"></span>
+				            </td>
+				        </tr>
+
+				        <tr>
+				            <td class="bold ">Policy Type</td>
+				            <td>
+				                <span class="pull-right" ng-bind="userData.productName"></span>
+				            </td>
+				        </tr>
+				    </tbody>
+				</table>
+            </div>
+        </div> <!-- /.sidebar-panel -->
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-12">
+        <div class="sidebar-panel your-quote-panel">
+            <div class="panel-heading">
+                <span class="bold uppercase">Your Quote</span>
+                <span class="pull-right">
+                    <i class="border-circle fa fa-gbp"></i>    
+                </span>
+            </div>
+
+            <div class="panel-body" >
+            	<div class="row">
+				    <div class="col-xs-5">
+				        <span class="bold">Tailored Cover</span>
+				    </div>
+				    <div class="col-xs-7">
+				        <table class="table compressed">
+				            
+				            <tbody>
+				                <tr rel='sidebar' ng-repeat="cover in userData.tailoredCovers">
+				                    <td class="text-right">
+				                        <span class="italic" ng-bind="cover.coverDesc"> </span>
+				                    </td>
+				                    <td>
+				                        <span class="bold pull-right" ng-bind-html="cover.coverLimit"></span> 
+				                    </td>
+				                </tr>
+				            </tbody>
+				        </table>
+				    </div>
+				</div> <!-- /.row -->
+
+            </div>
+        </div> <!-- /.sidebar-panel -->
+    </div>
+</div>
+
+<div class="row" ng-show="viewName === appViewsNames.CONFIRM_AND_PAY && userData.selection.address">
+    <div class="col-xs-12">
+        <div class="sidebar-panel your-details-panel">
+            <div class="panel-heading">
+                <span class="bold uppercase">Your Details</span>
+                <span class="pull-right">
+                    <i class="border-circle fa fa-check"></i>    
+                </span>
+            </div>
+
+            <div class="panel-body" >
+            	<div class="row">
+				    <div class="col-xs-5">
+				        <span class="bold">People Travelling</span>
+				    </div>
+				    <div class="col-xs-7">
+				    	<p rel='sidebar' ng-repeat="party in userData.partiesDetails" class="text-right">
+				    		<span class="bold">
+					        	{{party.title}} {{party.firstName}} {{party.lastName}}
+					        </span>
+				    	</p>
+				    </div>
+				</div> <!-- /.row -->
+
+				<div class="row mt2em">
+					<div class="col-xs-5">
+				        <p>&nbsp;</p>
+				    </div>
+				    <div class="col-xs-7">
+				    	<p class="text-right bold">
+				    		{{ userData.selection.mobile || userData.selection.landline }}
+				    	</p>
+				    </div>
+				</div>
+
+				<div class="row">
+					<div class="col-xs-5">
+				        <span class="bold">Contact Details</span>
+				    </div>
+				    <div class="col-xs-7">
+				    	<p class="text-right no-margins"><span>{{userData.selection.email}}</span></p>
+				    	<p class="text-right no-margins"><span>{{userData.selection.address.address_line1}}</span></p>
+				    	<p class="text-right no-margins"><span>{{userData.selection.address.address_line2}}</span></p>
+				    	<p class="text-right no-margins"><span>{{userData.selection.address.town}}</span></p>
+				    	<p class="text-right no-margins"><span>{{userData.selection.address.postcode}}</span></p>
+				    </div>
+				</div>
+            </div>
+        </div> <!-- /.sidebar-panel -->
+    </div>
+</div>
+
+
+<div class="sidebar-panel">
+	<div class="panel-body">
+        <div class="col-xs-6 col-xs-push-3">
+            <a class="btn btn-primary btn-block">
+                <div class="uppercase bold">Click Here</div>
+                <div class="small no-uppercase">
+                    for full Policy wording
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+

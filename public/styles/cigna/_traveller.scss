@@ -1,0 +1,40 @@
+#travellers-details {
+    header {
+        h4, h5 {
+            color: $primary;
+            text-transform: uppercase;
+        }
+
+        .well {
+            background: $lightGrey;
+
+            h4, h5 {
+            }
+        }
+    }
+
+    section.contact-details {
+
+        label.normal-cursor {
+            cursor: default;
+        }
+
+        a.form-control {
+            &:not(.btn) {
+                padding-left: 0;
+                padding-right: 0;
+                border: none;
+                text-decoration: underline;
+                color: $primary;
+                box-shadow: none;
+            }
+        }
+
+        input[type='checkbox'] {
+            & ~ i {
+                margin-right: .5em;
+            }
+        }
+    }
+
+}

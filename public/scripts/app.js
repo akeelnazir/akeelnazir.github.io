@@ -18,12 +18,6 @@ myApp.config(function ($routeProvider) {
     .when('/works', {
       templateUrl: 'views/works.html'
     })
-    .when('/knews', {
-      templateUrl: 'views/knews.html',
-      controller: 'knewsCtrl',
-      controllerAs: 'knews'
-    })
-    
     .otherwise({
       redirectTo: '/'
     });

@@ -1,0 +1,276 @@
+@import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/variables" ;
+@import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins" ;
+
+/*
+* Ordered according to http://css-tricks.com/poll-results-how-do-you-order-your-css-properties/
+*   Positioning
+*   Display and Box Model
+*   Color
+*   Text
+*   Other
+*/
+
+/* MIXINS */
+@mixin spacer($height) {
+    margin: 0;
+    height: $height;
+    background-color: transparent;
+    z-index: 0;
+}
+
+@mixin padding-left($x) {
+    padding-left: $x !important;
+}
+
+@mixin padding-top($x) {
+    padding-top: $x !important;
+}
+
+@mixin padding-bottom($x) {
+    padding-bottom: $x !important;
+}
+
+@mixin padding-right($x) {
+  padding-right: $x !important;
+}
+
+@mixin padding-bottom($x) {
+  padding-bottom: $x !important;
+}
+
+@mixin margin-top($x) {
+    margin-top: $x;
+}
+
+@mixin margin-left($x) {
+    margin-left: $x !important;
+}
+
+@mixin bg($color) {
+    background-color: $color !important;
+}
+
+@mixin line-height($x) {
+    line-height: $x;
+}
+
+/* SPACING */
+.spacer-55px { @include spacer(55px) }
+.spacer-70px { @include spacer(70px) }
+.spacer-100px { @include spacer(100px) }
+.spacer-10px { @include spacer(10px) }
+
+.pushdown-sm {
+  @include spacer(1em);
+}
+.pushdown-md {
+  @include spacer(2em);
+}
+.pushdown-lg {
+  @include spacer(3em);
+}
+
+
+
+/* PADDING */
+.no-padding { padding: 0 !important }
+.padding1em { padding: 1em !important }
+.padding_p5em { padding: .5em !important }
+.pl0 { padding-left: 0 !important }
+.pr0 { padding-right: 0 !important }
+.pt0 { padding-top: 0 !important }
+.pb0 { padding-bottom: 0 !important }
+
+.padding-left-15px { @include padding-left(15px) }
+.padding-left-p5em { @include padding-left(.5em) }
+.pl15px-xs {
+  @media screen and (max-width: $screen-xs-max){
+    padding-left: 15px;
+  }
+}
+.padding-all-10px {@include padding-left(10px); @include padding-right(10px); @include padding-top(10px); @include padding-bottom(10px)}
+.padding-top-p75em { @include padding-top(.75em) }
+.padding-top-p5em { @include padding-top(.5em) }
+.padding-top-p25em { @include padding-top(.25em) }
+.padding-top-1p5em { @include padding-top(1.5em) }
+
+.padding-bottom-1p5em { @include padding-bottom(1.5em) }
+.padding-bottom-1p5em { @include padding-bottom(1.5em) }
+.padding-bottom-p75em { @include padding-bottom(.75em) }
+.padding-bottom-p50em { @include padding-bottom(.5em) }
+
+
+
+/* MARGINS */
+.no-margins { margin: 0 !important }
+
+.no-top-margin, .mt0 { margin-top: 0 !important }
+.mt2em { @include margin-top(2em) }
+.mt3em { @include margin-top(3em) }
+.margin-top-1p5em, .mt1p5em { @include margin-top(1.5em) }
+.mtp5em { margin-top: .5em }
+.mt1em { margin-top: 1em !important }
+.mt-3px { margin-top: -3px }
+.mt10px { margin-top: 10px }
+.ml-20px { margin-left: -20px }
+
+.mr0 { margin-right: 0 !important }
+.mrp5em { margin-right: .5em !important }
+.mr15px-xs {
+  @media screen and (max-width: $screen-xs-max){
+    margin-right: 15px;
+  }
+}
+
+.mb0 { margin-bottom: 0 !important }
+.mbp5em { margin-bottom: .5em }
+.mbp25em { margin-bottom: .25em }
+.mb1em { margin-bottom: 1em !important }
+.mb2em { margin-bottom: 2em !important }
+.mb3px { margin-bottom: 3px !important }
+
+.ml3em { @include margin-left(3em) }
+.ml1em { @include margin-left(1em) }
+.ml-minus10 { margin-left: -10px}
+.ml-3em { margin-left: -3em }
+.ml2em { @include margin-left(2em) }
+.mlp5em { @include margin-left(.5em) }
+.ml1em { @include margin-left(1em) }
+.ml5px { @include margin-left(5px) }
+
+
+/* BORDERS */
+.no-borders {
+  border: none !important;
+  border-top: none !important;
+  border-bottom: none !important;
+  border-left: none !important;
+  border-right: none !important;
+}
+
+
+/* TEXT ATTRIBUTES */
+.uppercase { text-transform: uppercase }
+.no-uppercase { text-transform: none }
+.bold { font-weight: bold }
+.no-bold { font-weight: normal !important }
+.bolder { font-weight: bolder }
+.italic { font-style: italic }
+.normal { font-size: $font-size-base }
+.font-p9 {font-size: 0.9em};
+.font-sm { font-size: 1em }
+.font-rmd { font-size: 1.4em }
+.font-md { font-size: 2em }
+.font-lg { font-size: 3em }
+.font-xl {font-size: 3.5em}
+.cross-out { text-decoration: line-through }
+
+
+
+/* TEXT COLOR */
+.pink { color: $pink }
+.black { color: $black }
+.white { color: $white }
+.green { color: $green }
+.lightgreen, .light-green { color: $lightgreen }
+.light-blue, .lightblue { color: $light-blue }
+.lighter-blue, .lighterblue { color: $lighterblue }
+.lightest-blue, .lightestblue { color: $lightestblue }
+.dark-grey, .dark-gray { color: $drkGrey }
+.mid-grey, .mid-gray { color: $midGrey }
+.mid-blue { color: $mid-blue}
+.primary {color: $primary}
+
+
+/* BACKGROUND */
+.bg-pink { @include bg($pink) }
+.bg-orange { @include bg($orange) }
+.bg-green { @include bg($green) }
+.bg-limegreen { @include bg($limegreen) }
+.bg-purple { @include bg($purple) }
+.bg-white { @include bg($white) }
+.bg-transparent { @include bg(transparent) }
+.bg-grey { @include bg($lgtGrey) }
+
+.bg-lightblue { @include bg($lightblue) }
+.bg-lighterblue { @include bg($lighterblue) }
+.bg-lightestblue { @include bg($lightestblue) }
+.bg-midblue { @include bg($mid-blue) }
+.bg-blue { @include bg($blue) }
+.bg-primary {@include bg($primary)}
+
+
+.bg-lightgreen { @include bg($lightgreen) }
+
+
+/* MIXED BAG */
+.lh1em { line-height: 1em }
+.lh2em { line-height: 2em }
+.lh1p5em { line-height: 1.5em }
+
+.wide-page-xs {
+  @media screen and (max-width: $screen-xs-max){
+    @include make-row();
+  }
+}
+
+.no-box-shadow {
+  box-shadow: none;
+}
+
+.inline {
+    display: inline;
+}
+
+.pos-a, .absolute {
+    position: absolute;
+}
+
+.relative, .pos-r {
+    position: relative;
+}
+
+.ov-h {
+    overflow: hidden;
+}
+
+i[popover] {
+    position: absolute;
+    top: .20em;
+    right: 1em;
+    font-size: 26px;
+  z-index: 1;
+}
+
+label i[popover] {
+    top: -.2em;
+    right: .6em;
+}
+
+.underline-on-hover:hover {
+    text-decoration: underline;
+}
+
+.text-bottom {
+    vertical-align: bottom !important;
+}
+
+.text-middle {
+    vertical-align: middle !important;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+.cross-out {
+    text-decoration:line-through;
+}
+
+.no-list-style li{
+    list-style: none;
+}
+
+.numbered-list{
+    list-style: decimal;
+}

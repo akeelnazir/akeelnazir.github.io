@@ -1,0 +1,70 @@
+<section class="traveller-details">
+    <header>
+        <div class="well well-sm hidden-xs">
+            <h4>Traveller</h4>
+        </div>
+        <h4 class="visible-xs">Traveller {{$index + 1}}</h4>
+    </header>
+
+    <ng-form name="innerForm">
+        <div class="row">
+            <div class="form-group col-xs-12 col-sm-3">
+                <label for="title"><span class="primary">* </span> Title</label>
+                <select name="title" id="title" 
+                    class="form-control" required>
+                    <option value="">Select one</option>
+                    <option value="MR">Mr.</option>
+                    <option value="MRS">Mrs.</option>
+                    <option value="MISS">Miss.</option>
+                    <option value="DR">Dr.</option>
+                </select>
+                <div class="error" ng-show="form.submitted && innerForm.title.$invalid">
+                    Please enter a value for Title
+                </div>
+            </div>
+
+            <div class="form-group col-xs-12 col-sm-4 no-min-height">
+                <label for="dateOfBirth"><span class="primary">* </span> Date of Birth</label>
+                <input type="text" name="dateOfBirth" 
+                    value="01  /  01  /  1970"
+                    class="form-control text-center" disabled="true">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group col-xs-12 col-sm-6">
+                <label for="firstName{{$index}}"><span class="primary">* </span> First Name</label>
+                <input type="text" name="firstName" 
+                    id="firstName{{$index}}"
+                    ng-model="party.firstName"
+                    ng-pattern="/^[A-z\s'-]*$/"
+                    maxlength="20"
+                    class="form-control" required>
+                <div class="error" ng-show="form.submitted && innerForm.firstName.$error.required">
+                    Please enter a value for First Name
+                </div>
+                <div class="error" ng-show="innerForm.firstName.$error.pattern">
+                    Please enter a value for First Name
+                </div>
+            </div>
+
+            <div class="form-group col-xs-12 col-sm-6">
+                <label for="lastName"><span class="primary">* </span> Surname</label>
+                <input type="text" name="lastName" 
+                    id="lastName{{$index}}"
+                    ng-model="party.lastName"
+                    ng-pattern="/^[A-z\s'-]*$/"
+                    maxlength="20"
+                    class="form-control" required>
+                
+                <div class="error" ng-show="form.submitted && innerForm.lastName.$error.required">
+                    Please enter a value for Surname
+                </div>
+                <div class="error" ng-show="innerForm.lastName.$error.pattern">
+                    Please enter a value for Surname
+                </div>
+            </div>
+        </div>
+    </ng-form>
+    
+</section>
