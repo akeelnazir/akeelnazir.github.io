@@ -2627,7 +2627,8 @@ section.cigna aside.sidebar .sidebar-panel .panel-body {
     border: none;
     padding: 0 5px; }
 section.cigna aside.sidebar .sidebar-panel.key-features .panel-body, section.cigna aside.sidebar .sidebar-panel.why-cigna .panel-body {
-  color: #00AEEF; }
+  color: #00AEEF;
+  text-shadow: #DDD 0 1px; }
   section.cigna aside.sidebar .sidebar-panel.key-features .panel-body li, section.cigna aside.sidebar .sidebar-panel.why-cigna .panel-body li {
     padding: .5em 0;
     line-height: 1em; }
