@@ -1,6 +1,12 @@
 #knews.container {
   width: 100%;
 }
+#knews h1 {
+  font-weight: bold;
+}
+#knews p.story {
+  font-size: 2em;
+}
 #image_gallery .panel-heading h4.panel-title a.heading {
   padding: 0 15px;
 }

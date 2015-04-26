@@ -1108,7 +1108,7 @@ html.lt-ie9 div.png-icon {
   top: 30px;
   width: auto;
   height: auto;
-  z-index: 999;
+  z-index: 999999;
 }
 html.lt-ie9 div.png-icon.fixed-true {
   position: fixed;
@@ -1116,7 +1116,7 @@ html.lt-ie9 div.png-icon.fixed-true {
   top: 30px;
   width: auto;
   height: auto;
-  z-index: 999;
+  z-index: 999999;
 }
 html.lt-ie9 div.png-icon.fixed-false {
   position: fixed;
@@ -1131,7 +1131,7 @@ html.lt-ie9 div.png-icon.fixed-false {
   height: auto;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-  z-index: 999;
+  z-index: 999999;
 }
 .svg-icon.fixed-true {
   position: fixed;
@@ -1185,6 +1185,12 @@ html.lt-ie9 div.png-icon.fixed-false {
 }
 #knews.container {
   width: 100%;
+}
+#knews h1 {
+  font-weight: bold;
+}
+#knews p.story {
+  font-size: 2em;
 }
 #image_gallery .panel-heading h4.panel-title a.heading {
   padding: 0 15px;

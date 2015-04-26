@@ -1,7 +1,7 @@
 'use strict';
 
 var myApp = angular.module('akeelnazircomApp', [
-  'ngRoute',
+  'ngRoute', 'ngSanitize',
 
   'mgcrea.ngStrap.collapse'
 

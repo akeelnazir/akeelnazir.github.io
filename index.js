@@ -2,7 +2,8 @@ var
   express = require('express'),
   http = require('http'),
   scrapeImages = require ('./api/ScrapeImages'),
-  scrapeStories = require ('./api/ScrapeStories');
+  scrapeHeadlines = require ('./api/ScrapeHeadlines' ),
+  scrapeStory = require ('./api/ScrapeStory');
 
 
 var app = express()
@@ -18,8 +19,17 @@ app.get ('/api/images', function (req, res) {
     });
 });
 
-app.get ('/api/stories', function (req, res) {
-  scrapeStories ('http://www.greaterkashmir.com')
+app.get ('/api/headlines', function (req, res) {
+  scrapeHeadlines ('http://www.greaterkashmir.com')
+    .then(function(data) {
+      res.send (data);
+    }, function(error) {
+      res.send (error);
+    });
+});
+
+app.post ('/api/story', function (req, res) {
+  scrapeStory (req.body.storyLink)
     .then(function(data) {
       res.send (data);
     }, function(error) {

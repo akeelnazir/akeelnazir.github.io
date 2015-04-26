@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  function knewsCtrl (gkImages, gkStories) {
+  function knewsCtrl (gkImages, gkHeadlines, gkStory) {
     var vm = this;
 
     /* Variables */
@@ -14,7 +14,7 @@
     main();
     
     function main() {
-      vm.images = gkImages.get()
+      gkImages.get()
         .then (function(data) {
           vm.images = data;
         },
@@ -22,13 +22,24 @@
           errors = null;
         });
 
-      vm.stories = gkStories.get()
+      gkHeadlines.get()
         .then (function(data) {
-          vm.stories = data;
-          console.log (data);
+          vm.headlines = [];
+
+          angular.forEach(data, function(headline) {
+            headline.storyLink = 'http://www.greaterkashmir.com'+ headline.link;
+
+            gkStory.post({ 'storyLink' : headline.storyLink })
+              .then(function(data) {
+                headline.story = data;
+                vm.headlines.push(headline);
+              });
+
+          });
+
         },
         function(errors) {
-          console.log (errors);
+          errors = null;
         });
     }
 
@@ -42,7 +53,7 @@
 
   }
   
-  knewsCtrl.$inject = ['gkImages', 'gkStories'];
+  knewsCtrl.$inject = ['gkImages', 'gkHeadlines', 'gkStory'];
   
   angular.module('akeelnazircomApp')
     .controller('knewsCtrl', knewsCtrl);
