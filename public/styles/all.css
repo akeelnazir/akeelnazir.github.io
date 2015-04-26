@@ -1183,6 +1183,9 @@ html.lt-ie9 div.png-icon.fixed-false {
   -ms-transition: stroke 0.6s ease-out;
   transition: stroke 0.6s ease-out;
 }
+#knews.container {
+  width: 100%;
+}
 #image_gallery .panel-heading h4.panel-title a.heading {
   padding: 0 15px;
 }

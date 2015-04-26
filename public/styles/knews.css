@@ -1,23 +1,33 @@
-ul.gallery li.image {
+#knews.container {
+  width: 100%;
+}
+#image_gallery .panel-heading h4.panel-title a.heading {
+  padding: 0 15px;
+}
+#image_gallery ul.gallery li.image {
   position: relative;
 }
-ul.gallery li.image img {
+#image_gallery ul.gallery li.image img {
   max-height: 300px;
 }
-ul.gallery li.image div.bottom-panel {
+#image_gallery ul.gallery li.image:not(:hover) div.bottom-panel {
+  display: none;
+}
+#image_gallery ul.gallery li.image:hover div.bottom-panel {
   position: absolute;
   left: 0;
   bottom: 0px;
   width: 100%;
-  text-align: center;
   background: rgba(255,255,255,0.75);
   padding: 0.75em 0;
 }
-ul.gallery li.image div.bottom-panel i.fa {
-  font-size: 2.5em;
-}
-ul.gallery li.image div.bottom-panel span.caption {
+#image_gallery ul.gallery li.image:hover div.bottom-panel span.caption {
   display: inline-block;
+  padding-left: 10px;
   width: 85%;
   font-size: 1.5em;
+}
+#image_gallery ul.gallery li.image:hover div.bottom-panel div.description {
+  padding: 10px;
+  font-size: 1.25em;
 }

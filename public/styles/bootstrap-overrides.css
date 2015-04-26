@@ -1,3 +1,13 @@
 .panel-group {
   margin-top: 10px;
 }
+.panel-group .panel-collapse {
+  position: relative;
+}
+.panel-group .panel-collapse .panel-body {
+  position: absolute;
+  width: 100%;
+  z-index: 99999;
+  border: 1px solid #ddd;
+  background-color: #fff;
+}

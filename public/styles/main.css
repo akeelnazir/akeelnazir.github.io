@@ -54,3 +54,9 @@ ol li {
 a {
   cursor: pointer;
 }
+a:hover {
+  text-decoration: none;
+}
+pre.prettyprint {
+  border-radius: 0;
+}

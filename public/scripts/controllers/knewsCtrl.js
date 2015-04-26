@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  function knewsCtrl (gkImages) {
+  function knewsCtrl (gkImages, gkStories) {
     var vm = this;
 
     /* Variables */
@@ -10,14 +10,26 @@
     /* Functions */
     vm.prevImage = prevImage;
     vm.nextImage = nextImage;
+
+    main();
     
     function main() {
       vm.images = gkImages.get()
         .then (function(data) {
-        vm.images = data;
-      }, function(errors) {
-        errors = null;
-      });
+          vm.images = data;
+        },
+        function(errors) {
+          errors = null;
+        });
+
+      vm.stories = gkStories.get()
+        .then (function(data) {
+          vm.stories = data;
+          console.log (data);
+        },
+        function(errors) {
+          console.log (errors);
+        });
     }
 
     function prevImage() {
@@ -27,12 +39,10 @@
     function nextImage() {
       vm.imageNumber = (vm.imageNumber === vm.images.length - 1) ? 0 : vm.imageNumber + 1;
     }
-    
-    main();
 
   }
   
-  knewsCtrl.$inject = ['gkImages'];
+  knewsCtrl.$inject = ['gkImages', 'gkStories'];
   
   angular.module('akeelnazircomApp')
     .controller('knewsCtrl', knewsCtrl);
