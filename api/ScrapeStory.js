@@ -21,7 +21,7 @@
           $('#textcontent p')
             .each(function(index, value) {
               var $value = $(value);
-              story = $value.text();
+              story = $value.html();
             });
 
           if (story.length === 0) {
