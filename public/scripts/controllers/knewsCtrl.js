@@ -26,6 +26,8 @@
         .then (function(data) {
           vm.headlines = [];
 
+          console.log(data);
+
           angular.forEach(data, function(headline) {
             headline.storyLink = 'http://www.greaterkashmir.com'+ headline.link;
 
