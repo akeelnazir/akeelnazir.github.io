@@ -27,16 +27,3 @@ myApp.directive('nuScrollFix', ['$window', '$document', function($window, $docum
   };
   
 }]);
-
-myApp.directive('nuMouseLeave', function() {
-  function link(scope, element, attrs, ctrl) {
-    angular.element(element).on('mouseleave', function(event) {
-      
-    });
-  }
-
-  return {
-    restrict: 'A',
-    link: link
-  };
-});
