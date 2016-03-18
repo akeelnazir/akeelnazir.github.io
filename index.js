@@ -1,41 +1,11 @@
 var 
   express = require('express'),
-  http = require('http'),
-  scrapeImages = require ('./api/ScrapeImages'),
-  scrapeHeadlines = require ('./api/ScrapeHeadlines' ),
-  scrapeStory = require ('./api/ScrapeStory');
+  http = require('http');
 
 
 var app = express()
   .use(express.bodyParser())
   .use(express.static('public'));
-
-app.get ('/api/images', function (req, res) {
-  scrapeImages ('http://www.greaterkashmir.com')
-    .then(function(data) {
-      res.send (data);
-    }, function(error) {
-      res.send (error);
-    });
-});
-
-app.get ('/api/headlines', function (req, res) {
-  scrapeHeadlines ('http://www.greaterkashmir.com')
-    .then(function(data) {
-      res.send (data);
-    }, function(error) {
-      res.send (error);
-    });
-});
-
-app.post ('/api/story', function (req, res) {
-  scrapeStory (req.body.storyLink)
-    .then(function(data) {
-      res.send (data);
-    }, function(error) {
-      res.send (error);
-    });
-});
 
 var port = process.env.PORT || 3000;
 
